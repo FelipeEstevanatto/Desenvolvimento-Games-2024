@@ -24,52 +24,61 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
+        HandleInput();
+        HandleAnimation();
+    }
 
-        rb.linearVelocity = new Vector2(horizontalInput * 5, rb.linearVelocity.y);
+    void FixedUpdate()
+    {
+        HandleMovement();
+        CheckGrounded();
+    }
 
-        animator.SetFloat("Velocity", rb.linearVelocity.magnitude);
-
+    private void HandleInput()
+    {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            animator.SetTrigger("Jump");
+            animator.SetBool("Jump", true);
         }
 
-        //if (Mathf.Sign(horizontalInput) != rb.transform.localScale.x && horizontalInput != 0)
+        if (Input.GetButtonDown("Fire1"))
+        {
+            animator.SetTrigger("Shoot");
+        }
+    }
+
+    private void HandleMovement()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
+
         if (horizontalInput != 0)
         {
-            //rb.transform.localScale = new Vector3(Mathf.Sign(horizontalInput), transform.localScale.y, rb.transform.localScale.z);
             Vector3 newScale = transform.localScale;
             newScale.x = Mathf.Sign(horizontalInput) * Mathf.Abs(newScale.x);
             transform.localScale = newScale;
         }
+    }
 
-        // Set trigger attack
-        if (Input.GetButtonDown("Fire1"))
+    private void HandleAnimation()
+    {
+        animator.SetFloat("Velocity", rb.linearVelocity.magnitude);
+
+        if (isGrounded)
         {
-            animator.SetTrigger("Attack");
+            animator.SetBool("Jump", false);
         }
+    }
 
-        if (Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, groundLayer).collider != isGrounded)
+    private void CheckGrounded()
+    {
+        bool wasGrounded = isGrounded;
+        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, groundLayer);
+
+        if (isGrounded != wasGrounded)
         {
-            isGrounded = !isGrounded;
             animator.SetBool("Grounded", isGrounded);
         }
     }
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Ground"))
-    //     {
-    //         isGrounded = true;
-    //     }
-    // }
-
-    // private void OnCollisionExit2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Ground"))
-    //     {
-    //         isGrounded = false;
-    //     }
-    // }
 }
