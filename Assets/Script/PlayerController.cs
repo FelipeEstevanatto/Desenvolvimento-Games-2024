@@ -6,25 +6,33 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float crouchSpeedMultiplier;
     [SerializeField] private float distanceToGround;
     [SerializeField] private LayerMask groundLayer;
+
+    [SerializeField] private Collider2D normalCollider; 
+    [SerializeField] private Collider2D crouchCollider; 
 
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;
-    private Vector2 screenBounds;
+    private bool isCrouching;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        normalCollider.enabled = true;
+        crouchCollider.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         HandleInput();
+        HandleCrouch();
         HandleAnimation();
     }
 
@@ -36,15 +44,40 @@ public class PlayerController : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Jump", true);
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+        //    animator.SetTrigger("Shoot");
+        //}
+    }
+
+    private void HandleCrouch() //Corrigir animação e fazer verificação para saber se o Player pode levantar ou não
+    {
+        if (Input.GetKey(KeyCode.LeftControl) && isGrounded)
         {
-            animator.SetTrigger("Shoot");
+            if (!isCrouching)
+            {
+                isCrouching = true;
+                speed *= crouchSpeedMultiplier;
+                animator.SetBool("Crouched", true);
+
+                normalCollider.enabled = false;
+                crouchCollider.enabled = true;
+            }
+        }
+        else if (isCrouching)
+        {
+            isCrouching = false;
+            speed /= crouchSpeedMultiplier;
+            animator.SetBool("Crouched", false);
+
+            normalCollider.enabled = true;
+            crouchCollider.enabled = false;
         }
     }
 
@@ -63,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleAnimation()
     {
-        animator.SetFloat("Velocity", rb.linearVelocity.magnitude);
+        animator.SetFloat("Velocity", Mathf.Abs(rb.linearVelocity.x));
 
         if (isGrounded)
         {
