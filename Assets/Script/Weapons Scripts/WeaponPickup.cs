@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    public Weapon weapon; 
+    public Weapon weaponPrefab; // Prefab da arma a ser pega
     private bool isPlayerInRange = false;
-    private WeaponManager playerWeaponManager; 
+    private WeaponManager playerWeaponManager;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // get the WeaponManager component from the player
             playerWeaponManager = other.GetComponent<WeaponManager>();
             if (playerWeaponManager != null)
             {
@@ -34,7 +33,7 @@ public class WeaponPickup : MonoBehaviour
         {
             if (playerWeaponManager != null)
             {
-                playerWeaponManager.PickupWeapon(weapon); 
+                playerWeaponManager.PickupWeapon(weaponPrefab);
                 Destroy(gameObject); 
             }
         }

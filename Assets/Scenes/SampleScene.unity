@@ -2094,6 +2094,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 106563760901565385, guid: 020ff50f323cbac41b34c3a5de4d7a6e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1487336279}
+    - targetCorrespondingSourceObject: {fileID: 106563760901565385, guid: 020ff50f323cbac41b34c3a5de4d7a6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1487336282}
   m_SourcePrefab: {fileID: 100100000, guid: 020ff50f323cbac41b34c3a5de4d7a6e, type: 3}
 --- !u!1 &1006382176
 GameObject:
@@ -4507,8 +4510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d4287d35d2cba40bfd699f91126fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseWeapon: {fileID: 6613595083619445513, guid: 460d2fbf2495bde459ff48d8e6de3424, type: 3}
-  pickupWeapon: {fileID: 0}
+  baseWeaponPrefab: {fileID: 2008655652660254801, guid: 460d2fbf2495bde459ff48d8e6de3424, type: 3}
+  pickupWeaponPrefab: {fileID: 0}
   weaponHolderPos: {fileID: 1948605309}
   playerAnimator: {fileID: 1038564668}
   player: {fileID: 1038564662}
@@ -4691,7 +4694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188e2ac74a11f314b9848b49a35a9f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 3075534135144332438, guid: ba1bfe1396c300b46af7647d2327788c, type: 3}
+  weaponPrefab: {fileID: 2688101630262578400, guid: ba1bfe1396c300b46af7647d2327788c, type: 3}
 --- !u!70 &1487336280
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4729,6 +4732,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0.61750007, y: -0.00000011920929}
   m_Size: {x: 1.625, y: 0.4375}
   m_Direction: 1
+--- !u!114 &1487336282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487336277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41507633d2361ef4cb23a1713e6c6d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: 
+  description: 
+  weaponPrefab: {fileID: 2824628486371867538, guid: ba1bfe1396c300b46af7647d2327788c, type: 3}
+  shotSpeed: 20
+  bulletPrefab: {fileID: 3193756969829563608, guid: 22baca3810751d3478b23408ea10f72b, type: 3}
+  firePoint: {fileID: 0}
+  ammoCapacity: 20
+  pellets: 5
+  spread: 15
 --- !u!1 &1754575741
 GameObject:
   m_ObjectHideFlags: 0

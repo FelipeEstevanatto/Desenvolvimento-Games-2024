@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8750669495121531768}
   - component: {fileID: 7527054811974832770}
-  - component: {fileID: 6613595083619445513}
+  - component: {fileID: 2008655652660254801}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 2875411169699837321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9, y: 1.1659739, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8889507358168998332}
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6613595083619445513
+--- !u!114 &2008655652660254801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,16 +98,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2875411169699837321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 064786d0f14644745914e1a582200f1e, type: 3}
+  m_Script: {fileID: 11500000, guid: f715bff73784df7428b40fa324a86fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Base Weapon
-  description: Basic Pistol.
+  weaponName: Pistol
+  description: Basic Shooting.
   weaponPrefab: {fileID: 2875411169699837321}
   fireRate: 0.1
   shotSpeed: 20
   bulletPrefab: {fileID: 3193756969829563608, guid: 22baca3810751d3478b23408ea10f72b, type: 3}
-  firePoint: {fileID: 8889507358168998332}
+  firePoint: {fileID: 0}
+  ammoCapacity: 20
 --- !u!1 &5608890095939147266
 GameObject:
   m_ObjectHideFlags: 0

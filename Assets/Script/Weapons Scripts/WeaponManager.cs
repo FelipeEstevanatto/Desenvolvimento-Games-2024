@@ -2,78 +2,111 @@ using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
 {
-    [SerializeField] private Weapon baseWeapon; //primary weapon 
-    [SerializeField] private Weapon pickupWeapon; // secundary
+    [SerializeField] private Weapon baseWeaponPrefab; // primary weapon prefab
+    [SerializeField] private Weapon pickupWeaponPrefab; // secundary weapon prefab
     [SerializeField] private Transform weaponHolderPos;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private GameObject player;
 
-    private Weapon currentWeapon; //weapon to be equipped
-    private GameObject currentWeaponModel; //weapon that will be instantiated
+    private Weapon currentWeapon; // equipped weapon
+    private Weapon baseWeaponInstance; 
+    private Weapon pickupWeaponInstance; 
+    private bool isFiring = false;
 
     void Start()
     {
-        //start with base weapon in hands
-        EquipWeapon(baseWeapon);
+        //POR ALGUM MOTIVO O INSTANTIATE ESTÁ GERANDO UMA INSTANCIA MUITO MAIOR DO QUE O PREFAB, MESMO COM localScale = (1, 1, 1)
+        // instantiate primary weapon 
+        if (baseWeaponPrefab != null)
+        {
+            baseWeaponInstance = Instantiate(baseWeaponPrefab, weaponHolderPos.position, weaponHolderPos.rotation, weaponHolderPos);
+            // correct the instance's transform to the default position 
+            baseWeaponInstance.transform.localPosition = Vector3.zero; 
+            baseWeaponInstance.transform.localRotation = Quaternion.identity; 
+            baseWeaponInstance.transform.localScale = Vector3.one; 
+            currentWeapon = baseWeaponInstance;
+            EquipWeapon(currentWeapon);
+        }
+
+        // instantiate secundary weapon if in inventory and disable the instance initially
+        if (pickupWeaponPrefab != null)
+        {
+            pickupWeaponInstance = Instantiate(pickupWeaponPrefab, weaponHolderPos.position, weaponHolderPos.rotation, weaponHolderPos);
+            pickupWeaponInstance.transform.localPosition = Vector3.zero; 
+            pickupWeaponInstance.transform.localRotation = Quaternion.identity; 
+            pickupWeaponInstance.transform.localScale = Vector3.one; 
+            pickupWeaponInstance.gameObject.SetActive(false);
+        }
     }
 
     void Update()
     {
+        //Esses controles talvez possam ser passados para o PlayerController
+        // switch weapons
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            EquipWeapon(baseWeapon);
+            EquipWeapon(baseWeaponInstance);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && pickupWeapon != null)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && pickupWeaponInstance != null)
         {
-            EquipWeapon(pickupWeapon);
+            EquipWeapon(pickupWeaponInstance);
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !isFiring)
         {
-            float direction = Mathf.Sign(player.transform.localScale.x);  //player faicing direction to use in Attack()
+            isFiring = true;
+            float direction = Mathf.Sign(player.transform.localScale.x); // player direction to be used for bullets
             currentWeapon.Attack(direction);
-            playerAnimator.SetTrigger("Shoot");
+            
+            playerAnimator.SetTrigger("Shoot"); //Falta lógica para nao atirar sem munição
+        }
+        if (Input.GetButtonUp("Fire1")) //one shot per click
+        {
+            isFiring = false;
         }
     }
 
     void EquipWeapon(Weapon weapon)
     {
-        currentWeapon = weapon;
-
-        if (currentWeaponModel != null)
-        {
-            Destroy(currentWeaponModel);
-        }
-
-        // instantiate the weapon model ate the weapon holder's position
         if (currentWeapon != null)
         {
-            currentWeaponModel = Instantiate(currentWeapon.weaponPrefab, weaponHolderPos.position, Quaternion.identity);
-            currentWeaponModel.transform.SetParent(weaponHolderPos); // set the weapon's parent to the weapon holder to follow the position
+            currentWeapon.gameObject.SetActive(false); // disable current weapon
+        }
 
-            // Aajust the weapon's rotation based on the player's direction
-            UpdateWeaponRotation();
+        currentWeapon = weapon;
 
-            // if the weapon is of type 'Gun', initialize its fire point
-            if (currentWeapon is Gun gun)
+        if (currentWeapon != null)
+        {
+            currentWeapon.gameObject.SetActive(true); // enable new weapon
+
+            // if weapon is a Gun type, find the FirePoint transform and assign it to the Gun.firePoint variable
+            if (currentWeapon is Gun currentGun)
             {
-                gun.firePoint = currentWeaponModel.transform.Find("FirePoint");
+                Transform firePointTransform = currentWeapon.transform.Find("FirePoint");
+                if (firePointTransform != null)
+                {
+                    currentGun.firePoint = firePointTransform;
+                }
+                else
+                {
+                    Debug.LogWarning("FirePoint não encontrado na arma: " + currentGun.name);
+                }
             }
         }
     }
 
-    void UpdateWeaponRotation()
+    public void PickupWeapon(Weapon weaponPrefab)
     {
-        float direction = Mathf.Sign(player.transform.localScale.x);
+        if (pickupWeaponInstance != null)
+        {
+            Destroy(pickupWeaponInstance.gameObject);
+        }
 
-        //adjust the rotation of the weapon to match the player's direction
-        currentWeaponModel.transform.localRotation = Quaternion.Euler(0, direction == 1 ? 0 : 180, 0);
+        // instantiate the new weapon in player's hand
+        pickupWeaponInstance = Instantiate(weaponPrefab, weaponHolderPos.position, weaponHolderPos.rotation, weaponHolderPos);
+        pickupWeaponInstance.transform.localPosition = Vector3.zero; 
+        pickupWeaponInstance.transform.localRotation = Quaternion.identity; 
+        pickupWeaponInstance.transform.localScale = Vector3.one; 
+        pickupWeaponInstance.gameObject.SetActive(false); // initially disabled
     }
-
-    public void PickupWeapon(Weapon weapon)
-    {
-        //update the pickupWeapon slot when a new weapon is picked up
-        pickupWeapon = weapon;
-    }
-
 }

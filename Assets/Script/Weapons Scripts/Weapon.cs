@@ -8,7 +8,7 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] private string description;
     public GameObject weaponPrefab;
     //public float damage;
-    public float fireRate;
+    //public float fireRate;
     public float shotSpeed;
 
     public abstract void Attack(float direction);
