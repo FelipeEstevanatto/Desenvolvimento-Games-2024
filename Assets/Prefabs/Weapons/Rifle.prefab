@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3085775448679018477}
   - component: {fileID: 6695653170705905009}
-  - component: {fileID: 2688101630262578400}
+  - component: {fileID: 7610914917278204038}
   m_Layer: 0
   m_Name: Rifle
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2147974193919690080}
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2688101630262578400
+--- !u!114 &7610914917278204038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,19 +98,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2824628486371867538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41507633d2361ef4cb23a1713e6c6d94, type: 3}
+  m_Script: {fileID: 11500000, guid: 700b16b66e0760648834ffdda2a55d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Teste
-  description: 
+  weaponName: Rifle
+  description: Tiro simples mas com dano maior (Por enquanto. Quero fazer tiro burst).
   weaponPrefab: {fileID: 2824628486371867538}
-  fireRate: 0.1
-  shotSpeed: 20
   bulletPrefab: {fileID: 3193756969829563608, guid: 22baca3810751d3478b23408ea10f72b, type: 3}
+  shotSpeed: 25
   firePoint: {fileID: 0}
-  ammoCapacity: 90
-  pellets: 5
-  spread: 15
+  bulletDamage: 35
+  ammoCapacity: 75
+  bulletsPerShot: 1
+  currentAmmo: 0
 --- !u!1 &8028140886778840277
 GameObject:
   m_ObjectHideFlags: 0

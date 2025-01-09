@@ -15,7 +15,6 @@ public class WeaponManager : MonoBehaviour
 
     void Start()
     {
-        //POR ALGUM MOTIVO O INSTANTIATE ESTÁ GERANDO UMA INSTANCIA MUITO MAIOR DO QUE O PREFAB, MESMO COM localScale = (1, 1, 1)
         // instantiate primary weapon 
         if (baseWeaponPrefab != null)
         {
@@ -23,18 +22,19 @@ public class WeaponManager : MonoBehaviour
             // correct the instance's transform to the default position 
             baseWeaponInstance.transform.localPosition = Vector3.zero; 
             baseWeaponInstance.transform.localRotation = Quaternion.identity; 
-            baseWeaponInstance.transform.localScale = Vector3.one; 
+            baseWeaponInstance.transform.localScale /= Mathf.Abs(player.transform.localScale.x); // PLAYER COM SCALE (10,10,10) ENTÃO O PREFAB INSTANCIADO SERÁ DE SCALE 10, POIS HERDARÁ O SCALE DO PAI
+                                                                                                   // CASO O NOVO SPRITE FOR DE SCALE 1, REMOVER /= player.transform.localScale.x
             currentWeapon = baseWeaponInstance;
             EquipWeapon(currentWeapon);
         }
 
-        // instantiate secundary weapon if in inventory and disable the instance initially
+        // if in inventory, instantiate secundary weapon and disable the instance initially
         if (pickupWeaponPrefab != null)
         {
             pickupWeaponInstance = Instantiate(pickupWeaponPrefab, weaponHolderPos.position, weaponHolderPos.rotation, weaponHolderPos);
             pickupWeaponInstance.transform.localPosition = Vector3.zero; 
             pickupWeaponInstance.transform.localRotation = Quaternion.identity; 
-            pickupWeaponInstance.transform.localScale = Vector3.one; 
+            pickupWeaponInstance.transform.localScale /= Mathf.Abs(player.transform.localScale.x); 
             pickupWeaponInstance.gameObject.SetActive(false);
         }
     }
@@ -106,7 +106,7 @@ public class WeaponManager : MonoBehaviour
         pickupWeaponInstance = Instantiate(weaponPrefab, weaponHolderPos.position, weaponHolderPos.rotation, weaponHolderPos);
         pickupWeaponInstance.transform.localPosition = Vector3.zero; 
         pickupWeaponInstance.transform.localRotation = Quaternion.identity; 
-        pickupWeaponInstance.transform.localScale = Vector3.one; 
+        pickupWeaponInstance.transform.localScale /= Mathf.Abs(player.transform.localScale.x); 
         pickupWeaponInstance.gameObject.SetActive(false); // initially disabled
     }
 }

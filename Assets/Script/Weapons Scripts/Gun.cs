@@ -3,9 +3,13 @@ using UnityEngine;
 public abstract class Gun : Weapon
 {
     public GameObject bulletPrefab;
-    public Transform firePoint; 
-    [SerializeField] private int ammoCapacity; 
-    private int currentAmmo;
+    public float shotSpeed;
+    public Transform firePoint;
+    [SerializeField] private int bulletDamage;
+    [SerializeField] private int ammoCapacity;
+    //[SerializeField] private float fireRate;
+    public int bulletsPerShot = 1;
+    [HideInInspector] public int currentAmmo;
 
     void Start()
     {
@@ -17,7 +21,7 @@ public abstract class Gun : Weapon
         if (currentAmmo > 0) 
         {
             FireBullet(direction);
-            currentAmmo--; 
+            currentAmmo -= bulletsPerShot; 
             Debug.Log("Ammo: " + currentAmmo);
         }
         else
@@ -36,6 +40,7 @@ public abstract class Gun : Weapon
         }
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        SetDamage(bullet);
         bullet.transform.localScale = new Vector3(direction * Mathf.Abs(bullet.transform.localScale.x),
                                                   bullet.transform.localScale.y,
                                                   bullet.transform.localScale.z);
@@ -44,8 +49,16 @@ public abstract class Gun : Weapon
         bulletRB.linearVelocity = new Vector2(direction * shotSpeed, 0);
     }
 
-    //Ainda não usei pra nada, mas é uma função que não precisará de override
-    public void Reload()
+    public void SetDamage(GameObject bullet)
+    {
+        BulletController bulletController = bullet.GetComponent<BulletController>();
+        if (bulletController != null)
+        {
+            bulletController.damage = this.bulletDamage; // `weaponDamage` é um campo na sua arma
+        }
+    }
+        //Aplicar Reload com um botao pressionável e adicionar sistema de pente das armas 
+        public void Reload()
     {
         currentAmmo = ammoCapacity;
         Debug.Log("Arma recarregada!");
