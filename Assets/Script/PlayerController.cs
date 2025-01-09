@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool isGrounded;
     private bool isCrouching;
+    private bool isLookingUp;
 
     // Start is called before the first frame update
     void Start()
@@ -54,10 +55,8 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Jump", true);
         }
 
-        //if (Input.GetButtonDown("Fire1"))
-        //{
-        //    animator.SetTrigger("Shoot");
-        //}
+        isLookingUp = Input.GetKey(KeyCode.W);
+        animator.SetBool("LookingUp", isLookingUp);
     }
 
     private void HandleCrouch() //Corrigir animação e fazer verificação para saber se o Player pode levantar ou não
@@ -74,7 +73,7 @@ public class PlayerController : MonoBehaviour
                 crouchCollider.enabled = true;
             }
         }
-        else if (isCrouching)
+        else if (isCrouching && !Physics2D.Raycast(transform.position, Vector2.up, 1f, groundLayer))
         {
             isCrouching = false;
             speed /= crouchSpeedMultiplier;
