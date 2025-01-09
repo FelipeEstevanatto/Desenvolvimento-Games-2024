@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int Health => health;
+
+    [SerializeField] private int health;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float crouchSpeedMultiplier;
@@ -46,6 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
         {
+            health--;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Jump", true);
         }
