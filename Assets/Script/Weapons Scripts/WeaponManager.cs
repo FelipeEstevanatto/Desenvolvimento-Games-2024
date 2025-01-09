@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class WeaponManager : MonoBehaviour
 {
@@ -51,6 +52,9 @@ public class WeaponManager : MonoBehaviour
         {
             EquipWeapon(pickupWeaponInstance);
         }
+
+        // If the mouse is over a UI element, return
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
         if (Input.GetButtonDown("Fire1") && !isFiring)
         {
