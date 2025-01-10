@@ -56,6 +56,9 @@ public class WeaponManager : MonoBehaviour
         // If the mouse is over a UI element, return
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
+        // immediately remove the weapon from the player's hand when its ammo is <= 0
+        CheckAmmo();
+
         if (Input.GetButtonDown("Fire1"))
         {
             //
@@ -70,7 +73,7 @@ public class WeaponManager : MonoBehaviour
                     playerAnimator.SetTrigger("Shoot");
                     gun.nextFireTime = Time.time + gun.fireRate;
 
-                }
+                } 
             }
         }
         if (Input.GetButtonUp("Fire1")) //one shot per click (TALVEZ SEJA REDUNDANTE COM O FIRERATE)
@@ -122,4 +125,26 @@ public class WeaponManager : MonoBehaviour
         pickupWeaponInstance.transform.localScale /= Mathf.Abs(player.transform.localScale.x); 
         pickupWeaponInstance.gameObject.SetActive(false); // initially disabled
     }
+
+    private void CheckAmmo()
+    {
+        if (currentWeapon is Gun gun && gun.currentAmmo <= 0)
+        {
+            if (gun == pickupWeaponInstance) //base gun will always have infinity ammo
+            {
+                DestroyPickupWeapon();
+            }
+        }
+    }
+    private void DestroyPickupWeapon() //Incluir a animação (ou o que quer que seja) da ação de remover a arma da mão
+    {
+        if (pickupWeaponInstance != null)
+        {
+            Destroy(pickupWeaponInstance.gameObject);
+            pickupWeaponInstance = null;
+        }
+    }
+
 }
+
+

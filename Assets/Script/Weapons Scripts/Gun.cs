@@ -12,7 +12,7 @@ public abstract class Gun : Weapon
     [HideInInspector] public int currentAmmo;
     [HideInInspector] public float nextFireTime;
 
-    void Start()
+    void Awake()
     {
         currentAmmo = ammoCapacity;
         nextFireTime = 0f;
@@ -25,10 +25,6 @@ public abstract class Gun : Weapon
             FireBullet(direction);
             currentAmmo -= bulletsPerShot;
             Debug.Log("Ammo: " + currentAmmo);
-        }
-        else
-        {
-            Debug.Log("Sem munição");
         }
     }
 
