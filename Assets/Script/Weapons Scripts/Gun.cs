@@ -7,26 +7,28 @@ public abstract class Gun : Weapon
     public Transform firePoint;
     [SerializeField] private int bulletDamage;
     [SerializeField] private int ammoCapacity;
-    //[SerializeField] private float fireRate;
+    public float fireRate;
     public int bulletsPerShot = 1;
     [HideInInspector] public int currentAmmo;
+    [HideInInspector] public float nextFireTime;
 
     void Start()
     {
         currentAmmo = ammoCapacity;
+        nextFireTime = 0f;
     }
 
     public override void Attack(float direction)
     {
-        if (currentAmmo > 0) 
+        if (currentAmmo > 0)
         {
             FireBullet(direction);
-            currentAmmo -= bulletsPerShot; 
+            currentAmmo -= bulletsPerShot;
             Debug.Log("Ammo: " + currentAmmo);
         }
         else
         {
-            Debug.Log("Sem munição!");
+            Debug.Log("Sem munição");
         }
     }
 
@@ -35,7 +37,7 @@ public abstract class Gun : Weapon
     {
         if (firePoint == null)
         {
-            Debug.LogError("FirePoint não definido!");
+            Debug.LogError("FirePoint não definido");
             return;
         }
 
@@ -54,13 +56,13 @@ public abstract class Gun : Weapon
         BulletController bulletController = bullet.GetComponent<BulletController>();
         if (bulletController != null)
         {
-            bulletController.damage = this.bulletDamage; // `weaponDamage` é um campo na sua arma
+            bulletController.damage = this.bulletDamage; 
         }
     }
         //Aplicar Reload com um botao pressionável e adicionar sistema de pente das armas 
         public void Reload()
     {
         currentAmmo = ammoCapacity;
-        Debug.Log("Arma recarregada!");
+        Debug.Log("Arma recarregada");
     }
 }

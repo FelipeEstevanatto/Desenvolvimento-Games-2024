@@ -109,7 +109,9 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletDamage: 20
   ammoCapacity: 2147483647
+  fireRate: 0.1
   bulletsPerShot: 1
+  currentAmmo: 0
 --- !u!1 &5608890095939147266
 GameObject:
   m_ObjectHideFlags: 0

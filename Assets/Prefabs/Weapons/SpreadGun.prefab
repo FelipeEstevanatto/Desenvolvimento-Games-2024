@@ -140,6 +140,9 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   bulletDamage: 15
   ammoCapacity: 50
+  fireRate: 0.35
   bulletsPerShot: 3
+  currentAmmo: 0
+  nextFireTime: 0
   bulletCount: 3
   spreadAngle: 30

@@ -56,15 +56,24 @@ public class WeaponManager : MonoBehaviour
         // If the mouse is over a UI element, return
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        if (Input.GetButtonDown("Fire1") && !isFiring)
+        if (Input.GetButtonDown("Fire1"))
         {
-            isFiring = true;
-            float direction = Mathf.Sign(player.transform.localScale.x); // player direction to be used for bullets
-            currentWeapon.Attack(direction);
+            //
+            if (currentWeapon is Gun gun)
+            {
+                if(gun.currentAmmo > 0 && !isFiring && Time.time >= gun.nextFireTime)
+                {
+                    isFiring = true;
+                    float direction = Mathf.Sign(player.transform.localScale.x); // player direction to be used for bullets
+                    currentWeapon.Attack(direction);
             
-            playerAnimator.SetTrigger("Shoot"); //Falta lógica para nao atirar sem munição
+                    playerAnimator.SetTrigger("Shoot");
+                    gun.nextFireTime = Time.time + gun.fireRate;
+
+                }
+            }
         }
-        if (Input.GetButtonUp("Fire1")) //one shot per click
+        if (Input.GetButtonUp("Fire1")) //one shot per click (TALVEZ SEJA REDUNDANTE COM O FIRERATE)
         {
             isFiring = false;
         }
