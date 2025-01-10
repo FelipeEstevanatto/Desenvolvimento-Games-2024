@@ -29,13 +29,30 @@ public class WeaponPickup : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerInRange)
         {
-            if (playerWeaponManager != null)
+            if(weaponPrefab is Gun)
             {
-                playerWeaponManager.PickupWeapon(weaponPrefab);
-                Destroy(gameObject); 
+                //reload if the weapon pickup is the same as the one in the pickupweapon slot
+                if (weaponPrefab is Gun && playerWeaponManager.pickupWeaponInstance != null && weaponPrefab.GetType() == playerWeaponManager.pickupWeaponInstance.GetType())
+                {
+                    Gun playerPickUpGun = playerWeaponManager.pickupWeaponInstance as Gun;
+                    playerPickUpGun.Reload(); 
+                    Destroy(gameObject);
+                }
+                else if (Input.GetKeyDown(KeyCode.E))
+                {
+                    EquipWeaponPickUp(weaponPrefab);
+                }
             }
+        }
+    }
+    private void EquipWeaponPickUp(Weapon weaponPrefab)
+    {
+        if (playerWeaponManager != null)
+        {
+            playerWeaponManager.PickupWeapon(weaponPrefab);
+            Destroy(gameObject);
         }
     }
 }

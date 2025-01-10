@@ -55,8 +55,9 @@ public abstract class Gun : Weapon
             bulletController.damage = this.bulletDamage; 
         }
     }
-        //Aplicar Reload com um botao pressionável e adicionar sistema de pente das armas 
-        public void Reload()
+
+    //Aplicar Reload com um botao pressionável e adicionar sistema de pente das armas 
+    public void Reload()
     {
         currentAmmo = ammoCapacity;
         Debug.Log("Arma recarregada");

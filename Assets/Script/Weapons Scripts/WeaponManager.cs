@@ -11,7 +11,7 @@ public class WeaponManager : MonoBehaviour
 
     private Weapon currentWeapon; // equipped weapon
     private Weapon baseWeaponInstance; 
-    private Weapon pickupWeaponInstance; 
+    public Weapon pickupWeaponInstance; 
     private bool isFiring = false;
 
     void Start()
@@ -82,7 +82,7 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
-    void EquipWeapon(Weapon weapon)
+    private void EquipWeapon(Weapon weapon)
     {
         if (currentWeapon != null)
         {
@@ -132,11 +132,11 @@ public class WeaponManager : MonoBehaviour
         {
             if (gun == pickupWeaponInstance) //base gun will always have infinity ammo
             {
-                DestroyPickupWeapon();
+                RemovePickupWeapon();
             }
         }
     }
-    private void DestroyPickupWeapon() //Incluir a animação (ou o que quer que seja) da ação de remover a arma da mão
+    private void RemovePickupWeapon() //Incluir a animação (ou o que quer que seja) da ação de remover a arma da mão
     {
         if (pickupWeaponInstance != null)
         {
