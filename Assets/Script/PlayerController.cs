@@ -21,6 +21,12 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private bool isCrouching;
     private bool isLookingUp;
+    private bool canDash = true;
+    private bool isDashing;
+    [SerializeField]private float dashingPower = 24f;
+    [SerializeField]private float dasgingTime = 0.2f;
+    [SerializeField]private float dashingCooldown = 1f;
+    [SerializeField] private TrailRenderer tr; 
 
     // Start is called before the first frame update
     void Start()
@@ -34,15 +40,22 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   if ( isDashing == false) {
         HandleInput();
         HandleCrouch();
+    }
         HandleAnimation();
+        if(Input.GetKey(KeyCode.LeftShift) && canDash) {
+            StartCoroutine(Dash());
+        }
     }
 
     void FixedUpdate()
     {
+        if (!isDashing)
+    {
         HandleMovement();
+    }
         CheckGrounded();
     }
 
@@ -59,7 +72,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("LookingUp", isLookingUp);
     }
 
-    private void HandleCrouch() //Corrigir animação e fazer verificação para saber se o Player pode levantar ou não
+    private void HandleCrouch() //Corrigir animaï¿½ï¿½o e fazer verificaï¿½ï¿½o para saber se o Player pode levantar ou nï¿½o
     {
         if (Input.GetKey(KeyCode.LeftControl) && isGrounded)
         {
@@ -117,4 +130,25 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Grounded", isGrounded);
         }
     }
+
+    private IEnumerator Dash()
+{
+    canDash = false; // Desabilita a capacidade de dar Dash novamente
+    isDashing = true; // Marca que estÃ¡ dashing
+
+    float originalGravity = rb.gravityScale; // Salva a gravidade original
+    rb.gravityScale = 0f; // Desabilita gravidade durante o Dash
+    rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f); // Aplica a forÃ§a de Dash na direÃ§Ã£o correta
+    tr.emitting = true; // Ativa o efeito de trail renderer
+
+    yield return new WaitForSeconds(dasgingTime); // Espera o tempo do Dash
+
+    tr.emitting = false; // Desativa o efeito de trail renderer
+    rb.gravityScale = originalGravity; // Restaura a gravidade
+    isDashing = false; // Termina o Dash
+
+    yield return new WaitForSeconds(dashingCooldown); // Espera o cooldown
+    canDash = true; // Permite que o Dash seja usado novamente
+}
+
 }
