@@ -3,7 +3,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     [SerializeField] private float bulletDestroyTime = 1f;
-    public float damage; //o valor de damage est· contido nos scripts das armas
+    [HideInInspector] public float damage; //o valor de damage est√° contido nos scripts das armas
     void Start()
     {
         Destroy(gameObject, bulletDestroyTime);
@@ -11,14 +11,15 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //destroy bullet if it hits a wall
         if (collision.CompareTag("Ground"))
         {
-            //Adicionar efeito de colis„o da bullet na parede(Quando tivermos)
+            //Adicionar efeito de colis√£o da bullet na parede(Quando tivermos)
             Destroy(gameObject);
         }
         else if (collision.CompareTag("Damagable"))
         {
-            Enemy enemy = collision.GetComponent<Enemy>();
+            Enemy2 enemy = collision.GetComponent<Enemy2>();
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
