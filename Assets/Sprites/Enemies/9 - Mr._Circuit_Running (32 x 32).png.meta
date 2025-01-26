@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      9 - Mr._Circuit_Running (32 x 32)_0: -6851431825139047221
+      9 - Mr._Circuit_Running (32 x 32)_1: 3839338417189541421
+      9 - Mr._Circuit_Running (32 x 32)_2: -3790195553572628086
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

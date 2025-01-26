@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      3 - Hermie_Idle (32 x 32)_0: -3945451927582046657
+      3 - Hermie_Idle (32 x 32)_1: -4030665145855810691
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

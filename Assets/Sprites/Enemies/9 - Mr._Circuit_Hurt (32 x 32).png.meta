@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      9 - Mr._Circuit_Hurt (32 x 32)_0: -7683125695556038370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

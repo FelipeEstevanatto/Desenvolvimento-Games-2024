@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      6 - Jumpy_Lumpy_Hurt (32 x 32)_0: -1217059684207373625
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

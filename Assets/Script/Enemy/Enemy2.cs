@@ -2,20 +2,19 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Enemy2 : MonoBehaviour
+public class Enemy2 : Enemy
 {
-    [SerializeField] private float health = 100f;
     private Transform posicaoJogador;
     public float velocidadeInimigo;
     public float distanciaMorte = 3f; // Distância mínima para considerar como colisão
 
-    // Start é chamado uma vez antes da primeira execução de Update
+    // O valor da health será configurável diretamente no Inspector da Unity para este inimigo
+
     void Start()
     {
         posicaoJogador = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update é chamado uma vez por frame
     void Update()
     {
         SeguirJogador();
@@ -38,19 +37,8 @@ public class Enemy2 : MonoBehaviour
         }
     }
 
-    private void Die()
+    protected override void Die()
     {
         Destroy(gameObject);
-    }
-
-        public void TakeDamage(float damageAmount)
-    {
-        health -= damageAmount;
-        Debug.Log("Dano recebido: " + damageAmount + ", health restante: " + health);
-
-        if (health <= 0)
-        {
-            Die();
-        }
     }
 }

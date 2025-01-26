@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      4 - Ballooney_Flying (32 x 32)_0: -6641116038380286697
+      4 - Ballooney_Flying (32 x 32)_1: -5732641182323651930
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

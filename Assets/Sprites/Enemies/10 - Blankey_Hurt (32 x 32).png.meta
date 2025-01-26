@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      10 - Blankey_Hurt (32 x 32)_0: -5789379669160852223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

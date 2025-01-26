@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      2 - Martian_Red_Hurt (32 x 32)_0: 7116107348924008417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

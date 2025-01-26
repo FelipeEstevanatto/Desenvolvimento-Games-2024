@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      7 - Orchid_Owl_Hurt (32 x 32)_0: -5049854529658112549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      3 - Hermie_Crawling (32 x 32)_0: -649667392506720292
+      3 - Hermie_Crawling (32 x 32)_1: 9180073896018064697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      6 - Jumpy_Lumpy_Leaping_&_Falling (32 x 32)_0: 4634756883463779263
+      6 - Jumpy_Lumpy_Leaping_&_Falling (32 x 32)_1: -2439880115695949817
+      6 - Jumpy_Lumpy_Leaping_&_Falling (32 x 32)_2: 3354226802147924870
+      6 - Jumpy_Lumpy_Leaping_&_Falling (32 x 32)_3: -5993160733366880384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

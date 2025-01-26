@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      10 - Blankey_Floating (32 x 32)_0: 6059137778729831673
+      10 - Blankey_Floating (32 x 32)_1: 2046504797640899705
+      10 - Blankey_Floating (32 x 32)_2: -6426243327997776856
+      10 - Blankey_Floating (32 x 32)_3: -3640125706714349475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

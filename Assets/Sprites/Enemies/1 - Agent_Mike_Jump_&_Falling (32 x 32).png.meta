@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      1 - Agent_Mike_Jump_&_Falling (32 x 32)_0: -332046000308301099
+      1 - Agent_Mike_Jump_&_Falling (32 x 32)_1: -8593160448742868038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

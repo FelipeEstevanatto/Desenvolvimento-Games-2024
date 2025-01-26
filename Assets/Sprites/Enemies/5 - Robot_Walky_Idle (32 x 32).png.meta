@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      5 - Robot_Walky_Idle (32 x 32)_0: 7730518466217185684
+      5 - Robot_Walky_Idle (32 x 32)_1: -251078614649720549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

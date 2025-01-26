@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      7 - Orchid_Owl_Flying (32 x 32)_0: -7478646664463691743
+      7 - Orchid_Owl_Flying (32 x 32)_1: 4285406285531576022
+      7 - Orchid_Owl_Flying (32 x 32)_2: 5080461245967380067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

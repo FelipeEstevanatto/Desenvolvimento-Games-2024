@@ -19,7 +19,7 @@ public class BulletController : MonoBehaviour
         }
         else if (collision.CompareTag("Damagable"))
         {
-            Enemy2 enemy = collision.GetComponent<Enemy2>();
+            Enemy enemy = collision.GetComponent<Enemy>();
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);

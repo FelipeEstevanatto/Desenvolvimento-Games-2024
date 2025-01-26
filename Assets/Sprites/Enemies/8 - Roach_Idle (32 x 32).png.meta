@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      8 - Roach_Idle (32 x 32)_0: 9099999010810364225
+      8 - Roach_Idle (32 x 32)_1: -1444068750707893045
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

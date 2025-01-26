@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.WSA;
 
 public class WeaponManager : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private GameObject player;
 
     private Weapon currentWeapon; // equipped weapon
-    private Weapon baseWeaponInstance; 
-    public Weapon pickupWeaponInstance; 
+    private Weapon baseWeaponInstance;
+    [HideInInspector] public Weapon pickupWeaponInstance; 
     private bool isFiring = false;
 
     void Start()
@@ -98,7 +99,7 @@ public class WeaponManager : MonoBehaviour
             // if weapon is a Gun type, find the FirePoint transform and assign it to the Gun.firePoint variable
             if (currentWeapon is Gun currentGun)
             {
-                Transform firePointTransform = currentWeapon.transform.Find("FirePoint");
+                Transform firePointTransform = currentWeapon.transform.Find("FirePoint"); //REVISAR MÉTODO MELHOR
                 if (firePointTransform != null)
                 {
                     currentGun.firePoint = firePointTransform;
@@ -146,5 +147,7 @@ public class WeaponManager : MonoBehaviour
     }
 
 }
+
+
 
 

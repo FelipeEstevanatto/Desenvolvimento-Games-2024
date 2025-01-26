@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      1 - Agent_Mike_Running (32 x 32)_0: -3143911055269704792
+      1 - Agent_Mike_Running (32 x 32)_1: 8553273936321841844
+      1 - Agent_Mike_Running (32 x 32)_2: 2211201233680139159
+      1 - Agent_Mike_Running (32 x 32)_3: 7702700308914754589
+      1 - Agent_Mike_Running (32 x 32)_4: -4059878392020635675
+      1 - Agent_Mike_Running (32 x 32)_5: -6689569814302393488
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

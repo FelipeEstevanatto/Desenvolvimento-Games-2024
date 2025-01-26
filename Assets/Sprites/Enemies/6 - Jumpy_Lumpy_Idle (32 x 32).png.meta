@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      6 - Jumpy_Lumpy_Idle (32 x 32)_0: 206428280932237099
+      6 - Jumpy_Lumpy_Idle (32 x 32)_1: 5967601261165890535
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

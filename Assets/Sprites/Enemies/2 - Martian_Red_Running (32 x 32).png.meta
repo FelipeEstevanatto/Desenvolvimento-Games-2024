@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      2 - Martian_Red_Running (32 x 32)_0: 4828959255747550918
+      2 - Martian_Red_Running (32 x 32)_1: 3773910021628415695
+      2 - Martian_Red_Running (32 x 32)_2: 301768936301407214
+      2 - Martian_Red_Running (32 x 32)_3: 1407479312440406946
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

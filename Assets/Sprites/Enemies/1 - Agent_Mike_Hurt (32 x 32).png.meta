@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      1 - Agent_Mike_Hurt (32 x 32)_0: -3015174839280652416
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

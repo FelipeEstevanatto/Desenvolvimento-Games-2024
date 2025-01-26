@@ -2576,7 +2576,7 @@ GameObject:
   - component: {fileID: 991743328}
   - component: {fileID: 991743327}
   - component: {fileID: 991743326}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy2
   m_TagString: Damagable
   m_Icon: {fileID: 0}
@@ -5072,7 +5072,7 @@ GameObject:
   - component: {fileID: 1035255112}
   - component: {fileID: 1035255116}
   - component: {fileID: 1035255117}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Damagable
   m_Icon: {fileID: 0}
@@ -5208,8 +5208,8 @@ Transform:
   m_GameObject: {fileID: 1035255111}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 1.36, z: 0}
-  m_LocalScale: {x: 1.8218712, y: 3.916566, z: 1}
+  m_LocalPosition: {x: -1, y: 1.3897, z: 0}
+  m_LocalScale: {x: 1.8218712, y: 3.9760978, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 777675436}
@@ -5296,6 +5296,7 @@ GameObject:
   - component: {fileID: 1038564670}
   - component: {fileID: 1038564668}
   - component: {fileID: 1038564671}
+  - component: {fileID: 1038564672}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5648,6 +5649,24 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1038564672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038564662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf0ebcb3f1e81e4f8b364a697832f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: 4563206793464300232, guid: f239d69d20e13d941b307b1116d66994, type: 3}
+  grenadeSpawnPoint: {fileID: 1948605309}
+  maxGrenades: 50
+  throwForce: 25
+  throwAngle: 45
+  player: {fileID: 1038564662}
 --- !u!1 &1051528365
 GameObject:
   m_ObjectHideFlags: 0

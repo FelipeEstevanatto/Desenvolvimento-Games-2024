@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      8 - Roach_Running (32 x 32)_0: -6852821641895809915
+      8 - Roach_Running (32 x 32)_1: 1875451399585751756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

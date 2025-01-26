@@ -37,8 +37,15 @@ public class WeaponPickup : MonoBehaviour
                 if (weaponPrefab is Gun && playerWeaponManager.pickupWeaponInstance != null && weaponPrefab.GetType() == playerWeaponManager.pickupWeaponInstance.GetType())
                 {
                     Gun playerPickUpGun = playerWeaponManager.pickupWeaponInstance as Gun;
-                    playerPickUpGun.Reload(); 
-                    Destroy(gameObject);
+                    if (playerPickUpGun.currentAmmo == playerPickUpGun.ammoCapacity)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        playerPickUpGun.Reload(); 
+                        Destroy(gameObject);
+                    }
                 }
                 else if (Input.GetKeyDown(KeyCode.E))
                 {

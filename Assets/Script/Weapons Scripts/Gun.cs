@@ -6,7 +6,7 @@ public abstract class Gun : Weapon
     public float shotSpeed;
     public Transform firePoint;
     [SerializeField] private int bulletDamage;
-    [SerializeField] private int ammoCapacity;
+    public int ammoCapacity;
     public float fireRate;
     public int bulletsPerShot = 1;
     [HideInInspector] public int currentAmmo;
@@ -38,7 +38,7 @@ public abstract class Gun : Weapon
         }
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        SetDamage(bullet);
+        SetDamage(bullet); //passes the damage defined in gun to the bullet
         bullet.transform.localScale = new Vector3(direction * Mathf.Abs(bullet.transform.localScale.x),
                                                   bullet.transform.localScale.y,
                                                   bullet.transform.localScale.z);

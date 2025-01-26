@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      3 - Hermie_Hiding_&_Peek (32 x 32)_0: -4634058833261752335
+      3 - Hermie_Hiding_&_Peek (32 x 32)_1: -8255128231110732373
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
