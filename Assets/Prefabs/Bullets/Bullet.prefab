@@ -165,5 +165,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a808e674aeb6539428bcb8fd8462fb22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDestroyTime: 1
   damage: 0
+  maxRange: 20

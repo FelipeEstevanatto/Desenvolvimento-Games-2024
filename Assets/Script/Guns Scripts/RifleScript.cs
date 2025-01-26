@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RifleScript : Gun
+public class Rifle : Gun
 {
     protected override void FireBullet(float direction)
     {

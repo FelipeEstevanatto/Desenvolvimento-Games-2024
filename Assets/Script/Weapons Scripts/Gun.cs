@@ -3,11 +3,11 @@ using UnityEngine;
 public abstract class Gun : Weapon
 {
     public GameObject bulletPrefab;
-    public float shotSpeed;
+    public float shotSpeed = 20f;
     public Transform firePoint;
-    [SerializeField] private int bulletDamage;
-    public int ammoCapacity;
-    public float fireRate;
+    [SerializeField] private float bulletDamage = 10f;
+    public int ammoCapacity = 20;
+    public float fireRate = 0.1f;
     public int bulletsPerShot = 1;
     [HideInInspector] public int currentAmmo;
     [HideInInspector] public float nextFireTime;
@@ -49,14 +49,12 @@ public abstract class Gun : Weapon
 
     public void SetDamage(GameObject bullet)
     {
-        BulletController bulletController = bullet.GetComponent<BulletController>();
+        Bullet bulletController = bullet.GetComponent<Bullet>();
         if (bulletController != null)
         {
             bulletController.damage = this.bulletDamage; 
         }
     }
-
-    //Aplicar Reload com um botao pressionável e adicionar sistema de pente das armas 
     public void Reload()
     {
         currentAmmo = ammoCapacity;
