@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public int Health => health;
+    public bool IsCrouching => isCrouching;
+    public bool IsLookingUp => isLookingUp;
 
     [SerializeField] private int health;
     [SerializeField] private float speed;
@@ -40,7 +42,8 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   if (isDashing == false) {
+    {   
+        if (isDashing == false) {
             HandleInput();
             HandleCrouch();
         }
@@ -53,9 +56,9 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if (!isDashing)
-    {
-        HandleMovement();
-    }
+        {
+            HandleMovement();
+        }
         CheckGrounded();
     }
 
@@ -86,7 +89,7 @@ public class PlayerController : MonoBehaviour
                 crouchCollider.enabled = true;
             }
         }
-        else if (isCrouching && !Physics2D.Raycast(transform.position, Vector2.up, 1f, groundLayer))
+        else if (isCrouching && CanStandUp())
         {
             isCrouching = false;
             speed /= crouchSpeedMultiplier;
@@ -97,11 +100,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private bool CanStandUp()
+    {
+        // E.g. a small raycast / circlecast / boxcast above the player to ensure no ceiling
+        return !P   
+    }
+
     private void HandleMovement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
 
+        // Flip the player sprite
         if (horizontalInput != 0)
         {
             Vector3 newScale = transform.localScale;

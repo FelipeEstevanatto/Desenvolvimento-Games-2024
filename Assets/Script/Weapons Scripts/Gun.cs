@@ -12,6 +12,8 @@ public abstract class Gun : Weapon
     [HideInInspector] public int currentAmmo;
     [HideInInspector] public float nextFireTime;
 
+    private PlayerController playerController;
+
     void Awake()
     {
         currentAmmo = ammoCapacity;
@@ -20,6 +22,7 @@ public abstract class Gun : Weapon
         {
             firePoint = transform.Find("FirePoint");
         }
+        playerController = FindFirstObjectByType<PlayerController>();
     }
 
     public override void Attack(float direction)
@@ -37,18 +40,27 @@ public abstract class Gun : Weapon
     {
         if (firePoint == null)
         {
-            Debug.LogError("FirePoint não definido");
+            Debug.LogError("FirePoint nï¿½o definido");
             return;
         }
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        Vector3 bulletStartPosition = new Vector3(firePoint.position.x, firePoint.position.y + attackHeightOffset, firePoint.position.z);
+        GameObject bullet = Instantiate(bulletPrefab, bulletStartPosition, Quaternion.identity);
         SetDamage(bullet); //passes the damage defined in gun to the bullet
-        bullet.transform.localScale = new Vector3(direction * Mathf.Abs(bullet.transform.localScale.x),
-                                                  bullet.transform.localScale.y,
-                                                  bullet.transform.localScale.z);
-
+        
         Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
-        bulletRB.linearVelocity = new Vector2(direction * shotSpeed, 0);
+
+        if (playerController != null && playerController.IsLookingUp)
+        {
+            bulletRB.linearVelocity = new Vector2(0, shotSpeed);
+        }
+        else
+        {
+            bullet.transform.localScale = new Vector3(direction * Mathf.Abs(bullet.transform.localScale.x),
+                                                      bullet.transform.localScale.y,
+                                                      bullet.transform.localScale.z);
+            bulletRB.linearVelocity = new Vector2(direction * shotSpeed, 0);
+        }
     }
 
     public void SetDamage(GameObject bullet)
