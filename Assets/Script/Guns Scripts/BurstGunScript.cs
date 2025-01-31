@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BurstGun: Gun
 {
-    [SerializeField] int burstBulletsTotal;
+    [SerializeField] int burstBulletsTotal = 3;
     [SerializeField] float shotDelay;
     protected override void FireBullet(float direction)
     {

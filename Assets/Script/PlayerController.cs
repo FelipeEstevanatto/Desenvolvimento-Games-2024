@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
     private bool CanStandUp()
     {
         // E.g. a small raycast / circlecast / boxcast above the player to ensure no ceiling
-        return !P   
+        return !Physics2D.Raycast(transform.position, Vector2.up, 1f, groundLayer);
     }
 
     private void HandleMovement()

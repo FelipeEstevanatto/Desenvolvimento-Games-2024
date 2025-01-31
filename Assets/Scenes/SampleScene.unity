@@ -574,16 +574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319a34094b23de64a9c402f1662387d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1038564664}
-  smoothTime: 0.15
-  YMaxEnabled: 0
-  YMaxValue: 0
-  YMinEnabled: 0
-  YMinValue: 0
-  XMaxEnabled: 0
-  XMaxValue: 0
-  XMinEnabled: 0
-  XMinValue: 0
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6226,7 +6216,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1035255117
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
