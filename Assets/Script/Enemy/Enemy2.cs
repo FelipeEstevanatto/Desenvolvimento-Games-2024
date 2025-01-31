@@ -10,12 +10,13 @@ public class Enemy2 : Enemy
 
     // O valor da health será configurável diretamente no Inspector da Unity para este inimigo
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         posicaoJogador = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void Update()
+    protected override void Update()
     {
         SeguirJogador();
         VerificarColisaoJogador();
@@ -35,10 +36,5 @@ public class Enemy2 : Enemy
         {
             Die();
         }
-    }
-
-    protected override void Die()
-    {
-        Destroy(gameObject);
     }
 }

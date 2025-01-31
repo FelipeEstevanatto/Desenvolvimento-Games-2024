@@ -11,7 +11,7 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private GameObject player;
 
     private Weapon currentWeapon; // equipped weapon
-    private Weapon baseWeaponInstance;
+    [HideInInspector] public Weapon baseWeaponInstance;
     [HideInInspector] public Weapon pickupWeaponInstance; 
     private bool isFiring = false;
 
@@ -83,7 +83,7 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
-    private void EquipWeapon(Weapon weapon)
+    public void EquipWeapon(Weapon weapon)
     {
         if (currentWeapon != null)
         {
@@ -95,20 +95,6 @@ public class WeaponManager : MonoBehaviour
         if (currentWeapon != null)
         {
             currentWeapon.gameObject.SetActive(true); // enable new weapon
-
-            // if weapon is a Gun type, find the FirePoint transform and assign it to the Gun.firePoint variable
-            if (currentWeapon is Gun currentGun)
-            {
-                Transform firePointTransform = currentWeapon.transform.Find("FirePoint"); //REVISAR MÉTODO MELHOR
-                if (firePointTransform != null)
-                {
-                    currentGun.firePoint = firePointTransform;
-                }
-                else
-                {
-                    Debug.LogWarning("FirePoint não encontrado na arma: " + currentGun.name);
-                }
-            }
         }
     }
 

@@ -4,7 +4,7 @@ public abstract class Gun : Weapon
 {
     public GameObject bulletPrefab;
     public float shotSpeed = 20f;
-    public Transform firePoint;
+    [HideInInspector] public Transform firePoint;
     [SerializeField] private float bulletDamage = 10f;
     public int ammoCapacity = 20;
     public float fireRate = 0.1f;
@@ -16,6 +16,10 @@ public abstract class Gun : Weapon
     {
         currentAmmo = ammoCapacity;
         nextFireTime = 0f;
+        if (firePoint == null)
+        {
+            firePoint = transform.Find("FirePoint");
+        }
     }
 
     public override void Attack(float direction)

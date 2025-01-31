@@ -10,7 +10,7 @@ public class BaseBullet : Bullet
             //Adicionar efeito de colisão da bullet na parede(Quando tivermos)
             Destroy(gameObject);
         }
-        else if (collision.CompareTag("Damagable"))
+        if (collision.CompareTag("Damagable"))
         {
             EnemyDamage(collision);
         }

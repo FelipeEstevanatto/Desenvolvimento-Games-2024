@@ -40,10 +40,10 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   if ( isDashing == false) {
-        HandleInput();
-        HandleCrouch();
-    }
+    {   if (isDashing == false) {
+            HandleInput();
+            HandleCrouch();
+        }
         HandleAnimation();
         if(Input.GetKey(KeyCode.LeftShift) && canDash) {
             StartCoroutine(Dash());
@@ -132,23 +132,23 @@ public class PlayerController : MonoBehaviour
     }
 
     private IEnumerator Dash()
-{
-    canDash = false; // Desabilita a capacidade de dar Dash novamente
-    isDashing = true; // Marca que está dashing
+    {
+        canDash = false; // Desabilita a capacidade de dar Dash novamente
+        isDashing = true; // Marca que está dashing
 
-    float originalGravity = rb.gravityScale; // Salva a gravidade original
-    rb.gravityScale = 0f; // Desabilita gravidade durante o Dash
-    rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f); // Aplica a força de Dash na direção correta
-    tr.emitting = true; // Ativa o efeito de trail renderer
+        float originalGravity = rb.gravityScale; // Salva a gravidade original
+        rb.gravityScale = 0f; // Desabilita gravidade durante o Dash
+        rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f); // Aplica a força de Dash na direção correta
+        tr.emitting = true; // Ativa o efeito de trail renderer
 
-    yield return new WaitForSeconds(dasgingTime); // Espera o tempo do Dash
+        yield return new WaitForSeconds(dasgingTime); // Espera o tempo do Dash
 
-    tr.emitting = false; // Desativa o efeito de trail renderer
-    rb.gravityScale = originalGravity; // Restaura a gravidade
-    isDashing = false; // Termina o Dash
+        tr.emitting = false; // Desativa o efeito de trail renderer
+        rb.gravityScale = originalGravity; // Restaura a gravidade
+        isDashing = false; // Termina o Dash
 
-    yield return new WaitForSeconds(dashingCooldown); // Espera o cooldown
-    canDash = true; // Permite que o Dash seja usado novamente
-}
+        yield return new WaitForSeconds(dashingCooldown); // Espera o cooldown
+        canDash = true; // Permite que o Dash seja usado novamente
+    }
 
 }

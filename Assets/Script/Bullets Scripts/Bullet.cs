@@ -33,4 +33,5 @@ public abstract class Bullet : MonoBehaviour
 
         Destroy(gameObject);  // Destrói a bala após o impacto
     }
+
 }

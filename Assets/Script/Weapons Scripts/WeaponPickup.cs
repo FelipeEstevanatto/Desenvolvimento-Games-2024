@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    public Weapon weaponPrefab; // Prefab da arma a ser pega
+    public Weapon weaponPrefab; 
     private bool isPlayerInRange = false;
     private WeaponManager playerWeaponManager;
 
@@ -59,7 +59,12 @@ public class WeaponPickup : MonoBehaviour
         if (playerWeaponManager != null)
         {
             playerWeaponManager.PickupWeapon(weaponPrefab);
+            if (!playerWeaponManager.baseWeaponInstance.gameObject.activeSelf)
+            {
+                playerWeaponManager.EquipWeapon(playerWeaponManager.pickupWeaponInstance);
+            }
             Destroy(gameObject);
         }
     }
+
 }
