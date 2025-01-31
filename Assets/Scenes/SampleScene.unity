@@ -5225,13 +5225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14282a3c3e31b30449dd9a008acd4d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  speed: 2.5
-  ground: 1
-  groundCheck: {fileID: 777675436}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!212 &1035255114
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5436,7 +5429,7 @@ SpriteRenderer:
   m_SortingLayerID: 1168568993
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5223125860524820781, guid: 66a214c68aa31c844a629554bf589097, type: 3}
+  m_Sprite: {fileID: 1483274299760433543, guid: 66a214c68aa31c844a629554bf589097, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
