@@ -12,7 +12,7 @@ public abstract class Gun : Weapon
     [HideInInspector] public int currentAmmo;
     [HideInInspector] public float nextFireTime;
 
-    private PlayerController playerController;
+    protected PlayerController playerController;
 
     void Awake()
     {

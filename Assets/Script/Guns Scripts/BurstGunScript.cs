@@ -16,12 +16,18 @@ public class BurstGun: Gun
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             SetDamage(bullet); //passes the damage defined in gun to the bullet
-            bullet.transform.localScale = new Vector3(direction * Mathf.Abs(bullet.transform.localScale.x),
-                                                        bullet.transform.localScale.y,
-                                                        bullet.transform.localScale.z);
-
             Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
-            bulletRB.linearVelocity = new Vector2(direction * shotSpeed, 0);
+            if (playerController != null && playerController.IsLookingUp)
+            {
+                bulletRB.linearVelocity = new Vector2(0, shotSpeed);
+            }
+            else
+            {
+                bullet.transform.localScale = new Vector3(direction * Mathf.Abs(bullet.transform.localScale.x),
+                                                          bullet.transform.localScale.y,
+                                                          bullet.transform.localScale.z);
+                bulletRB.linearVelocity = new Vector2(direction * shotSpeed, 0);
+            }
             yield return new WaitForSeconds(shotDelay);
         }
     }
