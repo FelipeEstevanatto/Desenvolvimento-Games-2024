@@ -1,25 +1,43 @@
 fileFormatVersion: 2
-guid: 2a708a1b7a1d3764c82a079862d99f9e
+guid: 0714661ad0b8b914fbf380bbb99657ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1071083020363879801
-    second: Run2_0
+      213: 5676965158625959486
+    second: HandsRun_0
   - first:
-      213: 3398041401215206678
-    second: Run2_1
+      213: 9149303686494718698
+    second: HandsRun_1
   - first:
-      213: 2456362860138005872
-    second: Run2_2
+      213: -7302600096820001840
+    second: HandsRun_2
   - first:
-      213: 8911064690243821749
-    second: Run2_3
+      213: -1756306513652625612
+    second: HandsRun_3
   - first:
-      213: 3375198261198509059
-    second: Run2_4
+      213: -5636911624375191081
+    second: HandsRun_4
   - first:
-      213: 3038247332115490165
-    second: Run2_5
+      213: -7866290598655774092
+    second: HandsRun_5
+  - first:
+      213: -820676733397416120
+    second: HandsRun_6
+  - first:
+      213: 6633226193942885842
+    second: HandsRun_7
+  - first:
+      213: 5686255817793973525
+    second: HandsRun_8
+  - first:
+      213: -2125719086135636145
+    second: HandsRun_9
+  - first:
+      213: 8057673458853298470
+    second: HandsRun_10
+  - first:
+      213: 5830768447069609242
+    second: HandsRun_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,133 +133,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run2_0
+      name: HandsRun_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78a2246faafb221f0800000000000000
-      internalID: -1071083020363879801
+      spriteID: e3e5b22ebb1a8ce40800000000000000
+      internalID: 5676965158625959486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run2_1
+      name: HandsRun_1
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 615c08b96a4482f20800000000000000
-      internalID: 3398041401215206678
+      spriteID: aea80bf4a3bd8fe70800000000000000
+      internalID: 9149303686494718698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run2_2
+      name: HandsRun_2
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0750df5c101c61220800000000000000
-      internalID: 2456362860138005872
+      spriteID: 0d38f4c17e3f7aa90800000000000000
+      internalID: -7302600096820001840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run2_3
+      name: HandsRun_3
       rect:
         serializedVersion: 2
         x: 144
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b062887f167aab70800000000000000
-      internalID: 8911064690243821749
+      spriteID: 43fc709f78850a7e0800000000000000
+      internalID: -1756306513652625612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run2_4
+      name: HandsRun_4
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 304d04d9fec17de20800000000000000
-      internalID: 3375198261198509059
+      spriteID: 7d9b8d64ebaa5c1b0800000000000000
+      internalID: -5636911624375191081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run2_5
+      name: HandsRun_5
       rect:
         serializedVersion: 2
         x: 240
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 575a58ae9d50a2a20800000000000000
-      internalID: 3038247332115490165
+      spriteID: 472b02fb06255d290800000000000000
+      internalID: -7866290598655774092
       vertices: []
       indices: 
       edges: []
@@ -250,7 +268,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4ee4d7bbff97c9d42b76a64b4b608919
+    spriteID: 23802ef0eec04354893c56d1e67c05e8
     internalID: 0
     vertices: []
     indices: 
@@ -260,12 +278,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Run2_0: -1071083020363879801
-      Run2_1: 3398041401215206678
-      Run2_2: 2456362860138005872
-      Run2_3: 8911064690243821749
-      Run2_4: 3375198261198509059
-      Run2_5: 3038247332115490165
+      HandsRun_0: 5676965158625959486
+      HandsRun_1: 9149303686494718698
+      HandsRun_2: -7302600096820001840
+      HandsRun_3: -1756306513652625612
+      HandsRun_4: -5636911624375191081
+      HandsRun_5: -7866290598655774092
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

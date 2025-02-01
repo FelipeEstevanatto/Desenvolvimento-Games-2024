@@ -134,14 +134,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Burst Gun
   description: 
-  firePoint: {fileID: 8162419635967767033}
   weaponPrefab: {fileID: 6018145761252784790}
   bulletPrefab: {fileID: 3193756969829563608, guid: 22baca3810751d3478b23408ea10f72b, type: 3}
   shotSpeed: 20
   firePoint: {fileID: 0}
   bulletDamage: 10
   ammoCapacity: 1000
-  fireRate: 0.1
+  fireRate: 0.5
   bulletsPerShot: 3
   currentAmmo: 0
   nextFireTime: 0

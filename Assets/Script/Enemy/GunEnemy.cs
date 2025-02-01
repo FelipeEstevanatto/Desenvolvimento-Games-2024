@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class GunEnemy : Enemy
 {
-    [SerializeField] private float fireRate = 1f; 
-    [SerializeField] private float walkDistance = 5f; 
-    [SerializeField] private float speed = 2f; 
+    [SerializeField] private float fireRate = 1f;
+    [SerializeField] private float walkDistance = 5f;
+    [SerializeField] private float speed = 5f;
     [SerializeField] Animator anim;
     [SerializeField] Animator handsAnim;
 
     private float nextFireTime;
     private bool isAttacking;
-    private bool isWalking;
+    private bool isRunning;
+    private Vector3 weaponHolderOriginalPos;
+    private Vector3 weaponHolderTargetPos;
+    private float weaponMoveSpeed = 5f; 
+
+    protected override void Start()
+    {
+        base.Start();
+        weaponHolderOriginalPos = weaponHolder.localPosition; 
+        weaponHolderTargetPos = weaponHolderOriginalPos; 
+    }
 
     protected override void Update()
     {
@@ -18,18 +28,16 @@ public class GunEnemy : Enemy
 
         float distanceToTarget = Mathf.Abs(targetDistance);
 
-        // define enemy state
-        isWalking = distanceToTarget < walkDistance && distanceToTarget > attackDistance;
+        // Define o estado do inimigo
+        isRunning = distanceToTarget < walkDistance && distanceToTarget > attackDistance;
         isAttacking = distanceToTarget <= attackDistance && Time.time >= nextFireTime;
 
-        if(anim != null)
+        if (anim != null)
         {
-            anim.SetBool("IsWalking", isWalking);
-            handsAnim.SetBool("isRunning", isWalking);
-            //anim.SetBool("isAttacking", isAttacking);
+            anim.SetBool("isRunning", isRunning);
+            handsAnim.SetBool("isRunning", isRunning);
         }
 
-        // Se estiver atacando, para de andar
         if (isAttacking)
         {
             Attack();
@@ -38,14 +46,18 @@ public class GunEnemy : Enemy
 
     private void FixedUpdate()
     {
-        if (isWalking && !isAttacking)
+        if (isRunning && !isAttacking)
         {
             Move();
+            weaponHolderTargetPos = new Vector3(-0.05f, weaponHolderOriginalPos.y, weaponHolderOriginalPos.z);
         }
         else
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            weaponHolderTargetPos = weaponHolderOriginalPos;
         }
+
+        weaponHolder.localPosition = Vector3.Lerp(weaponHolder.localPosition, weaponHolderTargetPos, Time.fixedDeltaTime * weaponMoveSpeed); //weapon moves smoothly 
     }
 
     private void Move()
