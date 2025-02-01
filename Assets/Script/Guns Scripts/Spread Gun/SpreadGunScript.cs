@@ -24,7 +24,7 @@ public class SpreadGun : Gun
             
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             SetDamage(bullet);
-
+            SetShooterTag(bullet);
             // convert the angle to radians (unity default)
             float radians = Mathf.Deg2Rad * angle;
 

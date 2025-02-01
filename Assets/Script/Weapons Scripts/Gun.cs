@@ -22,7 +22,6 @@ public abstract class Gun : Weapon
         {
             firePoint = transform.Find("FirePoint");
         }
-        playerController = FindFirstObjectByType<PlayerController>();
     }
 
     public override void Attack(float direction)
@@ -44,10 +43,9 @@ public abstract class Gun : Weapon
             return;
         }
 
-        Vector3 bulletStartPosition = new Vector3(firePoint.position.x, firePoint.position.y + attackHeightOffset, firePoint.position.z);
-        GameObject bullet = Instantiate(bulletPrefab, bulletStartPosition, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         SetDamage(bullet); //passes the damage defined in gun to the bullet
-        
+        SetShooterTag(bullet);
         Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
 
         if (playerController != null && playerController.IsLookingUp)
@@ -63,7 +61,7 @@ public abstract class Gun : Weapon
         }
     }
 
-    public void SetDamage(GameObject bullet)
+    protected void SetDamage(GameObject bullet)
     {
         Bullet bulletController = bullet.GetComponent<Bullet>();
         if (bulletController != null)
@@ -71,6 +69,16 @@ public abstract class Gun : Weapon
             bulletController.damage = this.bulletDamage; 
         }
     }
+
+    protected void SetShooterTag(GameObject bullet)
+    {
+        Bullet bulletController = bullet.GetComponent<Bullet>();
+        if (bulletController != null)
+        {
+            bulletController.shooterTag = transform.root.tag;
+        }
+    }
+
     public void Reload()
     {
         currentAmmo = ammoCapacity;

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int Health => health;
+    public float Health => health;
     public bool IsCrouching => isCrouching;
     public bool IsLookingUp => isLookingUp;
 
-    [SerializeField] private int health;
+    [SerializeField] private float health = 100f;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float crouchSpeedMultiplier;
@@ -20,21 +20,22 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer sprite;
     private bool isGrounded;
     private bool isCrouching;
     private bool isLookingUp;
     private bool canDash = true;
     private bool isDashing;
-    [SerializeField]private float dashingPower = 24f;
-    [SerializeField]private float dasgingTime = 0.2f;
-    [SerializeField]private float dashingCooldown = 1f;
+    [SerializeField] private float dashingPower = 24f;
+    [SerializeField] private float dasgingTime = 0.2f;
+    [SerializeField] private float dashingCooldown = 1f;
     [SerializeField] private TrailRenderer tr; 
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
 
         normalCollider.enabled = true;
         crouchCollider.enabled = false;
@@ -66,7 +67,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
         {
-            health--;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Jump", true);
         }
@@ -161,4 +161,29 @@ public class PlayerController : MonoBehaviour
         canDash = true; // Permite que o Dash seja usado novamente
     }
 
+    public void TakeDamage(float damageAmount)
+    {
+        health -= damageAmount;
+        Debug.Log($"Dano recebido: {damageAmount}, health restante: {health}");
+
+        if (health <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            StartCoroutine(TookDamageCoroutine());
+        }
+    }
+    IEnumerator TookDamageCoroutine()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = Color.white;
+    }
+
+    protected void Die()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -6,12 +6,23 @@ public class BulletShotgun : Bullet
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Damagable"))
+        float distance = Vector2.Distance(startPos, collision.transform.position); // distance between target and firepoint
+        damage = CalculateDamage(distance); //gets the bullet damage based on positionz
+        if (this.shooterTag == "Player" && collision.CompareTag("Enemy"))
         {
-            float distance = Vector2.Distance(startPos, collision.transform.position); // distance between target and firepoint
-            damage = CalculateDamage(distance); //gets the bullet damage based on position
-
             EnemyDamage(collision);
+            Destroy(gameObject);
+        }
+        else if (this.shooterTag == "Enemy" && collision.CompareTag("Player"))
+        {
+            playerDamage(collision);
+            Destroy(gameObject);
+        }
+        //destroy bullet if it hits a wall
+        if (collision.CompareTag("Ground"))
+        {
+            //Adicionar efeito de colisão da bullet na parede(Quando tivermos)
+            Destroy(gameObject);
         }
     }
 

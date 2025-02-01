@@ -16,6 +16,7 @@ public class BurstGun: Gun
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             SetDamage(bullet); //passes the damage defined in gun to the bullet
+            SetShooterTag(bullet);
             Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
             if (playerController != null && playerController.IsLookingUp)
             {
@@ -31,8 +32,5 @@ public class BurstGun: Gun
             yield return new WaitForSeconds(shotDelay);
         }
     }
-
-    
-
 }
 

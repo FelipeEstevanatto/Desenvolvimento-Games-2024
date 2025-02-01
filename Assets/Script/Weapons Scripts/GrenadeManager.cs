@@ -8,7 +8,8 @@ public class GrenadeManager : MonoBehaviour
     private int currentGrenades; 
     [SerializeField] private float throwForce = 10f; 
     [SerializeField] private float throwAngle = 45f; // degrees
-    [SerializeField] private GameObject player; 
+    [SerializeField] private GameObject player;
+    public int CurrentGrenades => currentGrenades;
 
     private void Start()
     {
@@ -31,6 +32,9 @@ public class GrenadeManager : MonoBehaviour
         {
             // instantiate the grenade 
             GameObject grenadeInstance = Instantiate(grenadePrefab, grenadeSpawnPoint.position, Quaternion.identity);
+            //updates the thrower tag in grenade script, so it gives damage to enemy
+            Grenade grenadeController = grenadeInstance.GetComponent<Grenade>();
+            grenadeController.throwerTag = player.tag;
 
             // converts the throw angle in radians
             float angleRad = throwAngle * Mathf.Deg2Rad;
@@ -42,7 +46,7 @@ public class GrenadeManager : MonoBehaviour
             );
 
             Rigidbody2D grenadeRb = grenadeInstance.GetComponent<Rigidbody2D>(); 
-
+            
             // ignore collision between the player and the grenade (CASO A GRANADA NÃO DEVA INTERAGIR COM OUTROS OBJETOS EM CENA, FAZER COM LAYERS EM VEZ DE SCRIPT)
             Physics2D.IgnoreCollision(grenadeInstance.GetComponent<Collider2D>(), player.GetComponent<Collider2D>());
 
@@ -58,11 +62,5 @@ public class GrenadeManager : MonoBehaviour
         {
             Debug.Log("Sem granadas disponíveis"); // If no grenades are left, print a message
         }
-    }
-
-    // function to get the current number of grenades
-    public int GetCurrentGrenades()
-    {
-        return currentGrenades;
     }
 }

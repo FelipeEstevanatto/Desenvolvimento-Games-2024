@@ -28,6 +28,7 @@ public class WeaponManager : MonoBehaviour
     {
         HandleWeaponSwitch();
         HandleWeaponFire();
+        HandleWeaponInCrouch();
     }
 
     private void InstantiateWeapons()
@@ -83,13 +84,35 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
+    private void HandleWeaponInCrouch()
+    {
+        if (playerController.IsCrouching)
+        {
+            if (currentWeapon != null)
+            {
+                Vector3 newPosition = weaponHolderPos.localPosition;
+                newPosition.y = -0.05f;  
+                weaponHolderPos.localPosition = newPosition;
+            }
+        }
+        else
+        {
+            //resets weapon holder position
+            if (currentWeapon != null)
+            {
+                Vector3 newPosition = weaponHolderPos.localPosition;
+                newPosition.y = 0.0f; 
+                weaponHolderPos.localPosition = newPosition;
+            }
+        }
+    }
+
     private void TryFireWeapon()
     {
         if (currentWeapon is Gun gun && gun.currentAmmo > 0 && !isFiring && Time.time >= gun.nextFireTime)
         {
             isFiring = true;
             float direction = Mathf.Sign(player.transform.localScale.x);
-            gun.attackHeightOffset = playerController != null && playerController.IsCrouching ? -1.0f : 0.0f;
             currentWeapon.Attack(direction);
             playerAnimator.SetTrigger("Shoot");
             gun.nextFireTime = Time.time + gun.fireRate;
@@ -108,20 +131,6 @@ public class WeaponManager : MonoBehaviour
         if (currentWeapon != null)
         {
             currentWeapon.gameObject.SetActive(true); // enable new weapon
-
-            // if weapon is a Gun type, find the FirePoint transform and assign it to the Gun.firePoint variable
-            if (currentWeapon is Gun currentGun)
-            {
-                Transform firePointTransform = currentWeapon.transform.Find("FirePoint"); //REVISAR M�TODO MELHOR
-                if (firePointTransform != null)
-                {
-                    currentGun.firePoint = firePointTransform;
-                }
-                else
-                {
-                    Debug.LogWarning("FirePoint n�o encontrado na arma: " + currentGun.name);
-                }
-            }
         }
     }
 

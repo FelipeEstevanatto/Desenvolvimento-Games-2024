@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GrenadeLauncherScript : Gun
+public class GrenadeLauncher : Gun
 {
     [SerializeField] private GameObject grenadePrefab;
     [SerializeField] private float launchForce = 10f; 
@@ -15,6 +15,7 @@ public class GrenadeLauncherScript : Gun
         }
 
         GameObject grenadeInstance = Instantiate(grenadePrefab, firePoint.position, Quaternion.identity);
+        SetThrowerTag(grenadeInstance);
 
         float angleRad = launchAngle * Mathf.Deg2Rad;
 
@@ -27,6 +28,15 @@ public class GrenadeLauncherScript : Gun
         if (grenadeRb != null)
         {
             grenadeRb.linearVelocity = launchVelocity; // apply the calculated velocity to the grenade
+        }
+    }
+
+    private void SetThrowerTag(GameObject grenade)
+    {
+        if (grenade != null)
+        {
+            Grenade grenadeController = grenade.GetComponent<Grenade>();
+            grenadeController.throwerTag = transform.root.tag;
         }
     }
 }
