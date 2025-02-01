@@ -26,12 +26,26 @@ public class Grenade : MonoBehaviour
 
         foreach (Collider2D hit in colliders)
         {
-            if (throwerTag == "Player" && hit.CompareTag("Enemy"))
+            if (throwerTag == "Player")
             {
-                Enemy enemy = hit.GetComponent<Enemy>();
-                if (enemy != null)
+                if (hit.CompareTag("Enemy"))
                 {
-                    enemy.TakeDamage(grenadeDamage);
+                    Enemy enemy = hit.GetComponent<Enemy>();
+                    if (enemy != null)
+                    {
+                        enemy.TakeDamage(grenadeDamage);
+                    }
+                }
+                else //allow grenade TK
+                {
+                    if (hit.CompareTag("Player"))
+                    {
+                        PlayerController player = hit.GetComponent<PlayerController>();
+                        if (player != null)
+                        {
+                            player.TakeDamage(grenadeDamage);
+                        }
+                    }
                 }
             }
             else if (throwerTag == "Enemy" && hit.CompareTag("Player"))

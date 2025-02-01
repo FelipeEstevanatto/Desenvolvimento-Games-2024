@@ -6,6 +6,19 @@ public class WeaponPickup : MonoBehaviour
     private bool isPlayerInRange = false;
     private WeaponManager playerWeaponManager;
 
+    private void Start()
+    {
+        float distanceFromGround = 1.25f;
+        Vector3 initialPosition = transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(initialPosition, Vector2.down, Mathf.Infinity, LayerMask.GetMask("Ground"));
+
+        if (hit.collider != null)
+        {
+            Vector3 groundPosition = hit.point;
+            transform.position = new Vector3(initialPosition.x, groundPosition.y + distanceFromGround, initialPosition.z);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
