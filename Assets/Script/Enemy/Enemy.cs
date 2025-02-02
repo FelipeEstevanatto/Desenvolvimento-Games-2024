@@ -16,8 +16,8 @@ public abstract class Enemy : MonoBehaviour
     protected Rigidbody2D rb;
     protected SpriteRenderer sprite;
 
-    private bool isFlipping = false; 
-    private float flipDelay = 0.2f;  
+    protected bool isFlipping = false; 
+    private float flipDelay = 0.1f;  
 
     private void Awake()
     {
@@ -41,7 +41,6 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Update()
     {
         targetDistance = transform.position.x - target.position.x;
-        CheckFlip();
     }
 
     protected void CheckFlip()
@@ -54,7 +53,7 @@ public abstract class Enemy : MonoBehaviour
             }
         }
     }
-    IEnumerator Flip()
+    protected IEnumerator Flip()
     {
         isFlipping = true;
         yield return new WaitForSeconds(flipDelay); 
