@@ -5,16 +5,18 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Enemy
+  - Damagable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - No Collisions
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Enemies
+  - Player
   - 
   - 
   - 
@@ -41,6 +43,24 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2535115881
+    locked: 0
+  - name: Buildings
+    uniqueID: 2803501073
+    locked: 0
+  - name: Props
+    uniqueID: 2263431745
+    locked: 0
+  - name: Ground
+    uniqueID: 1563332337
+    locked: 0
+  - name: Player
+    uniqueID: 1168568993
+    locked: 0
+  - name: Bullet
+    uniqueID: 2626037293
     locked: 0
   m_RenderingLayers:
   - Default

@@ -1,0 +1,171 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.WSA;
+
+public class WeaponManager : MonoBehaviour
+{
+    [SerializeField] private Weapon baseWeaponPrefab; // primary weapon prefab
+    [SerializeField] private Weapon pickupWeaponPrefab; // secundary weapon prefab
+    [SerializeField] private Transform weaponHolderPos;
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private GameObject player;
+
+    private Weapon currentWeapon; // equipped weapon
+    [HideInInspector] public Weapon baseWeaponInstance;
+    [HideInInspector] public Weapon pickupWeaponInstance; 
+    private bool isFiring = false;
+    private PlayerController playerController;
+
+    void Start()
+    {
+        // Get the PlayerController component
+        playerController = player.GetComponent<PlayerController>();
+
+        InstantiateWeapons();
+    }
+
+    void Update()
+    {
+        HandleWeaponSwitch();
+        HandleWeaponFire();
+        HandleWeaponInCrouch();
+    }
+
+    private void InstantiateWeapons()
+    {
+        if (baseWeaponPrefab != null)
+        {
+            baseWeaponInstance = InstantiateWeapon(baseWeaponPrefab);
+            EquipWeapon(baseWeaponInstance);
+        }
+
+        if (pickupWeaponPrefab != null)
+        {
+            pickupWeaponInstance = InstantiateWeapon(pickupWeaponPrefab);
+            pickupWeaponInstance.gameObject.SetActive(false);
+        }
+    }
+
+    private Weapon InstantiateWeapon(Weapon weaponPrefab)
+    {
+        Weapon weaponInstance = Instantiate(weaponPrefab, weaponHolderPos.position, weaponHolderPos.rotation, weaponHolderPos);
+        weaponInstance.transform.localPosition = Vector3.zero;
+        weaponInstance.transform.localRotation = Quaternion.identity;
+        weaponInstance.transform.localScale /= Mathf.Abs(player.transform.localScale.x);
+        return weaponInstance;
+    }
+
+    private void HandleWeaponSwitch()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            EquipWeapon(baseWeaponInstance);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && pickupWeaponInstance != null)
+        {
+            EquipWeapon(pickupWeaponInstance);
+        }
+    }
+
+    private void HandleWeaponFire()
+    {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+
+        CheckAmmo();
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            TryFireWeapon();
+        }
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            isFiring = false;
+        }
+    }
+
+    private void HandleWeaponInCrouch()
+    {
+        if (playerController.IsCrouching)
+        {
+            if (currentWeapon != null)
+            {
+                Vector3 newPosition = weaponHolderPos.localPosition;
+                newPosition.y = -0.05f;  
+                weaponHolderPos.localPosition = newPosition;
+            }
+        }
+        else
+        {
+            //resets weapon holder position
+            if (currentWeapon != null)
+            {
+                Vector3 newPosition = weaponHolderPos.localPosition;
+                newPosition.y = 0.0f; 
+                weaponHolderPos.localPosition = newPosition;
+            }
+        }
+    }
+
+    private void TryFireWeapon()
+    {
+        if (currentWeapon is Gun gun && gun.currentAmmo > 0 && !isFiring && Time.time >= gun.nextFireTime)
+        {
+            isFiring = true;
+            float direction = Mathf.Sign(player.transform.localScale.x);
+            currentWeapon.Attack(direction);
+            playerAnimator.SetTrigger("Shoot");
+            gun.nextFireTime = Time.time + gun.fireRate;
+        }
+    }
+
+    public void EquipWeapon(Weapon weapon)
+    {
+        if (currentWeapon != null)
+        {
+            currentWeapon.gameObject.SetActive(false); // disable current weapon
+        }
+
+        currentWeapon = weapon;
+
+        if (currentWeapon != null)
+        {
+            currentWeapon.gameObject.SetActive(true); // enable new weapon
+        }
+    }
+
+    public void PickupWeapon(Weapon weaponPrefab)
+    {
+        if (pickupWeaponInstance != null)
+        {
+            Destroy(pickupWeaponInstance.gameObject);
+        }
+
+        pickupWeaponInstance = InstantiateWeapon(weaponPrefab);
+        pickupWeaponInstance.gameObject.SetActive(false);
+    }
+
+    private void CheckAmmo()
+    {
+        if (currentWeapon is Gun gun && gun.currentAmmo <= 0)
+        {
+            if (gun == pickupWeaponInstance) //base gun will always have infinity ammo
+            {
+                RemovePickupWeapon();
+            }
+        }
+    }
+    private void RemovePickupWeapon() //Incluir a anima��o (ou o que quer que seja) da a��o de remover a arma da m�o
+    {
+        if (pickupWeaponInstance != null)
+        {
+            Destroy(pickupWeaponInstance.gameObject);
+            pickupWeaponInstance = null;
+        }
+    }
+
+}
+
+
+
+
