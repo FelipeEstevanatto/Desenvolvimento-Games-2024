@@ -1,14 +1,22 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.WSA;
+using UnityEngine.UI;
 
 public class WeaponManager : MonoBehaviour
 {
+    [Header("Weapon Components")]
     [SerializeField] private Weapon baseWeaponPrefab; // primary weapon prefab
     [SerializeField] private Weapon pickupWeaponPrefab; // secundary weapon prefab
     [SerializeField] private Transform weaponHolderPos;
-    [SerializeField] private Animator playerAnimator;
+
+    [Header("Player Components")]
     [SerializeField] private GameObject player;
+    [SerializeField] private Animator playerAnimator;
+
+    [Header("UI Components")]
+    [SerializeField] private Image weaponSlot1;
+    [SerializeField] private Image weaponSlot2;
 
     private Weapon currentWeapon; // equipped weapon
     [HideInInspector] public Weapon baseWeaponInstance;
@@ -132,6 +140,7 @@ public class WeaponManager : MonoBehaviour
         if (currentWeapon != null)
         {
             currentWeapon.gameObject.SetActive(true); // enable new weapon
+            UpdateWeaponSlot(currentWeapon);
         }
     }
 
@@ -163,6 +172,23 @@ public class WeaponManager : MonoBehaviour
         {
             Destroy(pickupWeaponInstance.gameObject);
             pickupWeaponInstance = null;
+        }
+    }
+
+    private void UpdateWeaponSlot(Weapon weapon)
+    {
+        if (weapon != null && weapon.weaponIcon != null)
+        {
+            Sprite previousWeaponIcon = weaponSlot1.sprite;
+            weaponSlot1.sprite = weapon.weaponIcon;
+            weaponSlot1.enabled = true;
+            weaponSlot2.sprite = previousWeaponIcon;
+            weaponSlot2.enabled = true;
+        }
+        else
+        {
+            weaponSlot1.sprite = null;
+            weaponSlot1.enabled=false;
         }
     }
 

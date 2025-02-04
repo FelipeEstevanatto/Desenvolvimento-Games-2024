@@ -134,7 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Grenade Launcher
   description: Fires grenades that explode in a radius after a short delay.
-  weaponPrefab: {fileID: 5317692179368872602}
+  weaponIcon: {fileID: 21300000, guid: 4eb6735a5c4aaf54b8b153c3d532c2a1, type: 3}
+  attackHeightOffset: 0
   bulletPrefab: {fileID: 0}
   shotSpeed: 0
   firePoint: {fileID: 989657718636483435}

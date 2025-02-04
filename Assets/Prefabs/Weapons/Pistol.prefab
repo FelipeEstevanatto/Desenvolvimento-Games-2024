@@ -103,7 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Pistol
   description: Basic Shooting.
-  weaponPrefab: {fileID: 2875411169699837321}
+  weaponIcon: {fileID: 21300000, guid: 51c7327f715afd345818b70aaefb7c6e, type: 3}
+  attackHeightOffset: 0
   bulletPrefab: {fileID: 3193756969829563608, guid: 22baca3810751d3478b23408ea10f72b, type: 3}
   shotSpeed: 20
   firePoint: {fileID: 0}
@@ -112,6 +113,7 @@ MonoBehaviour:
   fireRate: 0.1
   bulletsPerShot: 1
   currentAmmo: 0
+  nextFireTime: 0
 --- !u!1 &5608890095939147266
 GameObject:
   m_ObjectHideFlags: 0

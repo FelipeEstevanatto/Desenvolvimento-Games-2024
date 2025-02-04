@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Weapon : MonoBehaviour
 {
@@ -6,7 +7,9 @@ public abstract class Weapon : MonoBehaviour
     
     [TextArea(3,5)]
     [SerializeField] private string description;
-    public GameObject weaponPrefab;
+    protected GameObject weaponPrefab;
+    public Sprite weaponIcon;
+
 
     public float attackHeightOffset = 0.0f;
 

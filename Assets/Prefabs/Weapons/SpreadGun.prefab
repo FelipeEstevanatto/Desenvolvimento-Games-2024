@@ -134,7 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Spread Gun
   description: Shoots a spread of 3 bullets.
-  weaponPrefab: {fileID: 7491094098644847284}
+  weaponIcon: {fileID: 21300000, guid: d6e2c64f020c21d49903810d3fc3d6a6, type: 3}
+  attackHeightOffset: 0
   bulletPrefab: {fileID: 4651502799127936051, guid: b521b42ef2d631e47abde0260a6ff8f7, type: 3}
   shotSpeed: 20
   firePoint: {fileID: 0}

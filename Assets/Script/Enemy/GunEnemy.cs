@@ -131,7 +131,7 @@ public class GunEnemy : Enemy
 
     private void MoveTowardsTarget()
     {
-        float moveDirection = targetDistance < 0 ? 1 : -1;
+        float moveDirection = targetDistance < 0 ? 1 : -1; //enemy goes towards player (oposite player direction)
         rb.linearVelocity = new Vector2(speed * moveDirection, rb.linearVelocity.y);
     }
 
