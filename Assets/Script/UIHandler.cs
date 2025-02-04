@@ -8,6 +8,7 @@ public class UIHandler : MonoBehaviour
 {
     public TextMeshProUGUI Text;
     [SerializeField] private PlayerController player;
+    [SerializeField] private GameObject PausedText;
 
     //private int score = 0;
 
@@ -21,6 +22,11 @@ public class UIHandler : MonoBehaviour
     void Update()
     {
         Text.text = "Vida: " + player.Health.ToString();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
     }
     public void LoadScene(string sceneName)
     {
@@ -30,6 +36,7 @@ public class UIHandler : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+        PausedText.SetActive(!PausedText.activeSelf);
     }
 
 }
