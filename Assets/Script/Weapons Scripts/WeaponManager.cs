@@ -153,6 +153,7 @@ public class WeaponManager : MonoBehaviour
             if (gun == pickupWeaponInstance) //base gun will always have infinity ammo
             {
                 RemovePickupWeapon();
+                EquipWeapon(baseWeaponInstance); // Switch back to the default weapon
             }
         }
     }
