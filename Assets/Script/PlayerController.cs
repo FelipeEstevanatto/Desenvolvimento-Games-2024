@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     [SerializeField] private float dashingPower = 24f;
-    [SerializeField] private float dasgingTime = 0.2f;
+    [SerializeField] private float dashingTime = 0.2f;
     [SerializeField] private float dashingCooldown = 1f;
     [SerializeField] private TrailRenderer tr; 
 
@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f); // Aplica a força de Dash na direção correta
         tr.emitting = true; // Ativa o efeito de trail renderer
 
-        yield return new WaitForSeconds(dasgingTime); // Espera o tempo do Dash
+        yield return new WaitForSeconds(dashingTime); // Espera o tempo do Dash
 
         tr.emitting = false; // Desativa o efeito de trail renderer
         rb.gravityScale = originalGravity; // Restaura a gravidade

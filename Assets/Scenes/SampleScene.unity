@@ -5100,7 +5100,7 @@ SpriteRenderer:
   m_SortingLayerID: 1168568993
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5223125860524820781, guid: 66a214c68aa31c844a629554bf589097, type: 3}
+  m_Sprite: {fileID: -478980978696974205, guid: 66a214c68aa31c844a629554bf589097, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5214,7 +5214,7 @@ MonoBehaviour:
   normalCollider: {fileID: 1038564665}
   crouchCollider: {fileID: 1038564669}
   dashingPower: 3
-  dasgingTime: 0.2
+  dashingTime: 0.2
   dashingCooldown: 1
   tr: {fileID: 1038564671}
 --- !u!95 &1038564668
@@ -6111,7 +6111,7 @@ Canvas:
   m_GameObject: {fileID: 1380542975}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0

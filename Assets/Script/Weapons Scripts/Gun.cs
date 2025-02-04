@@ -22,6 +22,7 @@ public abstract class Gun : Weapon
         {
             firePoint = transform.Find("FirePoint");
         }
+        playerController = FindFirstObjectByType<PlayerController>();
     }
 
     public override void Attack(float direction)
@@ -43,7 +44,8 @@ public abstract class Gun : Weapon
             return;
         }
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        Vector3 bulletStartPosition = new Vector3(firePoint.position.x, firePoint.position.y + attackHeightOffset, firePoint.position.z);
+        GameObject bullet = Instantiate(bulletPrefab, bulletStartPosition, Quaternion.identity);
         SetDamage(bullet); //passes the damage defined in gun to the bullet
         SetShooterTag(bullet);
         Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
