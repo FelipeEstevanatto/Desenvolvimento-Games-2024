@@ -95,9 +95,11 @@ public abstract class Gun : Weapon
 
     protected void CheckAndRotateGun()
     {
-        if (playerController != null && playerController.IsLookingUp == true)
+        if (playerController == null) return;
+
+        if (playerController.IsLookingUp == true)
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+            transform.rotation = playerController.transform.localScale.x > 0 ? Quaternion.Euler(0f,0f,90f) : Quaternion.Euler(0f,0f,-90f); //rotation fix based on player's direction
         }
         else
         {
