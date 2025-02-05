@@ -14,16 +14,22 @@ public abstract class Gun : Weapon
 
     protected PlayerController playerController;
 
-    void Awake()
+    private void Awake()
     {
+        playerController = FindFirstObjectByType<PlayerController>();
         currentAmmo = ammoCapacity;
         nextFireTime = 0f;
         if (firePoint == null)
         {
             firePoint = transform.Find("FirePoint");
         }
-        playerController = FindFirstObjectByType<PlayerController>();
     }
+
+    protected virtual void Update()
+    {
+        CheckAndRotateGun();
+    }
+
 
     public override void Attack(float direction)
     {
@@ -85,5 +91,17 @@ public abstract class Gun : Weapon
     {
         currentAmmo = ammoCapacity;
         Debug.Log("Arma recarregada");
+    }
+
+    protected void CheckAndRotateGun()
+    {
+        if (playerController != null && playerController.IsLookingUp == true)
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
     }
 }

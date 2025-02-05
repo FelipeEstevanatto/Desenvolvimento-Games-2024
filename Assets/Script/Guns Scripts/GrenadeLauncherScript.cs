@@ -16,15 +16,26 @@ public class GrenadeLauncher : Gun
 
         GameObject grenadeInstance = Instantiate(grenadePrefab, firePoint.position, Quaternion.identity);
         SetThrowerTag(grenadeInstance);
+        Rigidbody2D grenadeRb = grenadeInstance.GetComponent<Rigidbody2D>();
+        Vector2 launchVelocity;
 
         float angleRad = launchAngle * Mathf.Deg2Rad;
 
-        Vector2 launchVelocity = new Vector2(
-                Mathf.Cos(angleRad) * launchForce * direction, // horizontal velocity based on direction
-                Mathf.Sin(angleRad) * launchForce // vertical velocity
-          );
+        if (playerController != null && playerController.IsLookingUp == true)
+        {
+            launchVelocity = new Vector2(
+                    Mathf.Sin(angleRad) * launchForce, // horizontal velocity based on direction
+                    Mathf.Cos(angleRad) * launchForce // vertical velocity
+              );
+        }
+        else
+        {
+            launchVelocity = new Vector2(
+                    Mathf.Cos(angleRad) * launchForce * direction, // horizontal velocity based on direction
+                    Mathf.Sin(angleRad) * launchForce // vertical velocity
+              );
+        }
 
-        Rigidbody2D grenadeRb = grenadeInstance.GetComponent<Rigidbody2D>();
         if (grenadeRb != null)
         {
             grenadeRb.linearVelocity = launchVelocity; // apply the calculated velocity to the grenade
