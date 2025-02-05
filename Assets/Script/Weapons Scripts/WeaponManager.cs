@@ -139,9 +139,12 @@ public class WeaponManager : MonoBehaviour
 
         if (currentWeapon != null)
         {
-            currentWeapon.gameObject.SetActive(true); // enable new weapon
-            UpdateWeaponSlot(currentWeapon);
+            if (!currentWeapon.gameObject.activeSelf)
+            {
+                currentWeapon.gameObject.SetActive(true); // enable new weapon
+            }
         }
+        UpdateWeaponSlot();
     }
 
     public void PickupWeapon(Weapon weaponPrefab)
@@ -153,6 +156,7 @@ public class WeaponManager : MonoBehaviour
 
         pickupWeaponInstance = InstantiateWeapon(weaponPrefab);
         pickupWeaponInstance.gameObject.SetActive(false);
+        UpdateWeaponSlot();
     }
 
     private void CheckAmmo()
@@ -172,23 +176,36 @@ public class WeaponManager : MonoBehaviour
         {
             Destroy(pickupWeaponInstance.gameObject);
             pickupWeaponInstance = null;
+            weaponSlot2.sprite = null;
+            weaponSlot2.enabled = false;
         }
     }
 
-    private void UpdateWeaponSlot(Weapon weapon)
+    private void UpdateWeaponSlot()
     {
-        if (weapon != null && weapon.weaponIcon != null)
+        if (currentWeapon == baseWeaponInstance)
         {
-            Sprite previousWeaponIcon = weaponSlot1.sprite;
-            weaponSlot1.sprite = weapon.weaponIcon;
+            weaponSlot1.sprite = baseWeaponInstance.weaponIcon;
             weaponSlot1.enabled = true;
-            weaponSlot2.sprite = previousWeaponIcon;
-            weaponSlot2.enabled = true;
+
+            if (pickupWeaponInstance != null)
+            {
+                weaponSlot2.sprite = pickupWeaponInstance.weaponIcon;
+                weaponSlot2.enabled = true;
+            }
+            else
+            {
+                weaponSlot2.sprite = null;
+                weaponSlot2.enabled = false;
+            }
         }
-        else
+        else if (currentWeapon == pickupWeaponInstance)
         {
-            weaponSlot1.sprite = null;
-            weaponSlot1.enabled=false;
+            weaponSlot1.sprite = pickupWeaponInstance.weaponIcon;
+            weaponSlot1.enabled = true;
+
+            weaponSlot2.sprite = baseWeaponInstance.weaponIcon;
+            weaponSlot2.enabled = true;
         }
     }
 
