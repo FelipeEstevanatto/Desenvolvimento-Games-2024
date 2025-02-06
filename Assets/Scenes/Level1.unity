@@ -184,8 +184,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 25, y: 31}
+  m_AnchoredPosition: {x: 494.48, y: 466.46}
+  m_SizeDelta: {x: 96.7144, y: 97.5349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23084351
 MonoBehaviour:
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1376494156099515169, guid: 3a0564427b3a79a43b7d3d05c8826334, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a0564427b3a79a43b7d3d05c8826334, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 97690656
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -5628,9 +5628,9 @@ GameObject:
   - component: {fileID: 1038564666}
   - component: {fileID: 1038564667}
   - component: {fileID: 1038564670}
+  - component: {fileID: 1038564672}
   - component: {fileID: 1038564668}
   - component: {fileID: 1038564671}
-  - component: {fileID: 1038564672}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -5998,10 +5998,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf0ebcb3f1e81e4f8b364a697832f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grenadePrefab: {fileID: 4563206793464300232, guid: f239d69d20e13d941b307b1116d66994, type: 3}
+  grenadePrefab: {fileID: 8672914571373708590, guid: 74dd657bbf600a34e837bf8da1c8c172, type: 3}
   grenadeSpawnPoint: {fileID: 1948605309}
   maxGrenades: 50
-  throwForce: 25
+  throwForce: 20
   throwAngle: 45
   player: {fileID: 1038564662}
 --- !u!1 &1051528365

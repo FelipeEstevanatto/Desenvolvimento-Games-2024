@@ -10,7 +10,7 @@ public class GrenadeLauncher : Gun
     {
         if (firePoint == null)
         {
-            Debug.LogError("FirePoint não definido");
+            Debug.LogError("FirePoint nï¿½o definido");
             return;
         }
 
