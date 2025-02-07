@@ -18,7 +18,9 @@ public class Grenade : MonoBehaviour
         // instantiate the explosion effect at the grenade's position (Esbo�o para efeito)
         if (explosionEffect != null)
         {
-            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            // Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+            Instantiate(explosionEffect, transform.position, randomRotation);
         }
 
         // detect all objects within the explosion radius
