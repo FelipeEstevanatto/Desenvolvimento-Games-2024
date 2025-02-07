@@ -24,6 +24,12 @@ public class MenuManager : MonoBehaviour
 
     public void QuitGame()
     {
+        #if UNITY_EDITOR
+        // Stop playing the scene in the editor
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        // Quit the application
         Application.Quit();
+        #endif
     }
 }

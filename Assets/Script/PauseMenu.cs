@@ -8,11 +8,20 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public GameObject pauseMenuUI;
     public Slider musicVolumeSlider;
     public Slider SFXVolumeSlider;
+
+    public TextMeshProUGUI musicText;
+
+    public TextMeshProUGUI SFXText;
     private bool isPaused = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        SFXVolumeSlider.value = AudioManager.instance.sfxVolume;
+        musicVolumeSlider.value = AudioManager.instance.musicVolume;
+        SFXText.text = (AudioManager.instance.sfxVolume * 100).ToString("F0");
+        musicText.text = (AudioManager.instance.musicVolume * 100).ToString("F0");
+
         musicVolumeSlider.onValueChanged.AddListener(SetMusicVolume);
         SFXVolumeSlider.onValueChanged.AddListener(SetSFXVolume);
         pauseMenuUI.SetActive(false);
@@ -37,6 +46,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        AudioManager.instance.UnpauseMusic();
         isPaused = false;
     }
 
@@ -44,28 +54,31 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        AudioManager.instance.PauseMusic();
         isPaused = true;
     }
 
     void SetMusicVolume(float volume)
     {
         AudioManager.instance.SetMusicVolume(volume);
+        musicText.text = (volume * 100).ToString("F0");
     }
 
     void SetSFXVolume(float volume)
     {
         AudioManager.instance.SetSFXVolume(volume);
-    }
-
-    public void LoadMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SFXText.text = (volume * 100).ToString("F0");
     }
 
     public void Reload()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ExitToMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainTitle");
     }
 }

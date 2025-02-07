@@ -51,7 +51,7 @@ public class AudioManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.M))
         {
             isMuted = !isMuted;
-            // AudioListener.pause = isMuted;
+            // AudioListener.pause = !isMuted;
             AudioListener.volume = isMuted ? 0 : 1;
         }
 
@@ -93,7 +93,14 @@ public class AudioManager : MonoBehaviour
             {
                 musicSource.Pause();
             }
-            else
+        }
+    }
+
+    public void UnpauseMusic()
+    {
+        if (musicSource != null)
+        {
+            if (!musicSource.isPlaying)
             {
                 musicSource.UnPause();
             }
