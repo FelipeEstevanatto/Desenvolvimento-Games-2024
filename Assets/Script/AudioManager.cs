@@ -1,0 +1,98 @@
+using UnityEngine;
+
+public class AudioManager : MonoBehaviour
+{
+    [SerializeField] private bool isMuted = false;
+
+    [Header("Audio Source")]
+    public AudioSource musicSource;
+    public AudioSource sfxSource;
+
+    [Header("Audio Clips")]
+
+    public AudioClip grenadeLauncherThump;
+    public AudioClip explosionClip;
+    public AudioClip bombClip;
+    public AudioClip shotgunClip;
+    public AudioClip shotgunShellClip;
+    public AudioClip shotgunPumpClip;
+    public AudioClip pistolClip;
+    public AudioClip jumpClip;
+    public AudioClip menuMusic;
+    public AudioClip inGameMusic;
+
+    public static AudioManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        PlayMusic(inGameMusic);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            isMuted = !isMuted;
+            // AudioListener.pause = isMuted;
+            AudioListener.volume = isMuted ? 0 : 1;
+        }
+
+    }
+
+    public void PlayMusic(AudioClip musicClip)
+    {
+        if (musicSource != null && musicClip != null)
+        {
+            musicSource.clip = musicClip;
+            musicSource.loop = true;
+            musicSource.Play();
+        }
+    }
+
+    public void PlaySFX(AudioClip sfxClip, float volume = 1f)
+    {
+        if (sfxSource != null && sfxClip != null)
+        {
+            // This allows sounds to overlap
+            sfxSource.PlayOneShot(sfxClip, volume);
+        }
+    }
+
+    public void StopMusic()
+    {
+        if (musicSource != null)
+        {
+            musicSource.Stop();
+        }
+    }
+
+    public void PauseMusic()
+    {
+        if (musicSource != null)
+        {
+            if (musicSource.isPlaying)
+            {
+                musicSource.Pause();
+            }
+            else
+            {
+                musicSource.UnPause();
+            }
+        }
+    }
+}

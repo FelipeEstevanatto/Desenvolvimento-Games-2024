@@ -23,6 +23,8 @@ public class Grenade : MonoBehaviour
             Instantiate(explosionEffect, transform.position, randomRotation);
         }
 
+        AudioManager.instance.PlaySFX(AudioManager.instance.explosionClip);
+
         // detect all objects within the explosion radius
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 

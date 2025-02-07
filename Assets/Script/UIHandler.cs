@@ -54,8 +54,11 @@ public class UIHandler : MonoBehaviour
 
     public void PauseGame()
     {
-        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
-        PausedText.SetActive(!PausedText.activeSelf);
+        bool isPaused = Time.timeScale == 0;
+
+        Time.timeScale = !isPaused ? 0 : 1;
+        PausedText.SetActive(!isPaused);
+        AudioManager.instance.PauseMusic();
     }
 
 }

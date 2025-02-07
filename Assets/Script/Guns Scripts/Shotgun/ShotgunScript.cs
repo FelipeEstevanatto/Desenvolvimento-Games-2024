@@ -13,6 +13,8 @@ public class Shotgun : Gun
             return;
         }
 
+        AudioManager.instance.PlaySFX(AudioManager.instance.shotgunClip);
+
         // angle for the extreme bullet below the origin bullet
         float startAngle = -spreadAngle / 2f;
         Vector2 directionVector;
@@ -48,5 +50,14 @@ public class Shotgun : Gun
             Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
             bulletRB.linearVelocity = directionVector * shotSpeed;
         }
+
+        // wait for the pump sound to finish before playing the shell sound
+        AudioManager.instance.PlaySFX(AudioManager.instance.shotgunPumpClip);
+        Invoke("PlayShellSound", 0.5f);
+    }
+
+    private void PlayShellSound()
+    {
+        AudioManager.instance.PlaySFX(AudioManager.instance.shotgunShellClip);
     }
 }

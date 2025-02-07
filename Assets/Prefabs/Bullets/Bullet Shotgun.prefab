@@ -103,7 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  maxRange: 7.5
+  maxRange: 10
+  shooterTag: 
   minDamage: 25
 --- !u!58 &2061563647374656629
 CircleCollider2D:

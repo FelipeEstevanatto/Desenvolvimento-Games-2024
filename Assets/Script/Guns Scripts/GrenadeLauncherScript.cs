@@ -14,6 +14,8 @@ public class GrenadeLauncher : Gun
             return;
         }
 
+        AudioManager.instance.PlaySFX(AudioManager.instance.grenadeLauncherThump);
+
         GameObject grenadeInstance = Instantiate(grenadePrefab, firePoint.position, Quaternion.identity);
         SetThrowerTag(grenadeInstance);
         Rigidbody2D grenadeRb = grenadeInstance.GetComponent<Rigidbody2D>();
