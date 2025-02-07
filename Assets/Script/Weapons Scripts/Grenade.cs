@@ -15,7 +15,7 @@ public class Grenade : MonoBehaviour
 
     private void Explode()
     {
-        // instantiate the explosion effect at the grenade's position (Esboço para efeito)
+        // instantiate the explosion effect at the grenade's position (Esboï¿½o para efeito)
         if (explosionEffect != null)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
