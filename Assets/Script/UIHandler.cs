@@ -41,24 +41,5 @@ public class UIHandler : MonoBehaviour
                 ammoText.text = "Ammo: " + gun.currentAmmo.ToString() + "/" + gun.ammoCapacity.ToString();
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseGame();
-        }
     }
-    public void LoadScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
-
-    public void PauseGame()
-    {
-        bool isPaused = Time.timeScale == 0;
-
-        Time.timeScale = !isPaused ? 0 : 1;
-        PausedText.SetActive(!isPaused);
-        AudioManager.instance.PauseMusic();
-    }
-
 }

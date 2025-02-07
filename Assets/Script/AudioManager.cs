@@ -21,6 +21,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip menuMusic;
     public AudioClip inGameMusic;
 
+    public float musicVolume = 1f;
+    public float sfxVolume = 1f;
+
     public static AudioManager instance;
 
     private void Awake()
@@ -54,12 +57,13 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void PlayMusic(AudioClip musicClip)
+    public void PlayMusic(AudioClip musicClip, float volume = 1f)
     {
         if (musicSource != null && musicClip != null)
         {
             musicSource.clip = musicClip;
             musicSource.loop = true;
+            musicSource.volume = musicVolume * volume;
             musicSource.Play();
         }
     }
@@ -69,7 +73,7 @@ public class AudioManager : MonoBehaviour
         if (sfxSource != null && sfxClip != null)
         {
             // This allows sounds to overlap
-            sfxSource.PlayOneShot(sfxClip, volume);
+            sfxSource.PlayOneShot(sfxClip, sfxVolume * volume);
         }
     }
 
@@ -94,5 +98,17 @@ public class AudioManager : MonoBehaviour
                 musicSource.UnPause();
             }
         }
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = volume;
+        musicSource.volume = musicVolume;
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxVolume = volume;
+        sfxSource.volume = sfxVolume;
     }
 }
