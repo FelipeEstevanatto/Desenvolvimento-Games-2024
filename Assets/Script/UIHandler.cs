@@ -28,7 +28,7 @@ public class UIHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = "Vida: " + player.Health.ToString() + "/" + player.MaxHealth.ToString();
+        healthText.text = "Health: " + player.Health.ToString() + "/" + player.MaxHealth.ToString();
         grenadesText.text = grenadeManager.CurrentGrenades.ToString() + "/" + grenadeManager.MaxGrenades.ToString();
         if (weaponManager.currentWeapon is Gun gun)
         {
