@@ -29,10 +29,17 @@ public class UIHandler : MonoBehaviour
     void Update()
     {
         healthText.text = "Vida: " + player.Health.ToString() + "/" + player.MaxHealth.ToString();
-        grenadesText.text = "Grenades: " + grenadeManager.CurrentGrenades.ToString() + "/" + grenadeManager.MaxGrenades.ToString();
+        grenadesText.text = grenadeManager.CurrentGrenades.ToString() + "/" + grenadeManager.MaxGrenades.ToString();
         if (weaponManager.currentWeapon is Gun gun)
         {
-            ammoText.text = "Ammo: " + gun.currentAmmo.ToString() + "/" + gun.ammoCapacity.ToString();
+            if (weaponManager.currentWeapon == weaponManager.baseWeaponInstance)
+            {
+                ammoText.text = "Ammo: inf";
+            }
+            else
+            {
+                ammoText.text = "Ammo: " + gun.currentAmmo.ToString() + "/" + gun.ammoCapacity.ToString();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
