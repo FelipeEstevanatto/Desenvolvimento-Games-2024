@@ -6,9 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class UIHandler : MonoBehaviour
 {
-    public TextMeshProUGUI Text;
-    [SerializeField] private PlayerController player;
+    [Header("Texts Objects")]
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI grenadesText;
+    public TextMeshProUGUI ammoText;
     [SerializeField] private GameObject PausedText;
+
+    [Header("Scripts")]
+    [SerializeField] private PlayerController player;
+    [SerializeField] private GrenadeManager grenadeManager;
+    [SerializeField] private WeaponManager weaponManager;
 
     //private int score = 0;
 
@@ -21,7 +28,12 @@ public class UIHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Text.text = "Vida: " + player.Health.ToString();
+        healthText.text = "Vida: " + player.Health.ToString() + "/" + player.MaxHealth.ToString();
+        grenadesText.text = "Grenades: " + grenadeManager.CurrentGrenades.ToString() + "/" + grenadeManager.MaxGrenades.ToString();
+        if (weaponManager.currentWeapon is Gun gun)
+        {
+            ammoText.text = "Ammo: " + gun.currentAmmo.ToString() + "/" + gun.ammoCapacity.ToString();
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

@@ -18,7 +18,7 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private Image weaponSlot1;
     [SerializeField] private Image weaponSlot2;
 
-    private Weapon currentWeapon; // equipped weapon
+    public Weapon currentWeapon; // equipped weapon
     [HideInInspector] public Weapon baseWeaponInstance;
     [HideInInspector] public Weapon pickupWeaponInstance; 
     private bool isFiring = false;

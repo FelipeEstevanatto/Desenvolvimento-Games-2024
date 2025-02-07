@@ -8,15 +8,20 @@ public class EnemyDrone : Enemy
     [SerializeField] private float shootingCooldown = 1f;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float waitTime = 3f;
 
+    private float waitCount;
+    private Animator anim;
     private bool isChasing = false;
     private bool isShooting = false;
     private float patrolDirection = 1f;
     private Vector2 startPosition;
 
-    protected void Start()
+    private void Start()
     {
+        anim = GetComponent<Animator>();
         startPosition = transform.position;
+        waitCount = waitTime;
         StartCoroutine(Patrol());
     }
 
@@ -61,31 +66,37 @@ public class EnemyDrone : Enemy
     {
         while (!isChasing)
         {
-            Vector2 move = new Vector2(patrolDirection * speed, 0);
-            rb.linearVelocity = move;
-
-            if (patrolDirection > 0 && transform.localScale.x < 0)
+            waitCount -= Time.deltaTime;
+            if(waitCount <= 0)
             {
-                Vector3 scale = transform.localScale;
-                scale.x *= -1;
-                transform.localScale = scale;
-            }
-            else if (patrolDirection < 0 && transform.localScale.x > 0)
-            {
-                Vector3 scale = transform.localScale;
-                scale.x *= -1;
-                transform.localScale = scale;
-            }
+                waitCount = waitTime;
+                anim.SetBool("isMoving", true);
+                rb.linearVelocity = new Vector2(patrolDirection * speed, 0); 
 
-            yield return new WaitForSeconds(2f);
+                if (patrolDirection > 0 && transform.localScale.x < 0)
+                {
+                    Vector3 scale = transform.localScale;
+                    scale.x *= -1;
+                    transform.localScale = scale;
+                }
+                else if (patrolDirection < 0 && transform.localScale.x > 0)
+                {
+                    Vector3 scale = transform.localScale;
+                    scale.x *= -1;
+                    transform.localScale = scale;
+                }
 
-            patrolDirection *= -1;
+                yield return new WaitForSeconds(2f);
+
+                patrolDirection *= -1;
+            }
         }
     }
 
     private IEnumerator Shoot()
     {
         isShooting = true;
+        anim.SetBool("isFiring", isShooting);
         rb.linearVelocity = Vector2.zero; //stop and shoot
 
         Vector2 direction = (target.position - firePoint.position).normalized;
@@ -103,7 +114,7 @@ public class EnemyDrone : Enemy
         isShooting = false;
     }
 
-    protected void SetShooterTag(GameObject bullet)
+    private void SetShooterTag(GameObject bullet)
     {
         Bullet bulletController = bullet.GetComponent<Bullet>();
         if (bulletController != null)
@@ -111,5 +122,4 @@ public class EnemyDrone : Enemy
             bulletController.shooterTag = transform.root.tag;
         }
     }
-
 }

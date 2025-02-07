@@ -467,6 +467,7 @@ GameObject:
   - component: {fileID: 124224077}
   - component: {fileID: 124224081}
   - component: {fileID: 124224080}
+  - component: {fileID: 124224082}
   m_Layer: 7
   m_Name: FireDrone
   m_TagString: Enemy
@@ -493,6 +494,7 @@ MonoBehaviour:
   shootingCooldown: 1
   firePoint: {fileID: 861213574}
   bulletPrefab: {fileID: 3193756969829563608, guid: 22baca3810751d3478b23408ea10f72b, type: 3}
+  waitTime: 3
 --- !u!212 &124224078
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -628,6 +630,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.05}
   m_Size: {x: 2.32, y: 1.22}
   m_Direction: 1
+--- !u!95 &124224082
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124224076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0eb81edc3dd74d340bf516e0d0ae5434, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &129314225
 GameObject:
   m_ObjectHideFlags: 0
@@ -6413,6 +6437,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 1038564668}
   weaponSlot1: {fileID: 1865863065}
   weaponSlot2: {fileID: 188464402}
+  currentWeapon: {fileID: 0}
   baseWeaponInstance: {fileID: 0}
   pickupWeaponInstance: {fileID: 0}
 --- !u!96 &1038564671
@@ -7361,6 +7386,7 @@ GameObject:
   - component: {fileID: 1383375826}
   - component: {fileID: 1383375825}
   - component: {fileID: 1383375827}
+  - component: {fileID: 1383375828}
   m_Layer: 7
   m_Name: DropDrone
   m_TagString: Enemy
@@ -7520,8 +7546,32 @@ MonoBehaviour:
   speed: 5
   dropPoint: {fileID: 1683979937}
   dropGrenadePrefab: {fileID: 8710654606505095344, guid: 5e1ee35b77065aa48a2d93e2aa0f9b9d, type: 3}
-  dropDistance: 20
   dropSpeedX: 5
+  dropTime: 2
+  dropTotal: 3
+  dropDelay: 0.1
+--- !u!95 &1383375828
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383375822}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4ad162055822946468e92650456aca80, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1555400949
 GameObject:
   m_ObjectHideFlags: 0
@@ -7572,7 +7622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1563568022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8655,9 +8705,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e497ca38eddbb418622d844880ca1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 962336675}
-  player: {fileID: 1038564667}
+  healthText: {fileID: 0}
+  grenadesText: {fileID: 0}
+  ammoText: {fileID: 0}
   PausedText: {fileID: 797993461}
+  player: {fileID: 1038564667}
+  grenadeManager: {fileID: 0}
+  weaponManager: {fileID: 0}
 --- !u!4 &2067993299
 Transform:
   m_ObjectHideFlags: 0

@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BIkerHeadCrouchUp_0: 3803914090201068272
+      BIkerHeadCrouchUp_1: -25358810261377725
+      BIkerHeadCrouchUp_2: -294416201909063944
+      BIkerHeadCrouchUp_3: 4993641753895462852
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

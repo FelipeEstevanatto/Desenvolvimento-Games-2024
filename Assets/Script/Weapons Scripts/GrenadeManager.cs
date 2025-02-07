@@ -10,6 +10,7 @@ public class GrenadeManager : MonoBehaviour
     [SerializeField] private float throwAngle = 45f; // degrees
     [SerializeField] private GameObject player;
     public int CurrentGrenades => currentGrenades;
+    public int MaxGrenades => maxGrenades;
 
     private void Start()
     {

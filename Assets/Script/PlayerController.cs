@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float Health => health;
+
+    public float MaxHealth => maxHealth;
     public bool IsCrouching => isCrouching;
     public bool IsLookingUp => isLookingUp;
 
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private bool isLookingUp;
     private bool canDash = true;
     private bool isDashing;
+    private float maxHealth;
     [SerializeField] private float dashingPower = 24f;
     [SerializeField] private float dashingTime = 0.2f;
     [SerializeField] private float dashingCooldown = 1f;
@@ -36,6 +39,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        maxHealth = health;
 
         normalCollider.enabled = true;
         crouchCollider.enabled = false;

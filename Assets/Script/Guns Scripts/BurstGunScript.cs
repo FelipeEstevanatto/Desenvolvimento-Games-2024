@@ -10,7 +10,7 @@ public class BurstGun: Gun
         StartCoroutine(BurstShot(direction));
     }
 
-    IEnumerator BurstShot(float direction)
+    private IEnumerator BurstShot(float direction)
     {
         for (int i = 0; i < burstBulletsTotal; i++)
         {

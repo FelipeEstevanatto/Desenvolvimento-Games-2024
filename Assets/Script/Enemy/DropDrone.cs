@@ -1,29 +1,42 @@
 using UnityEngine;
+using System.Collections;
 
 public class DropDrone : Enemy
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private Transform dropPoint;
     [SerializeField] private GameObject dropGrenadePrefab;
-    [SerializeField] private float dropDistance = 20f;
     [SerializeField] private float dropSpeedX = 20f;
+    [SerializeField] private float dropTime = 2f;
+    [SerializeField] private int dropTotal = 3;
+    [SerializeField] private float dropDelay = 0.1f;
+    private Animator anim;
+    private float dropCount;
+    private bool isDroping;
     private bool isActive = false;
-    private bool hasDropped = false; 
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+        dropCount = dropTime;
+    }
 
     protected override void Update()
     {
         base.Update();
-        if (isActive && !hasDropped) 
+        anim.SetBool("isDroping", isDroping);
+        if (isActive)
         {
-            if (Mathf.Abs(targetDistance) <= dropDistance)
+            isDroping = true;
+            dropCount -= Time.deltaTime;
+            if (dropCount <= 0)
             {
-                Debug.Log("Entrou");
-                GameObject dropGrenade = Instantiate(dropGrenadePrefab, dropPoint.position, Quaternion.identity);
-                SetThrowerTag(dropGrenade);
-                Rigidbody2D dropGrenadeRB = dropGrenade.GetComponent<Rigidbody2D>();
-                dropGrenadeRB.linearVelocity = new Vector2(-dropSpeedX, 0);
-
-                hasDropped = true; 
+                dropCount = dropTime;
+                StartCoroutine(DropBomb());
+            }
+            else
+            {
+                isDroping = false;
             }
         }
     }
@@ -42,7 +55,18 @@ public class DropDrone : Enemy
         if (other.CompareTag("MainCamera"))
         {
             Destroy(gameObject);
-            hasDropped = false; 
+        }
+    }
+
+    private IEnumerator DropBomb()
+    {
+        for(int i=0; i < dropTotal; i++)
+        {
+            GameObject dropGrenade = Instantiate(dropGrenadePrefab, dropPoint.position, Quaternion.identity);
+            SetThrowerTag(dropGrenade);
+            Rigidbody2D dropGrenadeRB = dropGrenade.GetComponent<Rigidbody2D>();
+            dropGrenadeRB.linearVelocity = new Vector2(dropSpeedX, 0);
+            yield return new WaitForSeconds(dropDelay);
         }
     }
 
@@ -54,4 +78,5 @@ public class DropDrone : Enemy
             grenadeController.throwerTag = transform.root.tag;
         }
     }
+
 }
