@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BaseBullet : Bullet
@@ -18,7 +19,7 @@ public class BaseBullet : Bullet
             EnemyDamage(collision);
             Destroy(gameObject);
         }
-        else if(this.shooterTag == "Enemy" && collision.CompareTag("Player"))
+        else if (this.shooterTag == "Enemy" && collision.CompareTag("Player"))
         {
             playerDamage(collision);
             Destroy(gameObject);

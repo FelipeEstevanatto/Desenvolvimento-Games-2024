@@ -4,12 +4,8 @@ using System.Collections;
 public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected float health = 100f;
-    [SerializeField] protected WeaponPickup weaponPickup;
-    [SerializeField] protected Weapon weaponPrefab;
-    [SerializeField] protected Transform weaponHolder;
     [SerializeField] protected float attackDistance;
 
-    protected Weapon weapon;
     protected bool facingRight = true;
     protected Transform target;
     protected float targetDistance;
@@ -26,17 +22,6 @@ public abstract class Enemy : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    protected virtual void Start()
-    {
-        if (weaponHolder != null && weaponPrefab != null)
-        {
-            weapon = Instantiate(weaponPrefab, weaponHolder.position, Quaternion.identity, weaponHolder);
-            weapon.transform.localScale /= Mathf.Abs(transform.localScale.x);
-        }
-
-        
-        CheckFlip();
-    }
 
     protected virtual void Update()
     {
@@ -81,12 +66,8 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    protected void Die()
+    protected virtual void Die()
     {
-        if (weaponPickup != null)
-        {
-            Instantiate(weaponPickup, transform.position + Vector3.up * 0.5f, Quaternion.identity);
-        }
         Destroy(gameObject);
     }
 

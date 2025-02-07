@@ -3,24 +3,31 @@ using UnityEngine.InputSystem.Utilities;
 
 public class GunEnemy : Enemy
 {
+    [Header("Weapon Components")]
+    [SerializeField] protected WeaponPickup weaponPickup;
+    [SerializeField] protected Weapon weaponPrefab;
+    [SerializeField] protected Transform weaponHolder;
     [SerializeField] private float fireRate = 1f;
-    [SerializeField] private float walkDistance = 5f;
+
+    [Header("Enemy Components")]
+    [SerializeField] private Animator anim;
+    [SerializeField] private Animator handsAnim;
+    [SerializeField] private float chaseDistance = 5f;
     [SerializeField] private float speed = 2f;
     [SerializeField] private float jumpForce = 5f;
-
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform obstacleCheck;
     [SerializeField] private float obstacleCheckDistance = 1f;
 
+    [Header("Patrol Components")]
     [SerializeField] private Transform[] patrolPoints;
     private int currentPoint = 0;
     [SerializeField] private float waitAtPoint = 5f;
     private float waitCounter;
 
-    [SerializeField] private Animator anim;
-    [SerializeField] private Animator handsAnim;
 
+    protected Weapon weapon;
     private float nextFireTime;
     private bool isAttacking;
     private bool isChasing = false;
@@ -29,9 +36,13 @@ public class GunEnemy : Enemy
     private bool isPatrolling = true;
     private bool isWaiting = false;
 
-    protected override void Start()
+    protected void Start()
     {
-        base.Start();
+        if (weaponHolder != null && weaponPrefab != null)
+        {
+            weapon = Instantiate(weaponPrefab, weaponHolder.position, Quaternion.identity, weaponHolder);
+            weapon.transform.localScale /= Mathf.Abs(transform.localScale.x);
+        }
         waitCounter = waitAtPoint;
 
         foreach(Transform pPoint in patrolPoints)
@@ -44,13 +55,13 @@ public class GunEnemy : Enemy
         base.Update();
 
         float distanceToTarget = Mathf.Abs(targetDistance);
-        isChasing = distanceToTarget < walkDistance && distanceToTarget > attackDistance;
+        isChasing = distanceToTarget < chaseDistance && distanceToTarget > attackDistance;
         isAttacking = distanceToTarget <= attackDistance && Time.time >= nextFireTime;
         isRunning = rb.linearVelocity.x != 0 ? true : false;
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
-        if (distanceToTarget < walkDistance)
+        if (distanceToTarget < chaseDistance)
         {
             isPatrolling = false; 
             CheckFlip();
@@ -155,6 +166,15 @@ public class GunEnemy : Enemy
     private void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+    }
+
+    protected override void Die()
+    {
+        if (weaponPickup != null)
+        {
+            Instantiate(weaponPickup, transform.position + Vector3.up * 0.5f, Quaternion.identity);
+        }
+        base.Die();
     }
 
     private void OnDrawGizmos()
