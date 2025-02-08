@@ -34,7 +34,7 @@ public class UIHandler : MonoBehaviour
         {
             if (weaponManager.currentWeapon == weaponManager.baseWeaponInstance)
             {
-                ammoText.text = "Ammo: inf";
+                ammoText.text = "Ammo: ∞";
             }
             else
             {
