@@ -8,12 +8,12 @@ public class BulletShotgun : Bullet
     {
         float distance = Vector2.Distance(startPos, collision.transform.position); // distance between target and firepoint
         damage = CalculateDamage(distance); //gets the bullet damage based on positionz
-        if (this.shooterTag == "Player" && collision.CompareTag("Enemy"))
+        if (this.shooter.tag == "Player" && collision.CompareTag("Enemy"))
         {
             EnemyDamage(collision);
             Destroy(gameObject);
         }
-        else if (this.shooterTag == "Enemy" && collision.CompareTag("Player"))
+        else if (this.shooter.tag == "Enemy" && collision.CompareTag("Player"))
         {
             playerDamage(collision);
             Destroy(gameObject);

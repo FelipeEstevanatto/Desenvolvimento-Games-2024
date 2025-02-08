@@ -5,14 +5,8 @@ public abstract class Bullet : MonoBehaviour
     [HideInInspector] public float damage; // damage that each bullet gives (defined in weapon inspector)
     [SerializeField] protected float maxRange = 5f;  // maximum range
     protected Vector2 startPos; // bullet's start position 
-    [HideInInspector] public string shooterTag;
+    [HideInInspector] public GameObject shooter;
     protected PlayerController playerController;
-
-    private void Awake()
-    {
-        playerController = FindFirstObjectByType<PlayerController>(); // Busca a referência ao PlayerController
-    }
-
 
     private void Start()
     {
@@ -24,7 +18,6 @@ public abstract class Bullet : MonoBehaviour
     {
         // verify if the distance traveled is bigger than the maxRange
         float distanceTraveled = Vector2.Distance(startPos, transform.position);
-
         if (distanceTraveled >= maxRange)
         {
             Destroy(gameObject);  
@@ -33,9 +26,13 @@ public abstract class Bullet : MonoBehaviour
 
     protected void CheckAndRotateUp()
     {
-        if (playerController != null && playerController.IsLookingUp == true)
+        if (shooter != null && shooter.tag == "Player")
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+            PlayerController playerController = shooter.GetComponent<PlayerController>();
+            if (playerController != null && playerController.IsLookingUp == true)
+            {
+                transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+            }
         }
     }
 

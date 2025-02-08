@@ -12,6 +12,7 @@ public abstract class Gun : Weapon
     [HideInInspector] public int currentAmmo;
     [HideInInspector] public float nextFireTime;
 
+    protected GameObject shooter;
     protected PlayerController playerController;
 
     private void Awake()
@@ -19,6 +20,7 @@ public abstract class Gun : Weapon
         playerController = FindFirstObjectByType<PlayerController>();
         currentAmmo = ammoCapacity;
         nextFireTime = 0f;
+        shooter = transform.root.gameObject;
         if (firePoint == null)
         {
             firePoint = transform.Find("FirePoint");
@@ -52,7 +54,7 @@ public abstract class Gun : Weapon
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         SetDamage(bullet); //passes the damage defined in gun to the bullet
-        SetShooterTag(bullet);
+        SetShooter(bullet);
         Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
 
         if (playerController != null && playerController.IsLookingUp)
@@ -77,12 +79,12 @@ public abstract class Gun : Weapon
         }
     }
 
-    protected void SetShooterTag(GameObject bullet)
+    protected void SetShooter(GameObject bullet)
     {
         Bullet bulletController = bullet.GetComponent<Bullet>();
         if (bulletController != null)
         {
-            bulletController.shooterTag = transform.root.tag;
+            bulletController.shooter = shooter;
         }
     }
 
@@ -96,13 +98,16 @@ public abstract class Gun : Weapon
     {
         if (playerController == null) return;
 
-        if (playerController.IsLookingUp == true)
+        if (shooter.tag == "Player")
         {
-            transform.rotation = playerController.transform.localScale.x > 0 ? Quaternion.Euler(0f,0f,90f) : Quaternion.Euler(0f,0f,-90f); //rotation fix based on player's direction
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            if (playerController.IsLookingUp == true)
+            {
+                transform.rotation = playerController.transform.localScale.x > 0 ? Quaternion.Euler(0f,0f,90f) : Quaternion.Euler(0f,0f,-90f); //rotation fix based on player's direction
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            }
         }
     }
 }

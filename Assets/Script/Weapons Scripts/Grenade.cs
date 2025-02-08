@@ -6,7 +6,7 @@ public class Grenade : MonoBehaviour
     [SerializeField] private float explosionRadius = 3f; // radius of the explosion's damage
     [SerializeField] private float grenadeDamage = 50f; // damage caused by the explosion
     [SerializeField] private GameObject explosionEffect; // visual effect of the explosion
-    [HideInInspector] public string throwerTag;
+    [HideInInspector] public GameObject thrower;
     private void Start()
     {
         // calls the Explode method after the delay specified by explosionDelay
@@ -30,7 +30,7 @@ public class Grenade : MonoBehaviour
 
         foreach (Collider2D hit in colliders)
         {
-            if (throwerTag == "Player")
+            if (thrower.tag == "Player")
             {
                 if (hit.CompareTag("Enemy"))
                 {
@@ -52,7 +52,7 @@ public class Grenade : MonoBehaviour
                     }
                 }
             }
-            else if (throwerTag == "Enemy" && hit.CompareTag("Player"))
+            else if (thrower.tag == "Enemy" && hit.CompareTag("Player"))
             {
                 PlayerController player = hit.GetComponent<PlayerController>();
                 if (player != null)

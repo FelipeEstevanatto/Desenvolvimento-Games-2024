@@ -83,7 +83,6 @@ public class GravityBomb : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Debug.Log("OnDrawGizmos called");
         // Draw a red wire sphere in the editor to represent the explosion radius
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);

@@ -17,13 +17,13 @@ public class GrenadeLauncher : Gun
         AudioManager.instance.PlaySFX(AudioManager.instance.grenadeLauncherThump);
 
         GameObject grenadeInstance = Instantiate(grenadePrefab, firePoint.position, Quaternion.identity);
-        SetThrowerTag(grenadeInstance);
+        SetThrower(grenadeInstance);
         Rigidbody2D grenadeRb = grenadeInstance.GetComponent<Rigidbody2D>();
         Vector2 launchVelocity;
 
         float angleRad = launchAngle * Mathf.Deg2Rad;
 
-        if (playerController != null && playerController.IsLookingUp == true)
+        if (playerController != null && playerController.IsLookingUp == true && shooter.tag == "Player")
         {
             launchVelocity = new Vector2(
                     Mathf.Sin(angleRad) * launchForce, // horizontal velocity based on direction
@@ -44,12 +44,12 @@ public class GrenadeLauncher : Gun
         }
     }
 
-    private void SetThrowerTag(GameObject grenade)
+    private void SetThrower(GameObject grenade)
     {
         if (grenade != null)
         {
             Grenade grenadeController = grenade.GetComponent<Grenade>();
-            grenadeController.throwerTag = transform.root.tag;
+            grenadeController.thrower = transform.root.gameObject;
         }
     }
 }

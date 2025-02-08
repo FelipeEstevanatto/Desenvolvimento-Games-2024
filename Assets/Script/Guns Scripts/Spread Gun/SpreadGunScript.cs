@@ -25,14 +25,14 @@ public class SpreadGun : Gun
             
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             SetDamage(bullet);
-            SetShooterTag(bullet);
+            SetShooter(bullet);
             // convert the angle to radians (unity default)
             float radians = Mathf.Deg2Rad * angle;
 
             // calculating bullet's direction
             //(cos(x), sin(x)) describes the position of a point on a unit circle; direction is always 1 or -1 (player.transform.localScale.x)
             // Vector2(Mathf.Cos(radians), Mathf.Sin(radians)) * direction gets the directional vector that the bullet will follow
-            if (playerController != null && playerController.IsLookingUp)
+            if (playerController != null && playerController.IsLookingUp && shooter.tag == "Player")
             {
                 directionVector = new Vector2(Mathf.Sin(radians), Mathf.Cos(radians));
             }

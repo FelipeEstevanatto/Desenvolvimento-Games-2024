@@ -35,7 +35,7 @@ public class GrenadeManager : MonoBehaviour
             GameObject grenadeInstance = Instantiate(grenadePrefab, grenadeSpawnPoint.position, Quaternion.identity);
             //updates the thrower tag in grenade script, so it gives damage to enemy
             Grenade grenadeController = grenadeInstance.GetComponent<Grenade>();
-            grenadeController.throwerTag = player.tag;
+            grenadeController.thrower = player;
 
             // converts the throw angle in radians
             float angleRad = throwAngle * Mathf.Deg2Rad;

@@ -101,7 +101,7 @@ public class EnemyDrone : Enemy
 
         Vector2 direction = (target.position - firePoint.position).normalized;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        SetShooterTag(bullet);
+        SetShooter(bullet);
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
         if (bulletRb != null)
         {
@@ -114,12 +114,12 @@ public class EnemyDrone : Enemy
         isShooting = false;
     }
 
-    private void SetShooterTag(GameObject bullet)
+    private void SetShooter(GameObject bullet)
     {
         Bullet bulletController = bullet.GetComponent<Bullet>();
         if (bulletController != null)
         {
-            bulletController.shooterTag = transform.root.tag;
+            bulletController.shooter = transform.root.gameObject;
         }
     }
 }

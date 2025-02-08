@@ -16,9 +16,9 @@ public class BurstGun: Gun
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             SetDamage(bullet); //passes the damage defined in gun to the bullet
-            SetShooterTag(bullet);
+            SetShooter(bullet);
             Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
-            if (playerController != null && playerController.IsLookingUp)
+            if (playerController != null && playerController.IsLookingUp && shooter.tag == "Player")
             {
                 bulletRB.linearVelocity = new Vector2(0, shotSpeed);
             }
