@@ -9,6 +9,8 @@ public class DropDrone : Enemy
     [SerializeField] private float dropSpeedX = 20f;
     [SerializeField] private float dropTime = 2f;
     [SerializeField] private int dropTotal = 3;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private Transform playerTransform;
     [SerializeField] private float dropDelay = 0.1f;
     private Animator anim;
     private float dropCount;
@@ -22,6 +24,14 @@ public class DropDrone : Enemy
         if (dropBombPrefab == null)
         {
             Debug.LogError("Drop Bomb Prefab is not assigned in the Inspector");
+        }
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource is not assigned in the Inspector");
+        }
+        if (playerTransform == null)
+        {
+            Debug.LogError("Player Transform is not assigned in the Inspector");
         }
     }
 
@@ -43,6 +53,18 @@ public class DropDrone : Enemy
                 isDroping = false;
             }
         }
+
+        // Calculate the distance between the player and the plane
+        float distance = Vector3.Distance(transform.position, playerTransform.position);
+        float screenHeight = Camera.main.orthographicSize * 2;
+        float screenWidth = screenHeight * Camera.main.aspect;
+        float maxDistance = screenWidth * 2;
+
+        // Destroy the game object if the distance is greater than twice the screen width
+        if (distance > maxDistance)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,16 +73,9 @@ public class DropDrone : Enemy
         {
             rb.linearVelocity = new Vector2(-speed, 0);
             isActive = true;
+            audioSource.Play();
         }
     }
-
-    // private void OnTriggerExit2D(Collider2D other)
-    // {
-    //     // if (other.CompareTag("MainCamera"))
-    //     // {
-    //     //     Destroy(gameObject);
-    //     // }
-    // }
 
     private IEnumerator DropBomb()
     {
@@ -83,5 +98,4 @@ public class DropDrone : Enemy
             bombController.throwerTag = transform.root.tag;
         }
     }
-
 }

@@ -7,6 +7,21 @@ public class GravityBomb : MonoBehaviour
     [SerializeField] private GameObject explosionEffect;    // visual effect of the explosion
     [HideInInspector] public string throwerTag;
 
+    private float fallTime = 0f; // Timer to track fall duration
+    private bool hasExploded = false; // Flag to prevent multiple explosions
+
+    private void Update()
+    {
+        // Increment the fall timer
+        fallTime += Time.deltaTime;
+
+        // Check if the fall time exceeds 5 seconds and the bomb hasn't exploded yet
+        if (fallTime > 5f && !hasExploded)
+        {
+            Explode();
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // If the collided object has the tag "Ground", we explode

@@ -77,6 +77,39 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlaySFXAtPosition(AudioClip sfxClip, Vector3 position, float volume = 1f)
+    {
+        if (sfxSource != null && sfxClip != null)
+        {
+            AudioSource.PlayClipAtPoint(sfxClip, position, sfxVolume * volume);
+        }
+        // if (clip == null) return;
+    
+        // // Create a temporary game object
+        // GameObject tempGO = new GameObject("TempAudio");
+        // tempGO.transform.position = position;
+
+        // // Create AudioSource and configure 3D settings
+        // AudioSource aSource = tempGO.AddComponent<AudioSource>();
+        // aSource.clip = clip;
+
+        // // 1. Spatial Blend = 1 means fully 3D
+        // aSource.spatialBlend = 1f;
+
+        // // 2. Adjust distance rolloff
+        // aSource.rolloffMode = AudioRolloffMode.Logarithmic;
+        // aSource.minDistance = 1f;   // Start attenuating beyond 1 unit away
+        // aSource.maxDistance = 20f;  // Volume fades out fully at 20 units
+        // // ^ tweak these to match your 2D world scale
+
+        // // 3. Volume (include your global sfxVolume if desired)
+        // aSource.volume = sfxVolume * volume;
+
+        // // Play and destroy
+        // aSource.Play();
+        // Destroy(tempGO, clip.length);
+    }
+
     public void StopMusic()
     {
         if (musicSource != null)
