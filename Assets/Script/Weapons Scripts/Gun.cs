@@ -50,8 +50,7 @@ public abstract class Gun : Weapon
             return;
         }
 
-        Vector3 bulletStartPosition = new Vector3(firePoint.position.x, firePoint.position.y + attackHeightOffset, firePoint.position.z);
-        GameObject bullet = Instantiate(bulletPrefab, bulletStartPosition, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         SetDamage(bullet); //passes the damage defined in gun to the bullet
         SetShooterTag(bullet);
         Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();

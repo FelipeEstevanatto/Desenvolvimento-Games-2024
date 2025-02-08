@@ -121,7 +121,6 @@ public class WeaponManager : MonoBehaviour
         {
             isFiring = true;
             float direction = Mathf.Sign(player.transform.localScale.x);
-            gun.attackHeightOffset = playerController != null && playerController.IsCrouching ? -1.0f : 0.0f;
             currentWeapon.Attack(direction);
             playerAnimator.SetTrigger("Shoot");
             gun.nextFireTime = Time.time + gun.fireRate;

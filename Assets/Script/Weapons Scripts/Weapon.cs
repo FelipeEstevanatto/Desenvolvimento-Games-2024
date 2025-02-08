@@ -10,9 +10,6 @@ public abstract class Weapon : MonoBehaviour
     protected GameObject weaponPrefab;
     public Sprite weaponIcon;
 
-
-    public float attackHeightOffset = 0.0f;
-
     public abstract void Attack(float direction);
 
 }
