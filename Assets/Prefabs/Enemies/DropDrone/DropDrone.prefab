@@ -203,7 +203,7 @@ MonoBehaviour:
   attackDistance: 0
   speed: 5
   dropPoint: {fileID: 1116173503434429183}
-  dropGrenadePrefab: {fileID: 8710654606505095344, guid: 5e1ee35b77065aa48a2d93e2aa0f9b9d, type: 3}
+  dropBombPrefab: {fileID: 8710654606505095344, guid: 5e1ee35b77065aa48a2d93e2aa0f9b9d, type: 3}
   dropSpeedX: 1.5
   dropTime: 1.5
   dropTotal: 3

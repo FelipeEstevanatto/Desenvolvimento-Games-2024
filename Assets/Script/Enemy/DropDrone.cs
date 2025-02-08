@@ -5,7 +5,7 @@ public class DropDrone : Enemy
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private Transform dropPoint;
-    [SerializeField] private GameObject dropGrenadePrefab;
+    [SerializeField] private GameObject dropBombPrefab;
     [SerializeField] private float dropSpeedX = 20f;
     [SerializeField] private float dropTime = 2f;
     [SerializeField] private int dropTotal = 3;
@@ -19,6 +19,10 @@ public class DropDrone : Enemy
     {
         anim = GetComponent<Animator>();
         dropCount = dropTime;
+        if (dropBombPrefab == null)
+        {
+            Debug.LogError("Drop Bomb Prefab is not assigned in the Inspector");
+        }
     }
 
     protected override void Update()
@@ -50,32 +54,33 @@ public class DropDrone : Enemy
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("MainCamera"))
-        {
-            Destroy(gameObject);
-        }
-    }
+    // private void OnTriggerExit2D(Collider2D other)
+    // {
+    //     // if (other.CompareTag("MainCamera"))
+    //     // {
+    //     //     Destroy(gameObject);
+    //     // }
+    // }
 
     private IEnumerator DropBomb()
     {
         for(int i=0; i < dropTotal; i++)
         {
-            GameObject dropGrenade = Instantiate(dropGrenadePrefab, dropPoint.position, Quaternion.identity);
-            SetThrowerTag(dropGrenade);
-            Rigidbody2D dropGrenadeRB = dropGrenade.GetComponent<Rigidbody2D>();
+            GameObject gravityBomb = Instantiate(dropBombPrefab, dropPoint.position, Quaternion.identity);
+            SetThrowerTag(gravityBomb);
+            Rigidbody2D dropGrenadeRB = gravityBomb.GetComponent<Rigidbody2D>();
             dropGrenadeRB.linearVelocity = new Vector2(dropSpeedX, 0);
             yield return new WaitForSeconds(dropDelay);
+            // Destroy(gameObject);
         }
     }
 
-    private void SetThrowerTag(GameObject grenade)
+    private void SetThrowerTag(GameObject gravityBomb)
     {
-        if (grenade != null)
+        if (gravityBomb != null)
         {
-            Grenade grenadeController = grenade.GetComponent<Grenade>();
-            grenadeController.throwerTag = transform.root.tag;
+            GravityBomb bombController = gravityBomb.GetComponent<GravityBomb>();
+            bombController.throwerTag = transform.root.tag;
         }
     }
 
