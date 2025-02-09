@@ -23,6 +23,11 @@ public class MenuManager : MonoBehaviour
         AudioManager.instance.PlayMusic(inGameMusic);
     }
 
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void QuitGame()
     {
         #if UNITY_EDITOR

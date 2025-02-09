@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.WSA;
 using UnityEngine.UI;
 
 public class WeaponManager : MonoBehaviour
