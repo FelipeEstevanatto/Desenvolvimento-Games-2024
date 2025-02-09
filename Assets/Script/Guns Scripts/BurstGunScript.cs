@@ -14,6 +14,8 @@ public class BurstGun: Gun
     {
         for (int i = 0; i < burstBulletsTotal; i++)
         {
+            AudioManager.instance.PlaySFX(AudioManager.instance.rifleBurstClip);
+
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             SetDamage(bullet); //passes the damage defined in gun to the bullet
             SetShooter(bullet);

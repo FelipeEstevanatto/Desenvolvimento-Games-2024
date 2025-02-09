@@ -2486,8 +2486,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.038000003, y: 0.8554075}
   m_AnchorMax: {x: 0.097500086, y: 0.952}
-  m_AnchoredPosition: {x: 425.00003, y: 8.140015}
-  m_SizeDelta: {x: -14, y: 1.3999939}
+  m_AnchoredPosition: {x: 14.301025, y: 37.429962}
+  m_SizeDelta: {x: -55.409, y: -51.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706862323
 MonoBehaviour:
@@ -3468,7 +3468,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -96.675354, w: 0}
+  m_margin: {x: 0, y: 0, z: -194.82977, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3498,7 +3498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -642, y: 472}
+  m_AnchoredPosition: {x: -671, y: 474.86}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &984485873
@@ -7272,6 +7272,7 @@ MonoBehaviour:
   shotgunShellClip: {fileID: 8300000, guid: 0c228edf36bcfcf4facb0b6c40ca2ead, type: 3}
   shotgunPumpClip: {fileID: 8300000, guid: c099d85c5fad7df42adb87d714e8c3c3, type: 3}
   pistolClip: {fileID: 8300000, guid: 742c4c181c95aab479f38fb6be4ad786, type: 3}
+  rifleBurstClip: {fileID: 8300000, guid: 3a6eaff86aaca2e4dac134c270329b3d, type: 3}
   jumpClip: {fileID: 8300000, guid: bedca029cbd6b544a8323a82875d9778, type: 3}
   menuMusic: {fileID: 8300000, guid: 904499d83b5610446adffc1ca03484ec, type: 3}
   inGameMusic: {fileID: 8300000, guid: 3db1e92c4696aae40a591d216df9fafd, type: 3}
@@ -8703,7 +8704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -642, y: 412}
+  m_AnchoredPosition: {x: -671, y: 399.8401}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370238943
@@ -8819,7 +8820,7 @@ GameObject:
   - component: {fileID: 1380542976}
   - component: {fileID: 1380542980}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9267,8 +9268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.038000003, y: 0.8554075}
   m_AnchorMax: {x: 0.097500086, y: 0.94440746}
-  m_AnchoredPosition: {x: 7, y: 5.200012}
-  m_SizeDelta: {x: -14, y: 10.399994}
+  m_AnchoredPosition: {x: 12, y: -25.48}
+  m_SizeDelta: {x: -50.8078, y: -32.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1398627212
 MonoBehaviour:
