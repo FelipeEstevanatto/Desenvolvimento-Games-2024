@@ -34,7 +34,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float dashingPower = 24f;
     [SerializeField] private float dashingTime = 0.2f;
     [SerializeField] private float dashingCooldown = 1f;
-    [SerializeField] private TrailRenderer tr; 
+    [SerializeField] private TrailRenderer tr;
+
+    public GameObject deathMenuUI;
 
     void Start()
     {
@@ -50,6 +52,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        if (health <= 0)
+        {
+            return;
+        }
+
         if (isDashing == false) {
             HandleInput();
             HandleCrouch();
@@ -60,8 +67,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // This stays in check with the physics engine, things messing with the rigidbody should be here
     void FixedUpdate()
     {
+        if (health <= 0)
+        {
+            return;
+        }
+
         if (!isDashing)
         {
             HandleMovement();
@@ -191,6 +204,13 @@ public class PlayerController : MonoBehaviour
 
     protected void Die()
     {
-        Destroy(gameObject);
+        Debug.Log("Player morreu");
+
+        // Activate game over screen on the canvas
+        deathMenuUI.SetActive(true);
+
+        animator.SetTrigger("Death");
+
+        // Destroy(gameObject);
     }
 }
