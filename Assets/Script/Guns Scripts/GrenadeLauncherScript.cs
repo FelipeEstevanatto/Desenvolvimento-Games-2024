@@ -17,31 +17,29 @@ public class GrenadeLauncher : Gun
         AudioManager.instance.PlaySFX(AudioManager.instance.grenadeLauncherThump);
 
         GameObject grenadeInstance = Instantiate(grenadePrefab, firePoint.position, Quaternion.identity);
-        SetThrower(grenadeInstance);
         Rigidbody2D grenadeRb = grenadeInstance.GetComponent<Rigidbody2D>();
-        Vector2 launchVelocity;
 
-        float angleRad = launchAngle * Mathf.Deg2Rad;
-
-        if (playerController != null && playerController.IsLookingUp == true && shooter.tag == "Player")
+        if (grenadeRb == null)
         {
-            launchVelocity = new Vector2(
-                    Mathf.Sin(angleRad) * launchForce, // horizontal velocity based on direction
-                    Mathf.Cos(angleRad) * launchForce // vertical velocity
-              );
-        }
-        else
-        {
-            launchVelocity = new Vector2(
-                    Mathf.Cos(angleRad) * launchForce * direction, // horizontal velocity based on direction
-                    Mathf.Sin(angleRad) * launchForce // vertical velocity
-              );
+            Debug.LogError("Rigidbody2D não encontrado no prefab da granada");
+            return;
         }
 
-        if (grenadeRb != null)
-        {
-            grenadeRb.linearVelocity = launchVelocity; // apply the calculated velocity to the grenade
-        }
+        float angle = playerController != null && playerController.IsLookingUp && shooter.CompareTag("Player") ? 70f : launchAngle;
+        Vector2 launchVelocity = CalculateLaunchVelocity(angle, direction);
+
+        grenadeInstance.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(launchVelocity.y, launchVelocity.x) * Mathf.Rad2Deg);
+        SetThrower(grenadeInstance);
+
+        // Then apply velocity
+        grenadeRb.linearVelocity = launchVelocity;
+    }
+    private Vector2 CalculateLaunchVelocity(float angle, float direction)
+    {
+        float angleRad = angle * Mathf.Deg2Rad;
+        float x = Mathf.Cos(angleRad) * launchForce * direction;
+        float y = Mathf.Sin(angleRad) * launchForce;
+        return new Vector2(x, y);
     }
 
     private void SetThrower(GameObject grenade)
