@@ -3,12 +3,15 @@ using System.Collections;
 
 public class EnemyDrone : Enemy
 {
+    [Header("Movement Settings")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private float detectionRadius = 5f;
+    [SerializeField] private float waitTime = 3f;
+
+    [Header("Shooting Settings")]
     [SerializeField] private float shootingCooldown = 1f;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private float waitTime = 3f;
 
     private float waitCount;
     private Animator anim;
@@ -46,15 +49,20 @@ public class EnemyDrone : Enemy
 
     private void ChasePlayer()
     {
-        Vector2 direction = (target.position - transform.position).normalized;
+        if (target == null) return;
 
+        Vector2 direction = (target.position - transform.position).normalized;
         Vector2 move = direction * speed; //follows the player in X and Y axis
         rb.linearVelocity = move;
 
         CheckFlip();
 
+        // Calculate the angle and constrain the rotation to the Z-axis
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
+        // If the angle crosses 90 or -90, flip the sprite’s Y
+        // flips the artwork, not the actual transform direction
+        sprite.flipY = angle > 90 || angle < -90;
 
         if (Vector2.Distance(transform.position, target.position) <= attackDistance && !isShooting)
         {

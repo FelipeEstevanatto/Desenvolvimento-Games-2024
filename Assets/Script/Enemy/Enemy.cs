@@ -3,6 +3,7 @@ using System.Collections;
 
 public abstract class Enemy : MonoBehaviour
 {
+    [Header("Enemy Settings")]
     [SerializeField] protected float health = 100f;
     [SerializeField] protected float attackDistance;
 
@@ -17,7 +18,7 @@ public abstract class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        target = FindFirstObjectByType<PlayerController>().transform;
+        target = FindFirstObjectByType<PlayerController>()?.transform;
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
     }
@@ -25,7 +26,10 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-        targetDistance = transform.position.x - target.position.x;
+        if (target != null)
+        {
+            targetDistance = transform.position.x - target.position.x;
+        }
     }
 
     protected void CheckFlip()
@@ -71,7 +75,7 @@ public abstract class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    IEnumerator TookDamageCoroutine()
+    private IEnumerator TookDamageCoroutine()
     {
         sprite.color = Color.red;
         yield return new WaitForSeconds(0.1f);
