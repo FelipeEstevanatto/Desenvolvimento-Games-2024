@@ -83,4 +83,30 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainTitle");
     }
+
+    public void SetScreenMode(int modeIndex)
+    {
+        // Suppose your dropdown has options in this order:
+        // 0 = Fullscreen
+        // 1 = Windowed
+        // 2 = Borderless Window
+        Debug.Log("Screen mode index: " + modeIndex);
+        switch (modeIndex)
+        {
+            case 0: // Fullscreen (Exclusive)
+                Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+                Screen.fullScreen = true;
+                break;
+            case 1: // Windowed
+                Screen.fullScreenMode = FullScreenMode.Windowed;
+                Screen.fullScreen = false;
+                // Set a default resolution and allow resizing
+                Screen.SetResolution(1280, 720, false);
+                break;
+            case 2: // Borderless
+                Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+                Screen.fullScreen = true; 
+                break;
+        }
+    }
 }
