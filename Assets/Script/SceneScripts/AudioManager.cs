@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip pistolClip;
 
     public AudioClip rifleBurstClip;
+    public AudioClip errorSoundClip;
 
     public AudioClip jumpClip;
     public AudioClip menuMusic;

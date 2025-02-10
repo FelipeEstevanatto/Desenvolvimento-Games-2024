@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float MaxHealth => maxHealth;
     public bool IsCrouching => isCrouching;
     public bool IsLookingUp => isLookingUp;
+    public bool IsDead => isDead;
 
     [Header("Player Settings")]
     [SerializeField] private float health = 100f;
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private SpriteRenderer sprite;
     private bool isGrounded;
+    private bool isDead = false;
     private bool isCrouching;
     private bool isLookingUp;
     private bool canDash = true;
@@ -184,6 +186,11 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
+        if (isDead)
+        {
+            return;
+        }
+
         health -= damageAmount;
         Debug.Log($"Dano recebido: {damageAmount}, health restante: {health}");
 
@@ -208,10 +215,14 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Player morreu");
 
+        AudioManager.instance.PlaySFX(AudioManager.instance.errorSoundClip);
+
         // Activate game over screen on the canvas
         deathMenuUI.SetActive(true);
 
         animator.SetTrigger("Death");
+
+        isDead = true;
 
         // Destroy(gameObject);
     }

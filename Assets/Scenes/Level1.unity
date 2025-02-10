@@ -8532,6 +8532,7 @@ MonoBehaviour:
   shotgunPumpClip: {fileID: 8300000, guid: c099d85c5fad7df42adb87d714e8c3c3, type: 3}
   pistolClip: {fileID: 8300000, guid: 742c4c181c95aab479f38fb6be4ad786, type: 3}
   rifleBurstClip: {fileID: 8300000, guid: 3a6eaff86aaca2e4dac134c270329b3d, type: 3}
+  errorSoundClip: {fileID: 8300000, guid: 30041fb20c36e2242ae5803a0be35630, type: 3}
   jumpClip: {fileID: 8300000, guid: bedca029cbd6b544a8323a82875d9778, type: 3}
   menuMusic: {fileID: 8300000, guid: 904499d83b5610446adffc1ca03484ec, type: 3}
   inGameMusic: {fileID: 8300000, guid: 3db1e92c4696aae40a591d216df9fafd, type: 3}
