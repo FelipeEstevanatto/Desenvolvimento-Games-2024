@@ -7,11 +7,11 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     public float Health => health;
-
     public float MaxHealth => maxHealth;
     public bool IsCrouching => isCrouching;
     public bool IsLookingUp => isLookingUp;
 
+    [Header("Player Settings")]
     [SerializeField] private float health = 100f;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
@@ -22,6 +22,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Collider2D normalCollider; 
     [SerializeField] private Collider2D crouchCollider; 
 
+    [Header("Dash Settings")]
+    [SerializeField] private float dashingPower = 24f;
+    [SerializeField] private float dashingTime = 0.2f;
+    [SerializeField] private float dashingCooldown = 1f;
+    [SerializeField] private TrailRenderer tr;
+
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer sprite;
@@ -31,11 +37,6 @@ public class PlayerController : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     private float maxHealth;
-    [SerializeField] private float dashingPower = 24f;
-    [SerializeField] private float dashingTime = 0.2f;
-    [SerializeField] private float dashingCooldown = 1f;
-    [SerializeField] private TrailRenderer tr;
-
     public GameObject deathMenuUI;
 
     void Start()
@@ -189,6 +190,7 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            health = 0;
         }
         else
         {

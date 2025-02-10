@@ -73,6 +73,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public void Reload()
     {
         Time.timeScale = 1f;
+        AudioManager.instance.UnpauseMusic();
+        ScoreManager.instance.ResetScore();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

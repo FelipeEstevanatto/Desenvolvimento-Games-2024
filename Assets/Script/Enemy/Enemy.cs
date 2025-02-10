@@ -6,6 +6,7 @@ public abstract class Enemy : MonoBehaviour
     [Header("Enemy Settings")]
     [SerializeField] protected float health = 100f;
     [SerializeField] protected float attackDistance;
+    [SerializeField] protected int scoreValue = 10;
 
     protected bool facingRight = true;
     protected Transform target;
@@ -72,6 +73,8 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        ScoreManager.instance.AddScore(scoreValue);
+
         Destroy(gameObject);
     }
 
