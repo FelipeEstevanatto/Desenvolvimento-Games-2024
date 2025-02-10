@@ -14,6 +14,7 @@ TagManager:
   - No Collisions
   - Water
   - UI
+  - Background
   - Ground
   - Enemies
   - Player
@@ -39,13 +40,12 @@ TagManager:
   - 
   - 
   - 
-  - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 2535115881
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Buildings
     uniqueID: 2803501073
