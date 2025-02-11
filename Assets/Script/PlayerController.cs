@@ -216,7 +216,8 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Player morreu");
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.errorSoundClip);
+        AudioManager.instance.PauseMusic();
+        AudioManager.instance.PlaySFX(AudioManager.instance.drumsOfWar);
 
         // Activate game over screen on the canvas
         deathMenuUI.SetActive(true);

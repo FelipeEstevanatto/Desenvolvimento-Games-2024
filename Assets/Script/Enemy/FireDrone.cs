@@ -124,6 +124,8 @@ public class EnemyDrone : Enemy
             bulletController.SetDamage(10f); // Set the bullet damage
         }
 
+        AudioManager.instance.PlaySFX(AudioManager.instance.pistolClip, 0.75f);
+
         yield return new WaitForSeconds(shootingCooldown);
         isShooting = false;
     }

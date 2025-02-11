@@ -21,6 +21,7 @@ public class HealthPack : MonoBehaviour
             // Check if the player is in range
             if (Vector2.Distance(transform.position, playerController.transform.position) < 1.5f)
             {
+                AudioManager.instance.PlaySFX(AudioManager.instance.HealSoundClip);
                 // Give health to the player
                 playerController.GiveHealth(healthAmount);
 

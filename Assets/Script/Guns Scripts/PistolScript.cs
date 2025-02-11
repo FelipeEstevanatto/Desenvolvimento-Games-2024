@@ -4,7 +4,7 @@ public class Pistol : Gun
 {
     protected override void FireBullet(float direction)
     {
-        AudioManager.instance.PlaySFX(AudioManager.instance.pistolClip, 0.5f);
+        AudioManager.instance.PlaySFX(AudioManager.instance.pistolClip, 0.75f);
 
         base.FireBullet(direction); 
     }

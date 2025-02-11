@@ -17,10 +17,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip shotgunShellClip;
     public AudioClip shotgunPumpClip;
     public AudioClip pistolClip;
+    public AudioClip rifleSingleClip;
 
     public AudioClip rifleBurstClip;
     public AudioClip errorSoundClip;
+    public AudioClip HealSoundClip;
 
+    public AudioClip drumsOfWar;
     public AudioClip jumpClip;
     public AudioClip menuMusic;
     public AudioClip inGameMusic;
