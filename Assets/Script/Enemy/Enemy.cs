@@ -73,6 +73,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        Debug.Log("Enemy dead, score: " + scoreValue);
         ScoreManager.instance.AddScore(scoreValue);
 
         Destroy(gameObject);

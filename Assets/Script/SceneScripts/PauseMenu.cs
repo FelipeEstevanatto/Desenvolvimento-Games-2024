@@ -18,7 +18,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        playerController = FindObjectOfType<PlayerController>(); // Find the player controller script in the scene
+        playerController = FindFirstObjectByType<PlayerController>(); // Find the player controller script in the scene
 
         SFXVolumeSlider.value = AudioManager.instance.sfxVolume;
         musicVolumeSlider.value = AudioManager.instance.musicVolume;
