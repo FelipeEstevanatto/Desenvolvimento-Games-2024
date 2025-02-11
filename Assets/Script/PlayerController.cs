@@ -226,4 +226,10 @@ public class PlayerController : MonoBehaviour
 
         // Destroy(gameObject);
     }
+
+    public void GiveHealth(float healthAmount)
+    {
+        health += healthAmount;
+        health = Mathf.Clamp(health, 0, maxHealth);
+    }
 }

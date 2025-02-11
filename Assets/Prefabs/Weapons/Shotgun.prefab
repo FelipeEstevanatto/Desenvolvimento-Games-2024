@@ -106,14 +106,13 @@ MonoBehaviour:
     than half of the maximum range, the damage is reduced to half of the total damage.
     Otherwise, the full damage is applied.
   weaponIcon: {fileID: -8920651786008622604, guid: 66bc788e3f6c49945b3e91c2fd5d958e, type: 3}
-  attackHeightOffset: 0
   bulletPrefab: {fileID: 1293178893648271222, guid: 609e0cf7e585ce245bd6a6321f1383f9, type: 3}
   shotSpeed: 20
   firePoint: {fileID: 0}
   bulletDamage: 50
-  ammoCapacity: 10000
   fireRate: 0.5
   bulletsPerShot: 3
+  ammoCapacity: 25
   currentAmmo: 0
   nextFireTime: 0
   bulletCount: 3
