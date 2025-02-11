@@ -10,6 +10,7 @@ public class EnemyDrone : Enemy
 
     [Header("Shooting Settings")]
     [SerializeField] private float shootingCooldown = 1f;
+    [SerializeField] private float damage = 10f;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
 
@@ -17,6 +18,7 @@ public class EnemyDrone : Enemy
     private Animator anim;
     private bool isChasing = false;
     private bool isShooting = false;
+    private bool isDead = false;
     private float patrolDirection = 1f;
     private Vector2 startPosition;
 
@@ -30,12 +32,15 @@ public class EnemyDrone : Enemy
 
     protected override void Update()
     {
-        base.Update();
-        DetectPlayer();
-
-        if (isChasing && !isShooting)
+        if (!isDead)
         {
-            ChasePlayer();
+            base.Update();
+            DetectPlayer();
+
+            if (isChasing && !isShooting)
+            {
+                ChasePlayer();
+            }
         }
     }
 
@@ -121,7 +126,7 @@ public class EnemyDrone : Enemy
         Bullet bulletController = bullet.GetComponent<Bullet>();
         if (bulletController != null)
         {
-            bulletController.SetDamage(10f); // Set the bullet damage
+            bulletController.SetDamage(damage); // Set the bullet damage
         }
 
         AudioManager.instance.PlaySFX(AudioManager.instance.pistolClip, 0.75f);
@@ -137,5 +142,18 @@ public class EnemyDrone : Enemy
         {
             bulletController.shooter = transform.root.gameObject;
         }
+    }
+
+    protected override void Die()
+    {
+        Debug.Log("Enemy dead, score: " + scoreValue);
+        ScoreManager.instance.AddScore(scoreValue);
+
+        isDead = true;
+        rb.gravityScale = 5;
+        anim.SetBool("isDead", true);
+        anim.SetBool("isFiring", false);
+        anim.SetBool("isMoving", false);
+        Destroy(gameObject, 2f);
     }
 }

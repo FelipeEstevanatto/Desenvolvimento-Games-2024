@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 5155163167032735316, guid: 530554528a0474f418b50b01ffcd8bb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,14 +104,13 @@ MonoBehaviour:
   weaponName: Pistol
   description: Basic Shooting.
   weaponIcon: {fileID: 21300000, guid: 51c7327f715afd345818b70aaefb7c6e, type: 3}
-  attackHeightOffset: 0
   bulletPrefab: {fileID: 3193756969829563608, guid: 22baca3810751d3478b23408ea10f72b, type: 3}
   shotSpeed: 20
   firePoint: {fileID: 0}
   bulletDamage: 20
-  ammoCapacity: 2147483647
   fireRate: 0.1
   bulletsPerShot: 1
+  ammoCapacity: 2147483647
   currentAmmo: 0
   nextFireTime: 0
 --- !u!1 &5608890095939147266

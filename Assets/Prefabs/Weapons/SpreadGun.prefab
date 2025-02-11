@@ -108,7 +108,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 2037120817534264460, guid: 927670f7ff466974497ac1b4211d51af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -135,14 +135,13 @@ MonoBehaviour:
   weaponName: Spread Gun
   description: Shoots a spread of 3 bullets.
   weaponIcon: {fileID: 21300000, guid: d6e2c64f020c21d49903810d3fc3d6a6, type: 3}
-  attackHeightOffset: 0
   bulletPrefab: {fileID: 4651502799127936051, guid: b521b42ef2d631e47abde0260a6ff8f7, type: 3}
   shotSpeed: 20
   firePoint: {fileID: 0}
   bulletDamage: 15
-  ammoCapacity: 50
   fireRate: 0.35
   bulletsPerShot: 4
+  ammoCapacity: 50
   currentAmmo: 0
   nextFireTime: 0
   bulletCount: 4
