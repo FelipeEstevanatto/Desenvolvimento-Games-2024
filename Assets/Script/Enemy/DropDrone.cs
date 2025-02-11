@@ -61,7 +61,7 @@ public class DropDrone : Enemy
         float maxDistance = screenWidth * 2;
 
         // Destroy the game object if the distance is greater than twice the screen width
-        if (distance > maxDistance)
+        if (isActive && distance > maxDistance)
         {
             Destroy(gameObject);
         }
