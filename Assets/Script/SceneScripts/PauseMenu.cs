@@ -10,13 +10,16 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public Slider SFXVolumeSlider;
 
     public TextMeshProUGUI musicText;
-
     public TextMeshProUGUI SFXText;
+
     private bool isPaused = false;
+    private PlayerController playerController; // Reference to the player controller script
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerController = FindObjectOfType<PlayerController>(); // Find the player controller script in the scene
+
         SFXVolumeSlider.value = AudioManager.instance.sfxVolume;
         musicVolumeSlider.value = AudioManager.instance.musicVolume;
         SFXText.text = (AudioManager.instance.sfxVolume * 100).ToString("F0");
@@ -48,6 +51,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Time.timeScale = 1f;
         AudioManager.instance.UnpauseMusic();
         isPaused = false;
+
+        if (playerController != null)
+        {
+            playerController.enabled = true; // Enable the player controller
+        }
     }
 
     void Pause()
@@ -56,6 +64,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Time.timeScale = 0f;
         AudioManager.instance.PauseMusic();
         isPaused = true;
+
+        if (playerController != null)
+        {
+            playerController.enabled = false; // Disable the player controller
+        }
     }
 
     void SetMusicVolume(float volume)
