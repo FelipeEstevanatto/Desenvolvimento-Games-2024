@@ -11773,7 +11773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grenadePrefab: {fileID: 8672914571373708590, guid: 74dd657bbf600a34e837bf8da1c8c172, type: 3}
   grenadeSpawnPoint: {fileID: 1948605309}
-  maxGrenades: 50
+  maxGrenades: 10
   throwForce: 20
   throwAngle: 45
   player: {fileID: 1038564662}
@@ -12640,14 +12640,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244945174}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
