@@ -1386,7 +1386,7 @@ TextureImporter:
         x: 83
         y: 81
         width: 26
-        height: 36
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1408,7 +1408,7 @@ TextureImporter:
         x: 113
         y: 81
         width: 30
-        height: 34
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1427,10 +1427,10 @@ TextureImporter:
       name: METALSLUG_50
       rect:
         serializedVersion: 2
-        x: 178
-        y: 101
+        x: 148
+        y: 81
         width: 35
-        height: 13
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
