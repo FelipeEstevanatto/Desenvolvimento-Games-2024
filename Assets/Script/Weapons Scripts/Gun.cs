@@ -6,9 +6,9 @@ public abstract class Gun : Weapon
     public float shotSpeed = 20f;
     [HideInInspector] public Transform firePoint;
     [SerializeField] private float bulletDamage = 10f;
-    public int ammoCapacity = 20;
     public float fireRate = 0.1f;
     public int bulletsPerShot = 1;
+    public int ammoCapacity = 20;
     [HideInInspector] public int currentAmmo;
     [HideInInspector] public float nextFireTime;
 
@@ -35,7 +35,7 @@ public abstract class Gun : Weapon
 
     public override void Attack(float direction)
     {
-        if (currentAmmo > 0)
+        if (currentAmmo > 0 && Time.time >= nextFireTime)
         {
             FireBullet(direction);
             currentAmmo -= bulletsPerShot;
