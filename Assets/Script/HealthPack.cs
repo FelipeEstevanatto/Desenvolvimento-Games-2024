@@ -16,7 +16,7 @@ public class HealthPack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             // Get the PlayerController component
-            PlayerController playerController = FindObjectOfType<PlayerController>();
+            PlayerController playerController = FindFirstObjectByType<PlayerController>();
 
             // Check if the player is in range
             if (Vector2.Distance(transform.position, playerController.transform.position) < 1.5f)

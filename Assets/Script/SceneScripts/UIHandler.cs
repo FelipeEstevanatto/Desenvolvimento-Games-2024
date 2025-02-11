@@ -10,7 +10,6 @@ public class UIHandler : MonoBehaviour
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI grenadesText;
     public TextMeshProUGUI ammoText;
-    [SerializeField] private GameObject PausedText;
 
     [Header("Scripts")]
     [SerializeField] private PlayerController player;
@@ -19,7 +18,6 @@ public class UIHandler : MonoBehaviour
 
     //private int score = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //score = 0;

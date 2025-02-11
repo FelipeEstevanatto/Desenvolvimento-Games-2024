@@ -6,10 +6,14 @@ public class ScoreManager : MonoBehaviour
 {
     public int Score => score;
 
+
     private int score = 0;
 
     public static ScoreManager instance;
     [SerializeField] private TextMeshProUGUI scoreText; // Reference to the UI Text element
+
+    [SerializeField] private TextMeshProUGUI deathScoreText; // Reference to the UI Text element
+
 
     private void Awake()
     {
@@ -45,6 +49,7 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score.ToString();
+            deathScoreText.text = "Score: " + score.ToString();
         }
     }
 }
