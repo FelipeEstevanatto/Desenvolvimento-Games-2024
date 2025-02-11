@@ -15,8 +15,11 @@ public class EnemyDrone : Enemy
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
 
-    [Header("Prefab Effect")]
+    [Header("Explosion")]
     [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private float explosionRadius = 2f;
+    [SerializeField] private float explosionDamage = 15f;
+
     private float waitCount;
     private Animator anim;
     private bool isChasing = false;
@@ -165,7 +168,22 @@ public class EnemyDrone : Enemy
         if (collision.gameObject.tag == "Ground" && isDead)
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            DamageOnDeath(explosionDamage);
             Destroy(gameObject, 2f);
+        }
+    }
+
+    private void DamageOnDeath(float explosionDamage)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+
+        foreach (Collider2D hit in colliders)
+        {
+            if (hit.tag == "Player")
+            {
+                PlayerController player = hit.GetComponent<PlayerController>();
+                player.TakeDamage(explosionDamage);
+            }
         }
     }
 }
