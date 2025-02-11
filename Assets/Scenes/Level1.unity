@@ -6306,14 +6306,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124224076}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -8038,9 +8038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8294ae9b6df6c4ebb342c4194f4310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1038564667}
-  boundsBox: {fileID: 1308903365}
-  smoothTime: 0.2
 --- !u!61 &519420035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11230,23 +11227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9bd857c8a131194d909c594a32e3c5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMuted: 0
-  musicSource: {fileID: 40291248}
-  sfxSource: {fileID: 742152974}
-  grenadeLauncherThump: {fileID: 8300000, guid: af62bb3ebfaf7a6409e11842d86509b2, type: 3}
-  explosionClip: {fileID: 8300000, guid: 91007cc206f10d8478e4552fa33d33b1, type: 3}
-  bombClip: {fileID: 8300000, guid: cd1bb384616935c428aa7579e5402fa5, type: 3}
-  shotgunClip: {fileID: 8300000, guid: 425d169970421ca46b9cac394cba23b8, type: 3}
-  shotgunShellClip: {fileID: 8300000, guid: 0c228edf36bcfcf4facb0b6c40ca2ead, type: 3}
-  shotgunPumpClip: {fileID: 8300000, guid: c099d85c5fad7df42adb87d714e8c3c3, type: 3}
-  pistolClip: {fileID: 8300000, guid: 742c4c181c95aab479f38fb6be4ad786, type: 3}
-  rifleBurstClip: {fileID: 8300000, guid: 3a6eaff86aaca2e4dac134c270329b3d, type: 3}
-  errorSoundClip: {fileID: 8300000, guid: 30041fb20c36e2242ae5803a0be35630, type: 3}
-  jumpClip: {fileID: 8300000, guid: bedca029cbd6b544a8323a82875d9778, type: 3}
-  menuMusic: {fileID: 8300000, guid: 904499d83b5610446adffc1ca03484ec, type: 3}
-  inGameMusic: {fileID: 8300000, guid: 3db1e92c4696aae40a591d216df9fafd, type: 3}
-  musicVolume: 1
-  sfxVolume: 1
 --- !u!1 &1038564662
 GameObject:
   m_ObjectHideFlags: 0
@@ -13432,11 +13412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f404783fb8745844ae40f484ef84898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 1798299005}
-  musicVolumeSlider: {fileID: 1705140594}
-  SFXVolumeSlider: {fileID: 397021035}
-  musicText: {fileID: 634159474}
-  SFXText: {fileID: 32210817}
 --- !u!1 &1383375822
 GameObject:
   m_ObjectHideFlags: 0
@@ -13545,7 +13520,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -16579,14 +16554,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946124919}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -18038,13 +18013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e497ca38eddbb418622d844880ca1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthText: {fileID: 962336675}
-  grenadesText: {fileID: 1207348488}
-  ammoText: {fileID: 1370238943}
-  PausedText: {fileID: 797993461}
-  player: {fileID: 1038564667}
-  grenadeManager: {fileID: 1038564672}
-  weaponManager: {fileID: 1038564670}
 --- !u!4 &2067993299
 Transform:
   m_ObjectHideFlags: 0

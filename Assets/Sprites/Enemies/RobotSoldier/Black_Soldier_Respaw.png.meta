@@ -360,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Black_Soldier_Respaw_0: -5414941269183678040
+      Black_Soldier_Respaw_1: 1848817380214480722
+      Black_Soldier_Respaw_2: 3091318590003344674
+      Black_Soldier_Respaw_3: 1333612354850542641
+      Black_Soldier_Respaw_4: 2544372924299375367
+      Black_Soldier_Respaw_5: 5283375808600555067
+      Black_Soldier_Respaw_6: 1036516938883379403
+      Black_Soldier_Respaw_7: 1850597290098275321
+      Black_Soldier_Respaw_8: 5861110348863939711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
