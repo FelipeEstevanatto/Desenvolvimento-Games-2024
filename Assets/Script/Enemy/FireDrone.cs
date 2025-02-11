@@ -118,6 +118,12 @@ public class EnemyDrone : Enemy
             bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
         }
 
+        Bullet bulletController = bullet.GetComponent<Bullet>();
+        if (bulletController != null)
+        {
+            bulletController.SetDamage(10f); // Set the bullet damage
+        }
+
         yield return new WaitForSeconds(shootingCooldown);
         isShooting = false;
     }

@@ -54,4 +54,9 @@ public abstract class Bullet : MonoBehaviour
             player.TakeDamage(damage);
         }
     }
+
+    public void SetDamage(float damage)
+    {
+        this.damage = damage;
+    }
 }
