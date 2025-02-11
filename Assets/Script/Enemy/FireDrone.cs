@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.Cinemachine;
 
 public class EnemyDrone : Enemy
 {
@@ -14,6 +15,8 @@ public class EnemyDrone : Enemy
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
 
+    [Header("Prefab Effect")]
+    [SerializeField] private GameObject explosionPrefab;
     private float waitCount;
     private Animator anim;
     private bool isChasing = false;
@@ -28,6 +31,7 @@ public class EnemyDrone : Enemy
         startPosition = transform.position;
         waitCount = waitTime;
         StartCoroutine(Patrol());
+
     }
 
     protected override void Update()
@@ -154,6 +158,14 @@ public class EnemyDrone : Enemy
         anim.SetBool("isDead", true);
         anim.SetBool("isFiring", false);
         anim.SetBool("isMoving", false);
-        Destroy(gameObject, 2f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground" && isDead)
+        {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject, 2f);
+        }
     }
 }

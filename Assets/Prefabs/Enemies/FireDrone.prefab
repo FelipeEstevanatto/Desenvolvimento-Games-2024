@@ -114,6 +114,7 @@ MonoBehaviour:
   damage: 10
   firePoint: {fileID: 7042905286458668215}
   bulletPrefab: {fileID: 3193756969829563608, guid: 22baca3810751d3478b23408ea10f72b, type: 3}
+  explosionPrefab: {fileID: 5131202284976828051, guid: c077836f3618e5a41943b11bb3ef5874, type: 3}
 --- !u!70 &3170236193717635301
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
