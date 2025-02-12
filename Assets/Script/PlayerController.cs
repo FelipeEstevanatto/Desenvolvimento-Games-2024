@@ -1,75 +1,237 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
+    public float Health => health;
+    public float MaxHealth => maxHealth;
+    public bool IsCrouching => isCrouching;
+    public bool IsLookingUp => isLookingUp;
+    public bool IsDead => isDead;
+
+    [Header("Player Settings")]
+    [SerializeField] private float health = 100f;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float crouchSpeedMultiplier;
     [SerializeField] private float distanceToGround;
     [SerializeField] private LayerMask groundLayer;
 
+    [SerializeField] private Collider2D normalCollider; 
+    [SerializeField] private Collider2D crouchCollider; 
+
+    [Header("Dash Settings")]
+    [SerializeField] private float dashingPower = 24f;
+    [SerializeField] private float dashingTime = 0.2f;
+    [SerializeField] private float dashingCooldown = 1f;
+    [SerializeField] private TrailRenderer tr;
+
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer sprite;
     private bool isGrounded;
-    private Vector2 screenBounds;
+    private bool isDead = false;
+    private bool isCrouching;
+    private bool isLookingUp;
+    private bool canDash = true;
+    private bool isDashing;
+    private float maxHealth;
+    public GameObject deathMenuUI;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        maxHealth = health;
+
+        normalCollider.enabled = true;
+        crouchCollider.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-
-        rb.linearVelocity = new Vector2(horizontalInput * 5, rb.linearVelocity.y);
-
-        animator.SetFloat("Velocity", rb.linearVelocity.magnitude);
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
+    {   
+        if (health <= 0)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            animator.SetTrigger("Jump");
+            return;
         }
 
-        //if (Mathf.Sign(horizontalInput) != rb.transform.localScale.x && horizontalInput != 0)
+        if (isDashing == false) {
+            HandleInput();
+            HandleCrouch();
+        }
+        Debug.Log(isGrounded);
+        HandleAnimation();
+        if(Input.GetKey(KeyCode.LeftShift) && canDash) {
+            StartCoroutine(Dash());
+        }
+    }
+
+    // This stays in check with the physics engine, things messing with the rigidbody should be here
+    void FixedUpdate()
+    {
+        if (health <= 0)
+        {
+            return;
+        }
+
+        if (!isDashing)
+        {
+            HandleMovement();
+        }
+        CheckGrounded();
+    }
+
+    private void HandleInput()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
+        {
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            animator.SetBool("Jump", true);
+            AudioManager.instance.PlaySFX(AudioManager.instance.jumpClip);
+        }
+
+        isLookingUp = Input.GetKey(KeyCode.W);
+        animator.SetBool("LookingUp", isLookingUp);
+    }
+
+    private void HandleCrouch() //Corrigir anima��o e fazer verifica��o para saber se o Player pode levantar ou n�o
+    {
+        if (Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        {
+            if (!isCrouching)
+            {
+                isCrouching = true;
+                speed *= crouchSpeedMultiplier;
+                animator.SetBool("Crouched", true);
+
+                normalCollider.enabled = false;
+                crouchCollider.enabled = true;
+            }
+        }
+        else if (isCrouching && CanStandUp())
+        {
+            isCrouching = false;
+            speed /= crouchSpeedMultiplier;
+            animator.SetBool("Crouched", false);
+
+            normalCollider.enabled = true;
+            crouchCollider.enabled = false;
+        }
+    }
+
+    private bool CanStandUp()
+    {
+        // E.g. a small raycast / circlecast / boxcast above the player to ensure no ceiling
+        return !Physics2D.Raycast(transform.position, Vector2.up, 1f, groundLayer);
+    }
+
+    private void HandleMovement()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
+
+        // Flip the player sprite
         if (horizontalInput != 0)
         {
-            //rb.transform.localScale = new Vector3(Mathf.Sign(horizontalInput), transform.localScale.y, rb.transform.localScale.z);
             Vector3 newScale = transform.localScale;
             newScale.x = Mathf.Sign(horizontalInput) * Mathf.Abs(newScale.x);
             transform.localScale = newScale;
         }
+    }
 
-        // Set trigger attack
-        if (Input.GetButtonDown("Fire1"))
+    private void HandleAnimation()
+    {
+        animator.SetFloat("Velocity", Mathf.Abs(rb.linearVelocity.x));
+
+        if (isGrounded)
         {
-            animator.SetTrigger("Attack");
+            animator.SetBool("Jump", false);
         }
+    }
 
-        if (Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, groundLayer).collider != isGrounded)
+    private void CheckGrounded()
+    {
+        bool wasGrounded = isGrounded;
+        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, groundLayer);
+
+        if (isGrounded != wasGrounded)
         {
-            isGrounded = !isGrounded;
             animator.SetBool("Grounded", isGrounded);
         }
     }
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Ground"))
-    //     {
-    //         isGrounded = true;
-    //     }
-    // }
 
-    // private void OnCollisionExit2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Ground"))
-    //     {
-    //         isGrounded = false;
-    //     }
-    // }
+    private IEnumerator Dash()
+    {
+        canDash = false; // Desabilita a capacidade de dar Dash novamente
+        isDashing = true; // Marca que está dashing
+
+        float originalGravity = rb.gravityScale; // Salva a gravidade original
+        rb.gravityScale = 0f; // Desabilita gravidade durante o Dash
+        rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f); // Aplica a força de Dash na direção correta
+        tr.emitting = true; // Ativa o efeito de trail renderer
+
+        yield return new WaitForSeconds(dashingTime); // Espera o tempo do Dash
+
+        tr.emitting = false; // Desativa o efeito de trail renderer
+        rb.gravityScale = originalGravity; // Restaura a gravidade
+        isDashing = false; // Termina o Dash
+
+        yield return new WaitForSeconds(dashingCooldown); // Espera o cooldown
+        canDash = true; // Permite que o Dash seja usado novamente
+    }
+
+    public void TakeDamage(float damageAmount)
+    {
+        if (isDead)
+        {
+            return;
+        }
+
+        health -= damageAmount;
+        Debug.Log($"Dano recebido: {damageAmount}, health restante: {health}");
+
+        if (health <= 0)
+        {
+            Die();
+            health = 0;
+        }
+        else
+        {
+            StartCoroutine(TookDamageCoroutine());
+        }
+    }
+    IEnumerator TookDamageCoroutine()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = Color.white;
+    }
+
+    protected void Die()
+    {
+        Debug.Log("Player morreu");
+
+        AudioManager.instance.PauseMusic();
+        AudioManager.instance.PlaySFX(AudioManager.instance.drumsOfWar);
+
+        // Activate game over screen on the canvas
+        deathMenuUI.SetActive(true);
+
+        animator.SetTrigger("Death");
+
+        isDead = true;
+
+        // Destroy(gameObject);
+    }
+
+    public void GiveHealth(float healthAmount)
+    {
+        health += healthAmount;
+        health = Mathf.Clamp(health, 0, maxHealth);
+    }
 }
