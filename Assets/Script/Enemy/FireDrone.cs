@@ -157,10 +157,14 @@ public class EnemyDrone : Enemy
         ScoreManager.instance.AddScore(scoreValue);
 
         isDead = true;
-        rb.gravityScale = 5;
+        StartCoroutine(DeathBehaviour());
+    }
+    IEnumerator DeathBehaviour()
+    {
+        rb.linearVelocity = Vector2.zero;
         anim.SetBool("isDead", true);
-        anim.SetBool("isFiring", false);
-        anim.SetBool("isMoving", false);
+        yield return new WaitForSeconds(0.45f); // death animation time
+        rb.gravityScale = 5;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -172,6 +176,7 @@ public class EnemyDrone : Enemy
             Destroy(gameObject, 2f);
         }
     }
+
 
     private void DamageOnDeath(float explosionDamage)
     {
