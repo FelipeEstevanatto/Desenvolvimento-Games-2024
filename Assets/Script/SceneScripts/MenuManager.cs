@@ -1,16 +1,23 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using UnityEditor;
+
 
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private AudioClip mainMenuMusic;
     [SerializeField] private AudioClip inGameMusic;
 
+    // [SerializeField] private GameObject hoverSprite;
+
+    // private Vector3 originalScale;
+    // private Coroutine scaleCoroutine;
 
     public void Start()
     {
+        // Set the game to run in fullscreen mode at the native resolution
+        // Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, FullScreenMode.FullScreenWindow);
+
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
