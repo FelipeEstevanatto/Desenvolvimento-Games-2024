@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
             HandleInput();
             HandleCrouch();
         }
-        Debug.Log(isGrounded);
+        // Debug.Log(isGrounded);
         HandleAnimation();
         if(Input.GetKey(KeyCode.LeftShift) && canDash) {
             StartCoroutine(Dash());

@@ -15,6 +15,14 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI deathScoreText; // Reference to the UI Text element
 
 
+    private void Start()
+    {
+        if (scoreText == null || deathScoreText == null)
+        {
+            Debug.LogError("ScoreManager: UI Text references are not assigned.");
+        }
+    }
+
     private void Awake()
     {
         if (instance == null)
@@ -22,7 +30,7 @@ public class ScoreManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -30,6 +38,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int scoreValue)
     {
+        Debug.Log($"Adding score: {scoreValue}");
         score += scoreValue;
         UpdateScoreText();
     }
