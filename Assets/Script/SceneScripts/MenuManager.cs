@@ -20,6 +20,7 @@ public class MenuManager : MonoBehaviour
     public void LoadScene(string sceneName = "Level1")
     {
         SceneManager.LoadScene(sceneName);
+        AudioManager.instance.UnpauseMusic();
         AudioManager.instance.PlayMusic(inGameMusic);
     }
 
