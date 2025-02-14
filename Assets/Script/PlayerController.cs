@@ -60,15 +60,8 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (isDashing == false) {
-            HandleInput();
-            HandleCrouch();
-        }
-        // Debug.Log(isGrounded);
+        HandleInput();
         HandleAnimation();
-        if(Input.GetKey(KeyCode.LeftShift) && canDash) {
-            StartCoroutine(Dash());
-        }
     }
 
     // This stays in check with the physics engine, things messing with the rigidbody should be here
@@ -87,6 +80,18 @@ public class PlayerController : MonoBehaviour
     }
 
     private void HandleInput()
+    {
+        if (isDashing == false) {
+            HandleJump();
+            HandleCrouch();
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift) && canDash) {
+            StartCoroutine(Dash());
+        }
+    }
+
+    private void HandleJump()
     {
         if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
         {
@@ -222,9 +227,13 @@ public class PlayerController : MonoBehaviour
         // Activate game over screen on the canvas
         deathMenuUI.SetActive(true);
 
+        animator.SetBool("Jump", false);
         animator.SetTrigger("Death");
 
         isDead = true;
+
+        // Stop the player's movement gradually
+        
 
         // Destroy(gameObject);
     }
