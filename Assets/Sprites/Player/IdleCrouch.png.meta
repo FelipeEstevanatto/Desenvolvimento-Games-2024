@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: b134e4b27afabb54ca60e53b7c523ff0
+guid: 20eb810d7723aca468e84ea5a5ace659
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4281637774074219296
-    second: jump_0
+      213: -7225802974758629910
+    second: IdleCrouch_0
+  - first:
+      213: -4851079776644774831
+    second: IdleCrouch_1
+  - first:
+      213: -8844066442101052621
+    second: IdleCrouch_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +132,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump_0
+      name: IdleCrouch_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 100
-        width: 812
-        height: 947
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02b8694dede6b6b30800000000000000
-      internalID: 4281637774074219296
+      spriteID: aed0d887a7ac8bb90800000000000000
+      internalID: -7225802974758629910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCrouch_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 154c10035a08dacb0800000000000000
+      internalID: -4851079776644774831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleCrouch_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b2d94cd60934580800000000000000
+      internalID: -8844066442101052621
       vertices: []
       indices: 
       edges: []
@@ -151,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 301f465b12ce3ad44835f7999ec7e90f
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jump_0: 4281637774074219296
+      IdleCrouch_0: -7225802974758629910
+      IdleCrouch_1: -4851079776644774831
+      IdleCrouch_2: -8844066442101052621
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
