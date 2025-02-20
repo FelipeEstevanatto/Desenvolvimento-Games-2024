@@ -163,7 +163,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -177,7 +177,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -201,7 +201,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -242,10 +242,10 @@ TextureImporter:
       name: BrownAntCav_die_0
       rect:
         serializedVersion: 2
-        x: 100
-        y: 2328
-        width: 880
-        height: 711
+        x: 0
+        y: 2160
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,10 +264,10 @@ TextureImporter:
       name: BrownAntCav_die_1
       rect:
         serializedVersion: 2
-        x: 1180
-        y: 2328
-        width: 947
-        height: 711
+        x: 1080
+        y: 2160
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: BrownAntCav_die_2
       rect:
         serializedVersion: 2
-        x: 2260
-        y: 2328
-        width: 947
-        height: 711
+        x: 2160
+        y: 2160
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,10 +308,10 @@ TextureImporter:
       name: BrownAntCav_die_3
       rect:
         serializedVersion: 2
-        x: 100
-        y: 1248
-        width: 947
-        height: 711
+        x: 0
+        y: 1080
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,10 +330,10 @@ TextureImporter:
       name: BrownAntCav_die_4
       rect:
         serializedVersion: 2
-        x: 1180
-        y: 1855
-        width: 70
-        height: 70
+        x: 1080
+        y: 1080
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: BrownAntCav_die_5
       rect:
         serializedVersion: 2
-        x: 1383
-        y: 1855
-        width: 69
-        height: 36
+        x: 2160
+        y: 1080
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,825 +370,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_6
-      rect:
-        serializedVersion: 2
-        x: 1315
-        y: 1788
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 35563a1b55c714130800000000000000
-      internalID: 3549254688839001427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_7
-      rect:
-        serializedVersion: 2
-        x: 1383
-        y: 1687
-        width: 170
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: efc7dd63542634ef0800000000000000
-      internalID: -125148315223491330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_8
-      rect:
-        serializedVersion: 2
-        x: 1551
-        y: 1754
-        width: 36
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a21d12c2e70658380800000000000000
-      internalID: -8969656987815915222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_9
-      rect:
-        serializedVersion: 2
-        x: 1619
-        y: 1518
-        width: 238
-        height: 272
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7e6f3f6a8e9c645a0800000000000000
-      internalID: -6537315808011094297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_10
-      rect:
-        serializedVersion: 2
-        x: 1923
-        y: 1754
-        width: 35
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0eee045a830ff9320800000000000000
-      internalID: 2567034438705802976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_11
-      rect:
-        serializedVersion: 2
-        x: 2496
-        y: 1754
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec044d382cfb5a9b0800000000000000
-      internalID: -5069434963379339058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_12
-      rect:
-        serializedVersion: 2
-        x: 2901
-        y: 1754
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f04d45e7c93808430800000000000000
-      internalID: 3783168395148841999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_13
-      rect:
-        serializedVersion: 2
-        x: 1383
-        y: 1585
-        width: 170
-        height: 137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 42d3f1e0349fbbf80800000000000000
-      internalID: -8089598239245910748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_14
-      rect:
-        serializedVersion: 2
-        x: 1855
-        y: 1619
-        width: 36
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f8629f91e86adf980800000000000000
-      internalID: -8503457392154302833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_15
-      rect:
-        serializedVersion: 2
-        x: 1956
-        y: 1619
-        width: 137
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b9d42761d05a1b50800000000000000
-      internalID: 6564648267154774450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_16
-      rect:
-        serializedVersion: 2
-        x: 2496
-        y: 1653
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c4489f0fc4c96d50800000000000000
-      internalID: 6731127511680828612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_17
-      rect:
-        serializedVersion: 2
-        x: 2564
-        y: 1687
-        width: 36
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 816a07416ffb2a770800000000000000
-      internalID: 8620663700366337560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_18
-      rect:
-        serializedVersion: 2
-        x: 2733
-        y: 1653
-        width: 35
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6eb71e6ae9a83a660800000000000000
-      internalID: 7395907427081747430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_19
-      rect:
-        serializedVersion: 2
-        x: 2800
-        y: 1653
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a339d588c312a5150800000000000000
-      internalID: 5862034408845710138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_20
-      rect:
-        serializedVersion: 2
-        x: 3070
-        y: 1687
-        width: 36
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d232fe12011aa430800000000000000
-      internalID: 3794864336819860180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_21
-      rect:
-        serializedVersion: 2
-        x: 3036
-        y: 1619
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aa74d696d0d6fb890800000000000000
-      internalID: -7440108155021998166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_22
-      rect:
-        serializedVersion: 2
-        x: 1383
-        y: 1518
-        width: 103
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0990e391978882d70800000000000000
-      internalID: 9018608307505334672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_23
-      rect:
-        serializedVersion: 2
-        x: 1518
-        y: 1484
-        width: 103
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45b9e3694be2f7920800000000000000
-      internalID: 2990160030746975060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_24
-      rect:
-        serializedVersion: 2
-        x: 1855
-        y: 1518
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5484c14bc78f93370800000000000000
-      internalID: 8302940602515605573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_25
-      rect:
-        serializedVersion: 2
-        x: 1956
-        y: 1518
-        width: 70
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b960999415fca4a0800000000000000
-      internalID: -6580615486670607945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_26
-      rect:
-        serializedVersion: 2
-        x: 2024
-        y: 1450
-        width: 103
-        height: 137
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 29d006dfa2e970c60800000000000000
-      internalID: 7784364388409937298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_27
-      rect:
-        serializedVersion: 2
-        x: 2631
-        y: 1518
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48ca1282adb5edbf0800000000000000
-      internalID: -297699532825580412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_28
-      rect:
-        serializedVersion: 2
-        x: 2868
-        y: 1552
-        width: 35
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dbb13d6ce5304eca0800000000000000
-      internalID: -5988657898898383939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_29
-      rect:
-        serializedVersion: 2
-        x: 3138
-        y: 1484
-        width: 35
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3ab9edacd1de567d0800000000000000
-      internalID: -2925671670693848157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_30
-      rect:
-        serializedVersion: 2
-        x: 1281
-        y: 1484
-        width: 104
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 21fc107b48830d030800000000000000
-      internalID: 3517373451633544978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_31
-      rect:
-        serializedVersion: 2
-        x: 1450
-        y: 1450
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 334147b5ccd6ecaa0800000000000000
-      internalID: -6138848517584317389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_32
-      rect:
-        serializedVersion: 2
-        x: 1653
-        y: 1450
-        width: 69
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 888c4099480c92050800000000000000
-      internalID: 5776359672814815368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_33
-      rect:
-        serializedVersion: 2
-        x: 1754
-        y: 1417
-        width: 36
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80a57d33287119f70800000000000000
-      internalID: 9192154162422831624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_34
-      rect:
-        serializedVersion: 2
-        x: 1923
-        y: 1450
-        width: 35
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d42b8779ce09826e0800000000000000
-      internalID: -1862079100089748915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_35
-      rect:
-        serializedVersion: 2
-        x: 2530
-        y: 1450
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef74cf4ee5f207550800000000000000
-      internalID: 6156472775230638078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_36
-      rect:
-        serializedVersion: 2
-        x: 1416
-        y: 1349
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 936488da95e6d8330800000000000000
-      internalID: 3714746599093061177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_37
-      rect:
-        serializedVersion: 2
-        x: 1518
-        y: 1417
-        width: 35
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a09a80d18f8c6cd0800000000000000
-      internalID: -2563516300168359771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_38
-      rect:
-        serializedVersion: 2
-        x: 1619
-        y: 1383
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5274c8a1c45efe820800000000000000
-      internalID: 2949828395976640293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_39
-      rect:
-        serializedVersion: 2
-        x: 1653
-        y: 1282
-        width: 35
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e895ba5b57c86eee0800000000000000
-      internalID: -1232143010852284018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_40
-      rect:
-        serializedVersion: 2
-        x: 1754
-        y: 1349
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2d9f86e11a625650800000000000000
-      internalID: 6220150660467236139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_41
-      rect:
-        serializedVersion: 2
-        x: 1383
-        y: 1248
-        width: 69
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7bf74c309212f6e0800000000000000
-      internalID: -1805360089926206593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrownAntCav_die_42
-      rect:
-        serializedVersion: 2
-        x: 1484
-        y: 1248
-        width: 69
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 26b382774da2334f0800000000000000
-      internalID: -850288812622333086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 827ed9953a8078f47b5349030b08bfe5
     internalID: 0
     vertices: []
     indices: 
@@ -1200,47 +386,10 @@ TextureImporter:
     nameFileIdTable:
       BrownAntCav_die_0: 8310626854073108182
       BrownAntCav_die_1: -3263995913815698892
-      BrownAntCav_die_10: 2567034438705802976
-      BrownAntCav_die_11: -5069434963379339058
-      BrownAntCav_die_12: 3783168395148841999
-      BrownAntCav_die_13: -8089598239245910748
-      BrownAntCav_die_14: -8503457392154302833
-      BrownAntCav_die_15: 6564648267154774450
-      BrownAntCav_die_16: 6731127511680828612
-      BrownAntCav_die_17: 8620663700366337560
-      BrownAntCav_die_18: 7395907427081747430
-      BrownAntCav_die_19: 5862034408845710138
       BrownAntCav_die_2: -1958053169699853338
-      BrownAntCav_die_20: 3794864336819860180
-      BrownAntCav_die_21: -7440108155021998166
-      BrownAntCav_die_22: 9018608307505334672
-      BrownAntCav_die_23: 2990160030746975060
-      BrownAntCav_die_24: 8302940602515605573
-      BrownAntCav_die_25: -6580615486670607945
-      BrownAntCav_die_26: 7784364388409937298
-      BrownAntCav_die_27: -297699532825580412
-      BrownAntCav_die_28: -5988657898898383939
-      BrownAntCav_die_29: -2925671670693848157
       BrownAntCav_die_3: -2604919134975060165
-      BrownAntCav_die_30: 3517373451633544978
-      BrownAntCav_die_31: -6138848517584317389
-      BrownAntCav_die_32: 5776359672814815368
-      BrownAntCav_die_33: 9192154162422831624
-      BrownAntCav_die_34: -1862079100089748915
-      BrownAntCav_die_35: 6156472775230638078
-      BrownAntCav_die_36: 3714746599093061177
-      BrownAntCav_die_37: -2563516300168359771
-      BrownAntCav_die_38: 2949828395976640293
-      BrownAntCav_die_39: -1232143010852284018
       BrownAntCav_die_4: 8295954993102556489
-      BrownAntCav_die_40: 6220150660467236139
-      BrownAntCav_die_41: -1805360089926206593
-      BrownAntCav_die_42: -850288812622333086
       BrownAntCav_die_5: -6926222903474586617
-      BrownAntCav_die_6: 3549254688839001427
-      BrownAntCav_die_7: -125148315223491330
-      BrownAntCav_die_8: -8969656987815915222
-      BrownAntCav_die_9: -6537315808011094297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

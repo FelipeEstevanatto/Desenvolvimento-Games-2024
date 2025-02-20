@@ -7,18 +7,17 @@ public class GunEnemy : Enemy
     [SerializeField] protected WeaponPickup weaponPickup;
     [SerializeField] protected Weapon weaponPrefab;
     [SerializeField] protected Transform weaponHolder;
-    [SerializeField] private float fireRate = 1f;
+    private float fireRate = 1f;
 
     [Header("Enemy Components")]
     [SerializeField] private Animator anim;
-    [SerializeField] private Animator handsAnim;
     [SerializeField] private float chaseDistance = 5f;
     [SerializeField] private float speed = 2f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform obstacleCheck;
-    [SerializeField] private float obstacleCheckDistance = 1f;
+    [SerializeField] private float obstacleCheckDistance = 2f;
 
     [Header("Patrol Components")]
     [SerializeField] private Transform[] patrolPoints;
@@ -42,7 +41,12 @@ public class GunEnemy : Enemy
         {
             weapon = Instantiate(weaponPrefab, weaponHolder.position, Quaternion.identity, weaponHolder);
             weapon.transform.localScale /= Mathf.Abs(transform.localScale.x);
+            if(weapon is Gun gun)
+            {
+                fireRate = gun.fireRate;
+            }
         }
+
         waitCounter = waitAtPoint;
 
         foreach(Transform pPoint in patrolPoints)
@@ -74,7 +78,6 @@ public class GunEnemy : Enemy
         if (anim != null)
         {
             anim.SetBool("isRunning", isRunning);
-            handsAnim.SetBool("isRunning", isRunning);
         }
 
         if (isAttacking)
