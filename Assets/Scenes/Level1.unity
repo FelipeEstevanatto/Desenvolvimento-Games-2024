@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 27697309}
   - component: {fileID: 27697308}
   - component: {fileID: 27697307}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: GroundTiles
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -9918,9 +9918,9 @@ GameObject:
   - component: {fileID: 1006382180}
   - component: {fileID: 1006382179}
   - component: {fileID: 1006382178}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Barriers
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11055,7 +11055,7 @@ GameObject:
   - component: {fileID: 1038564672}
   - component: {fileID: 1038564668}
   - component: {fileID: 1038564671}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -14853,7 +14853,7 @@ GameObject:
   - component: {fileID: 1691206302}
   - component: {fileID: 1691206304}
   - component: {fileID: 1691206303}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: BuildingsTilesDetails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16115,7 +16115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948605309}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: WeaponHolder
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -16351,7 +16351,7 @@ GameObject:
   - component: {fileID: 2067010247}
   - component: {fileID: 2067010249}
   - component: {fileID: 2067010248}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: BuildingsTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
