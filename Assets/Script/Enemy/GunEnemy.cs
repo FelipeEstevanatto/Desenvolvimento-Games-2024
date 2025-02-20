@@ -8,7 +8,7 @@ public class GunEnemy : Enemy
     [SerializeField] protected WeaponPickup weaponPickup;
     [SerializeField] protected Weapon weaponPrefab;
     [SerializeField] protected Transform weaponHolder;
-    private float fireRate = 1f;
+    [SerializeField] private float fireRate = 1f;
 
     [Header("Enemy Components")]
     [SerializeField] private Animator anim;
@@ -42,10 +42,10 @@ public class GunEnemy : Enemy
         {
             weapon = Instantiate(weaponPrefab, weaponHolder.position, Quaternion.identity, weaponHolder);
             weapon.transform.localScale /= Mathf.Abs(transform.localScale.x);
-            if(weapon is Gun gun)
-            {
-                fireRate = gun.fireRate;
-            }
+            //if(weapon is Gun gun)
+            //{
+            //    fireRate = gun.fireRate;
+            //}
         }
 
         waitCounter = waitAtPoint;

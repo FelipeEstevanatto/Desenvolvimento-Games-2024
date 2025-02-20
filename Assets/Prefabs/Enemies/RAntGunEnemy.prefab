@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 3951434888963242580}
   - component: {fileID: 5746221320032503808}
   m_Layer: 8
-  m_Name: RAntGunEnemy 2
+  m_Name: RAntGunEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,7 +242,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -524243777237510430, guid: 4d048877a5b0d514d9cf1bcd8e7012f2, type: 3}
+  m_Sprite: {fileID: -4112028958681500555, guid: a24283376e22cbd4e9cdba29bd8d79fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -360,7 +360,7 @@ Animator:
   m_GameObject: {fileID: 3105954363712733463}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f9b6c918758bce4cace7f7bcd0433b7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 291fd61bcab1af14ab8cd4c8e2b4a988, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
