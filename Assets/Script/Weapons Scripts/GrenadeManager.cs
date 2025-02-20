@@ -48,12 +48,13 @@ public class GrenadeManager : MonoBehaviour
 
             Rigidbody2D grenadeRb = grenadeInstance.GetComponent<Rigidbody2D>(); 
             
-            // ignore collision between the player and the grenade (CASO A GRANADA NÃO DEVA INTERAGIR COM OUTROS OBJETOS EM CENA, FAZER COM LAYERS EM VEZ DE SCRIPT)
+            // ignore collision between the player and the grenade 
             Physics2D.IgnoreCollision(grenadeInstance.GetComponent<Collider2D>(), player.GetComponent<Collider2D>());
 
             if (grenadeRb != null)
             {
                 grenadeRb.linearVelocity = throwVelocity; // apply the calculated velocity to the grenade
+                grenadeRb.AddTorque(direction * 50f, ForceMode2D.Impulse); //ForceMode2D.Impulse -> based on object's mass
             }
 
             currentGrenades--; // decrease the number of grenades
