@@ -11219,7 +11219,7 @@ MonoBehaviour:
     m_Bits: 512
   normalCollider: {fileID: 1038564665}
   crouchCollider: {fileID: 1038564669}
-  dashingPower: 3
+  dashingPower: 20
   dashingTime: 0.2
   dashingCooldown: 1
   tr: {fileID: 1038564671}
