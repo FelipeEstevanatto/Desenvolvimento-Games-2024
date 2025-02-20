@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 16682840}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 27697309}
   - component: {fileID: 27697308}
   - component: {fileID: 27697307}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: GroundTiles
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5485,6 +5485,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1928252838}
     m_Modifications:
+    - target: {fileID: 1453899961011023982, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2342834557984553074, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_LocalPosition.x
       value: 96.024025
@@ -5525,9 +5529,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964292867767603784, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_Name
       value: GunEnemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479866238967322062, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596277065802284219, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5492990772907395548, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: weaponPickup
@@ -5549,6 +5569,22 @@ PrefabInstance:
       propertyPath: 'patrolPoints.Array.data[2]'
       value: 
       objectReference: {fileID: 776618382}
+    - target: {fileID: 5533524732077340029, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938520471295246026, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477044975713784802, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924642707715622438, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5700,7 +5736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 81849515}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PatrolPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5734,7 +5770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 82487162}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -5765,7 +5801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 93506144}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PatrolPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6272,7 +6308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 216079148}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (2)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -6921,7 +6957,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 321744166}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (2)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -7308,6 +7344,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireDrone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7292550564060127344, guid: d9a9b674b5456e2449bd62ac9b782506, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540317889217763627, guid: d9a9b674b5456e2449bd62ac9b782506, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9046434649193947821, guid: d9a9b674b5456e2449bd62ac9b782506, type: 3}
       propertyPath: m_LocalPosition.x
       value: 87.87403
@@ -7567,7 +7611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 560093749}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -8096,6 +8140,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1928252838}
     m_Modifications:
+    - target: {fileID: 1453899961011023982, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2342834557984553074, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_LocalPosition.x
       value: 74.80403
@@ -8136,9 +8184,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964292867767603784, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_Name
       value: GunEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479866238967322062, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596277065802284219, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5492990772907395548, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: weaponPickup
@@ -8160,6 +8224,22 @@ PrefabInstance:
       propertyPath: 'patrolPoints.Array.data[2]'
       value: 
       objectReference: {fileID: 321744166}
+    - target: {fileID: 5533524732077340029, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938520471295246026, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477044975713784802, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924642707715622438, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -8315,7 +8395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 702749127}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PatrolPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8801,7 +8881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 776618382}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (2)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -9418,7 +9498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848177328}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -9771,7 +9851,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 984485874}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -9802,7 +9882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 985806834}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -10433,7 +10513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1009057392}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -10464,7 +10544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1011291440}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (2)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -10551,6 +10631,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1928252838}
     m_Modifications:
+    - target: {fileID: 1453899961011023982, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2342834557984553074, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.902905
@@ -10591,9 +10675,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964292867767603784, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_Name
       value: GunEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479866238967322062, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596277065802284219, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5492990772907395548, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: walkDistance
@@ -10619,6 +10719,22 @@ PrefabInstance:
       propertyPath: 'patrolPoints.Array.data[2]'
       value: 
       objectReference: {fileID: 2000205997}
+    - target: {fileID: 5533524732077340029, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938520471295246026, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477044975713784802, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924642707715622438, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -10939,7 +11055,7 @@ GameObject:
   - component: {fileID: 1038564672}
   - component: {fileID: 1038564668}
   - component: {fileID: 1038564671}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -11010,9 +11126,9 @@ Transform:
   m_GameObject: {fileID: 1038564662}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.58, y: -3.486, z: 0.0207}
-  m_LocalScale: {x: 6, y: 6, z: 6}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -10.06, y: -3.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1948605309}
   m_Father: {fileID: 0}
@@ -11051,8 +11167,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0018298626, y: 0.00012679896}
-  m_Size: {x: 0.4037673, y: 0.5041046}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3.3, y: 2.58}
   m_Direction: 0
 --- !u!50 &1038564666
 Rigidbody2D:
@@ -11100,7 +11216,7 @@ MonoBehaviour:
   distanceToGround: 2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   normalCollider: {fileID: 1038564665}
   crouchCollider: {fileID: 1038564669}
   dashingPower: 3
@@ -11164,9 +11280,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.008551432, y: -0.09810814}
-  m_Size: {x: 0.39367282, y: 0.3080098}
-  m_Direction: 1
+  m_Offset: {x: 0, y: -0.3}
+  m_Size: {x: 2.72, y: 0.0001}
+  m_Direction: 0
 --- !u!114 &1038564670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11459,7 +11575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054819279}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PatrolPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11605,6 +11721,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1928252838}
     m_Modifications:
+    - target: {fileID: 1453899961011023982, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2342834557984553074, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.625971
@@ -11645,9 +11765,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964292867767603784, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_Name
       value: GunEnemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479866238967322062, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596277065802284219, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5492990772907395548, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: walkDistance
@@ -11673,6 +11809,22 @@ PrefabInstance:
       propertyPath: 'patrolPoints.Array.data[2]'
       value: 
       objectReference: {fileID: 216079148}
+    - target: {fileID: 5533524732077340029, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938520471295246026, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477044975713784802, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924642707715622438, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -11702,6 +11854,14 @@ PrefabInstance:
     - target: {fileID: 7292550564060127344, guid: d9a9b674b5456e2449bd62ac9b782506, type: 3}
       propertyPath: m_Name
       value: FireDrone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292550564060127344, guid: d9a9b674b5456e2449bd62ac9b782506, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540317889217763627, guid: d9a9b674b5456e2449bd62ac9b782506, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8615680652101035890, guid: d9a9b674b5456e2449bd62ac9b782506, type: 3}
       propertyPath: explosionPrefab
@@ -12420,6 +12580,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1928252838}
     m_Modifications:
+    - target: {fileID: 1453899961011023982, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2342834557984553074, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_LocalPosition.x
       value: 107.024025
@@ -12460,9 +12624,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964292867767603784, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_Name
       value: GunEnemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479866238967322062, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596277065802284219, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5492990772907395548, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: weaponPickup
@@ -12484,6 +12664,22 @@ PrefabInstance:
       propertyPath: 'patrolPoints.Array.data[2]'
       value: 
       objectReference: {fileID: 1802590359}
+    - target: {fileID: 5533524732077340029, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938520471295246026, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477044975713784802, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924642707715622438, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -12501,7 +12697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1314831301}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PatrolPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12659,7 +12855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1362954550}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -13120,6 +13316,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1928252838}
     m_Modifications:
+    - target: {fileID: 1453899961011023982, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2342834557984553074, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_LocalPosition.x
       value: 85.524025
@@ -13160,9 +13360,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2964292867767603784, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: m_Name
       value: GunEnemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239212689575752564, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479866238967322062, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596277065802284219, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5492990772907395548, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
       propertyPath: weaponPickup
@@ -13184,6 +13400,22 @@ PrefabInstance:
       propertyPath: 'patrolPoints.Array.data[2]'
       value: 
       objectReference: {fileID: 1011291440}
+    - target: {fileID: 5533524732077340029, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938520471295246026, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477044975713784802, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924642707715622438, guid: 2a0ab59477822da469bb81daf0546439, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -13760,7 +13992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1548385971}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PatrolPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13825,7 +14057,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1561243310}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -15046,7 +15278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1709425288}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -15518,7 +15750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1802590359}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (2)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -15811,7 +16043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1892263574}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -15842,9 +16074,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1928252838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemies
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15883,7 +16115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948605309}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: WeaponHolder
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -15971,7 +16203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1962202554}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -16002,7 +16234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000205997}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Patrol Point (2)
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -17182,6 +17414,7 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1360794552}
   - {fileID: 1038564664}
+  - {fileID: 1928252838}
   - {fileID: 746196627}
   - {fileID: 1035255115}
   - {fileID: 1380542979}
@@ -17195,4 +17428,3 @@ SceneRoots:
   - {fileID: 168616808}
   - {fileID: 2453358794114576655}
   - {fileID: 1955369639}
-  - {fileID: 1928252838}

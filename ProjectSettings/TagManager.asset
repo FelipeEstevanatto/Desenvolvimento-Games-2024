@@ -14,10 +14,10 @@ TagManager:
   - No Collisions
   - Water
   - UI
-  - Background
-  - Ground
-  - Enemies
+  - Projectiles
   - Player
+  - Enemies
+  - Ground
   - 
   - 
   - 

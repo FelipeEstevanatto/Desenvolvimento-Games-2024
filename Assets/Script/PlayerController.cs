@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
         crouchCollider.enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {   
         if (health <= 0)

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5696595005925430570}
   - component: {fileID: 1901338001277523484}
   - component: {fileID: 8287794271740495521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueBullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168568993
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: -7726624851970778080, guid: faae605c37674d44bac17119c99fb1a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

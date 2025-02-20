@@ -14,12 +14,12 @@ public class BaseBullet : Bullet
 
         if (collision.CompareTag(shooter.tag)) return; //avoid TK
 
-        if (this.shooter.tag == "Player" && collision.CompareTag("Enemy"))
+        if (shooter.tag == "Player" && collision.CompareTag("Enemy"))
         {
             EnemyDamage(collision);
             Destroy(gameObject);
         }
-        else if (this.shooter.tag == "Enemy" && collision.CompareTag("Player"))
+        else if (shooter.tag == "Enemy" && collision.CompareTag("Player"))
         {
             playerDamage(collision);
             Destroy(gameObject);
