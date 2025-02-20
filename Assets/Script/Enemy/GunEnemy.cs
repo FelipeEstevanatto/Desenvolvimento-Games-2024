@@ -57,35 +57,37 @@ public class GunEnemy : Enemy
     }
     protected override void Update()
     {
-        base.Update();
-
-        float distanceToTarget = Mathf.Abs(targetDistance);
-        isChasing = distanceToTarget < chaseDistance && distanceToTarget > attackDistance;
-        isAttacking = distanceToTarget <= attackDistance && Time.time >= nextFireTime;
-        isRunning = rb.linearVelocity.x != 0 ? true : false;
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
-
-        if (distanceToTarget < chaseDistance)
+        if (!player.IsDead)
         {
-            isPatrolling = false; 
-            CheckFlip();
-        }
-        else if (!isPatrolling)
-        {
-            isPatrolling = true; 
-        }
+            base.Update();
 
-        if (anim != null)
-        {
-            anim.SetBool("isRunning", isRunning);
-        }
+            float distanceToTarget = Mathf.Abs(targetDistance);
+            isChasing = distanceToTarget < chaseDistance && distanceToTarget > attackDistance;
+            isAttacking = distanceToTarget <= attackDistance && Time.time >= nextFireTime;
+            isRunning = rb.linearVelocity.x != 0 ? true : false;
 
-        if (isAttacking)
-        {
-            Attack();
-        }
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
+            if (distanceToTarget < chaseDistance)
+            {
+                isPatrolling = false; 
+                CheckFlip();
+            }
+            else if (!isPatrolling)
+            {
+                isPatrolling = true; 
+            }
+
+            if (anim != null)
+            {
+                anim.SetBool("isRunning", isRunning);
+            }
+
+            if (isAttacking)
+            {
+                Attack();
+            }
+        }
     }
 
     private void FixedUpdate()

@@ -218,7 +218,7 @@ public class WeaponManager : MonoBehaviour
 
     private void HandleDeath()
     {
-        if(playerController.IsDead)
+        if (playerController.IsDead)
         {
             Destroy(currentWeapon.gameObject);
         }

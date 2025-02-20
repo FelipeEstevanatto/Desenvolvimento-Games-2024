@@ -9,7 +9,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected int scoreValue = 10;
 
     protected bool facingRight = true;
-    protected Transform target;
+    protected PlayerController player;
     protected float targetDistance;
     protected Rigidbody2D rb;
     protected SpriteRenderer sprite;
@@ -19,7 +19,7 @@ public abstract class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        target = FindFirstObjectByType<PlayerController>()?.transform;
+        player = FindFirstObjectByType<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
     }
@@ -27,9 +27,9 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (target != null)
+        if (player != null)
         {
-            targetDistance = transform.position.x - target.position.x;
+            targetDistance = transform.position.x - player.transform.position.x;
         }
     }
 

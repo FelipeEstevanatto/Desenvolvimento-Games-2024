@@ -39,7 +39,7 @@ public class EnemyDrone : Enemy
 
     protected override void Update()
     {
-        if (!isDead)
+        if (!isDead && !player.IsDead)
         {
             base.Update();
             DetectPlayer();
@@ -53,7 +53,7 @@ public class EnemyDrone : Enemy
 
     private void DetectPlayer()
     {
-        if (Vector2.Distance(transform.position, target.position) <= detectionRadius)
+        if (Vector2.Distance(transform.position, player.transform.position) <= detectionRadius)
         {
             isChasing = true;
         }
@@ -61,9 +61,9 @@ public class EnemyDrone : Enemy
 
     private void ChasePlayer()
     {
-        if (target == null) return;
+        if (player == null) return;
 
-        Vector2 direction = (target.position - transform.position).normalized;
+        Vector2 direction = (player.transform.position - transform.position).normalized;
         Vector2 move = direction * speed; //follows the player in X and Y axis
         rb.linearVelocity = move;
 
@@ -76,7 +76,7 @@ public class EnemyDrone : Enemy
         // flips the artwork, not the actual transform direction
         sprite.flipY = angle > 90 || angle < -90;
 
-        if (Vector2.Distance(transform.position, target.position) <= attackDistance && !isShooting)
+        if (Vector2.Distance(transform.position, player.transform.position) <= attackDistance && !isShooting)
         {
             StartCoroutine(Shoot());
         }
@@ -119,7 +119,7 @@ public class EnemyDrone : Enemy
         anim.SetBool("isFiring", isShooting);
         rb.linearVelocity = Vector2.zero; //stop and shoot
 
-        Vector2 direction = (target.position - firePoint.position).normalized;
+        Vector2 direction = (player.transform.position - firePoint.position).normalized;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         SetShooter(bullet);
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
