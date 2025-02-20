@@ -30,7 +30,7 @@ public class UIHandler : MonoBehaviour
         grenadesText.text = grenadeManager.CurrentGrenades.ToString() + "/" + grenadeManager.MaxGrenades.ToString();
         if (weaponManager.currentWeapon is Gun gun)
         {
-            if (weaponManager.currentWeapon == weaponManager.baseWeaponInstance)
+            if (weaponManager.currentWeapon is Pistol)
             {
                 ammoText.text = "Ammo: ∞";
             }
