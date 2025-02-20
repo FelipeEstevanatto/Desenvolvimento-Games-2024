@@ -189,11 +189,13 @@ public class WeaponManager : MonoBehaviour
         {
             weaponSlot1.sprite = baseWeaponInstance.weaponIcon;
             weaponSlot1.enabled = true;
+            weaponSlot1.color = Color.white;
 
             if (pickupWeaponInstance != null)
             {
                 weaponSlot2.sprite = pickupWeaponInstance.weaponIcon;
                 weaponSlot2.enabled = true;
+                weaponSlot2.color = Color.black;
             }
             else
             {
@@ -205,9 +207,11 @@ public class WeaponManager : MonoBehaviour
         {
             weaponSlot1.sprite = pickupWeaponInstance.weaponIcon;
             weaponSlot1.enabled = true;
+            weaponSlot1.color = Color.white;
 
             weaponSlot2.sprite = baseWeaponInstance.weaponIcon;
             weaponSlot2.enabled = true;
+            weaponSlot2.color = Color.black;
         }
     }
 
