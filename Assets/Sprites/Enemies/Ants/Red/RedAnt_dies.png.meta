@@ -1,0 +1,1205 @@
+fileFormatVersion: 2
+guid: 1907f714fffe4bf43825b7273e5b2b0b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2779168585917883714
+    second: RedAnt_dies_0
+  - first:
+      213: -6631112343073911526
+    second: RedAnt_dies_1
+  - first:
+      213: 8744322020902658103
+    second: RedAnt_dies_2
+  - first:
+      213: 3641415797352215484
+    second: RedAnt_dies_3
+  - first:
+      213: 5969759967287717860
+    second: RedAnt_dies_4
+  - first:
+      213: -4699209688668683534
+    second: RedAnt_dies_5
+  - first:
+      213: -3811591667169367151
+    second: RedAnt_dies_6
+  - first:
+      213: -7322968707829884937
+    second: RedAnt_dies_7
+  - first:
+      213: 8683178287883113128
+    second: RedAnt_dies_8
+  - first:
+      213: 918454799815641861
+    second: RedAnt_dies_9
+  - first:
+      213: 3234483289100943924
+    second: RedAnt_dies_10
+  - first:
+      213: 5207767226966402801
+    second: RedAnt_dies_11
+  - first:
+      213: -252875704071716862
+    second: RedAnt_dies_12
+  - first:
+      213: 4225821667087345503
+    second: RedAnt_dies_13
+  - first:
+      213: -5689626195421662430
+    second: RedAnt_dies_14
+  - first:
+      213: -4132186455264624724
+    second: RedAnt_dies_15
+  - first:
+      213: -287960848014684724
+    second: RedAnt_dies_16
+  - first:
+      213: -4632712658981362992
+    second: RedAnt_dies_17
+  - first:
+      213: 8638295164092941913
+    second: RedAnt_dies_18
+  - first:
+      213: -8736056857829063499
+    second: RedAnt_dies_19
+  - first:
+      213: 3876328032338758986
+    second: RedAnt_dies_20
+  - first:
+      213: -7483808583355406199
+    second: RedAnt_dies_21
+  - first:
+      213: -6522469088316446092
+    second: RedAnt_dies_22
+  - first:
+      213: -7036568530258731785
+    second: RedAnt_dies_23
+  - first:
+      213: 5666180481982164469
+    second: RedAnt_dies_24
+  - first:
+      213: -934513992943870049
+    second: RedAnt_dies_25
+  - first:
+      213: -8335178248209191478
+    second: RedAnt_dies_26
+  - first:
+      213: -5864092807425411499
+    second: RedAnt_dies_27
+  - first:
+      213: -42336225192883746
+    second: RedAnt_dies_28
+  - first:
+      213: -5038863745244119703
+    second: RedAnt_dies_29
+  - first:
+      213: -7812135771453878794
+    second: RedAnt_dies_30
+  - first:
+      213: 1045230279743352296
+    second: RedAnt_dies_31
+  - first:
+      213: -5077283549179213194
+    second: RedAnt_dies_32
+  - first:
+      213: 5126405524606734777
+    second: RedAnt_dies_33
+  - first:
+      213: 8965741664762391399
+    second: RedAnt_dies_34
+  - first:
+      213: -7920405676397528396
+    second: RedAnt_dies_35
+  - first:
+      213: -3558920585536289748
+    second: RedAnt_dies_36
+  - first:
+      213: -4712960616940294852
+    second: RedAnt_dies_37
+  - first:
+      213: 4343565350240162293
+    second: RedAnt_dies_38
+  - first:
+      213: 3104178809343409716
+    second: RedAnt_dies_39
+  - first:
+      213: -3041193459741145244
+    second: RedAnt_dies_40
+  - first:
+      213: -4679210851511282284
+    second: RedAnt_dies_41
+  - first:
+      213: -3657907665535053675
+    second: RedAnt_dies_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RedAnt_dies_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2328
+        width: 880
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba907155e86e69d0800000000000000
+      internalID: -2779168585917883714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_1
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 2328
+        width: 947
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d0f55057e89f3a0800000000000000
+      internalID: -6631112343073911526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_2
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 2328
+        width: 947
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73067817c821a5970800000000000000
+      internalID: 8744322020902658103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1248
+        width: 947
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3bca8ef58e88230800000000000000
+      internalID: 3641415797352215484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_4
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 1855
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef2884af09d8d250800000000000000
+      internalID: 5969759967287717860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_5
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1855
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f244d58fad09ceb0800000000000000
+      internalID: -4699209688668683534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_6
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1788
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19be789c2918a1bc0800000000000000
+      internalID: -3811591667169367151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_7
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1687
+        width: 170
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f79f7c42c69f5a90800000000000000
+      internalID: -7322968707829884937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_8
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1754
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a258aab5a8d08870800000000000000
+      internalID: 8683178287883113128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_9
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1518
+        width: 238
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b834536c10fbc00800000000000000
+      internalID: 918454799815641861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_10
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1754
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4328cc61a6133ec20800000000000000
+      internalID: 3234483289100943924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_11
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1754
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6e04473b4b54840800000000000000
+      internalID: 5207767226966402801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_12
+      rect:
+        serializedVersion: 2
+        x: 2901
+        y: 1754
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2008a7e03ea9d7cf0800000000000000
+      internalID: -252875704071716862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_13
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1585
+        width: 170
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57e3e6ba6225aa30800000000000000
+      internalID: 4225821667087345503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_14
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1619
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2237225ce136a01b0800000000000000
+      internalID: -5689626195421662430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_15
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1619
+        width: 137
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf754cef4687a6c0800000000000000
+      internalID: -4132186455264624724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_16
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1653
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd4dd86225f00cf0800000000000000
+      internalID: -287960848014684724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_17
+      rect:
+        serializedVersion: 2
+        x: 2564
+        y: 1687
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2e5feb16c45bfb0800000000000000
+      internalID: -4632712658981362992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_18
+      rect:
+        serializedVersion: 2
+        x: 2733
+        y: 1653
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9560cb02fa361e770800000000000000
+      internalID: 8638295164092941913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_19
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1653
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4cb7bc29a43c680800000000000000
+      internalID: -8736056857829063499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_20
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 1687
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4dc078cecb7bc530800000000000000
+      internalID: 3876328032338758986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_21
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 1619
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988e41e8ebb242890800000000000000
+      internalID: -7483808583355406199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_22
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1518
+        width: 103
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47aae64fbe88b75a0800000000000000
+      internalID: -6522469088316446092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_23
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1484
+        width: 103
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc5c3cf336195e90800000000000000
+      internalID: -7036568530258731785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_24
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1518
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd6ccda02152ae40800000000000000
+      internalID: 5666180481982164469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_25
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1518
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9fd2f48970f703f0800000000000000
+      internalID: -934513992943870049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_26
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1450
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acdadef7b8f735c80800000000000000
+      internalID: -8335178248209191478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_27
+      rect:
+        serializedVersion: 2
+        x: 2631
+        y: 1518
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5563c7339ae8e9ea0800000000000000
+      internalID: -5864092807425411499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_28
+      rect:
+        serializedVersion: 2
+        x: 2868
+        y: 1552
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed94f307d67996ff0800000000000000
+      internalID: -42336225192883746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_29
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 1484
+        width: 35
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d3129ee1c521ab0800000000000000
+      internalID: -5038863745244119703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_30
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1484
+        width: 104
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd8e5508e7b59390800000000000000
+      internalID: -7812135771453878794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_31
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1450
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eda59cc667618e00800000000000000
+      internalID: 1045230279743352296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_32
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 1450
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a0d3b338dd989b0800000000000000
+      internalID: -5077283549179213194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_33
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 1417
+        width: 36
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b1d8cce9a6a42740800000000000000
+      internalID: 5126405524606734777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_34
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1450
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76be414aa86bc6c70800000000000000
+      internalID: 8965741664762391399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_35
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1450
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba765d5001151290800000000000000
+      internalID: -7920405676397528396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_36
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 1349
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24c84b559c2c9ec0800000000000000
+      internalID: -3558920585536289748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_37
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1417
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d2eda0a43389eb0800000000000000
+      internalID: -4712960616940294852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_38
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1383
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f192cf3ca1774c30800000000000000
+      internalID: 4343565350240162293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_39
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 1282
+        width: 35
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e75323e22441b20800000000000000
+      internalID: 3104178809343409716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_40
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 1349
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46743ea49a28bc5d0800000000000000
+      internalID: -3041193459741145244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_41
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1248
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4955486a58a101fb0800000000000000
+      internalID: -4679210851511282284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_42
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1248
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590da9ecb508c3dc0800000000000000
+      internalID: -3657907665535053675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

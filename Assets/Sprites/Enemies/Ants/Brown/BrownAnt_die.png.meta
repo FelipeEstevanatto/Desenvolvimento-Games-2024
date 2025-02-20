@@ -1,0 +1,1205 @@
+fileFormatVersion: 2
+guid: 4de9f937d5e4d014493bc3a9636b36d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3184540167118217643
+    second: BrownAnt_die_0
+  - first:
+      213: 5253937033841761018
+    second: BrownAnt_die_1
+  - first:
+      213: 7230565034047939068
+    second: BrownAnt_die_2
+  - first:
+      213: -4903887983687170149
+    second: BrownAnt_die_3
+  - first:
+      213: -3660193153766743603
+    second: BrownAnt_die_4
+  - first:
+      213: -2888176601665728784
+    second: BrownAnt_die_5
+  - first:
+      213: 3518595119352848718
+    second: BrownAnt_die_6
+  - first:
+      213: -8127711813093906547
+    second: BrownAnt_die_7
+  - first:
+      213: -2979188209806548096
+    second: BrownAnt_die_8
+  - first:
+      213: -274833834859492033
+    second: BrownAnt_die_9
+  - first:
+      213: -9216740769387054517
+    second: BrownAnt_die_10
+  - first:
+      213: 8249807093849038698
+    second: BrownAnt_die_11
+  - first:
+      213: -4175291797167355594
+    second: BrownAnt_die_12
+  - first:
+      213: -854301599152246709
+    second: BrownAnt_die_13
+  - first:
+      213: -8867918550116248703
+    second: BrownAnt_die_14
+  - first:
+      213: -1663281346962379241
+    second: BrownAnt_die_15
+  - first:
+      213: 3222503355827847670
+    second: BrownAnt_die_16
+  - first:
+      213: 499479737877328849
+    second: BrownAnt_die_17
+  - first:
+      213: -8444107256985668795
+    second: BrownAnt_die_18
+  - first:
+      213: 2919024651539849758
+    second: BrownAnt_die_19
+  - first:
+      213: -7382034463781603306
+    second: BrownAnt_die_20
+  - first:
+      213: 2499342079918479415
+    second: BrownAnt_die_21
+  - first:
+      213: -42619717429772003
+    second: BrownAnt_die_22
+  - first:
+      213: 2508197591643529220
+    second: BrownAnt_die_23
+  - first:
+      213: -4852650698338171504
+    second: BrownAnt_die_24
+  - first:
+      213: 778216531379416968
+    second: BrownAnt_die_25
+  - first:
+      213: 8492527139528373281
+    second: BrownAnt_die_26
+  - first:
+      213: 4580696928345721320
+    second: BrownAnt_die_27
+  - first:
+      213: 8065964400540266670
+    second: BrownAnt_die_28
+  - first:
+      213: 3548383609235869613
+    second: BrownAnt_die_29
+  - first:
+      213: -2409030466843937158
+    second: BrownAnt_die_30
+  - first:
+      213: 7712649670835585360
+    second: BrownAnt_die_31
+  - first:
+      213: 4230608220547422196
+    second: BrownAnt_die_32
+  - first:
+      213: -5370367606476060726
+    second: BrownAnt_die_33
+  - first:
+      213: 2146650788717460349
+    second: BrownAnt_die_34
+  - first:
+      213: 4137105496135749890
+    second: BrownAnt_die_35
+  - first:
+      213: 3028885731137742592
+    second: BrownAnt_die_36
+  - first:
+      213: 3063480230751986223
+    second: BrownAnt_die_37
+  - first:
+      213: -7035568706306146169
+    second: BrownAnt_die_38
+  - first:
+      213: -8831633186194105629
+    second: BrownAnt_die_39
+  - first:
+      213: -3168005572289828523
+    second: BrownAnt_die_40
+  - first:
+      213: 5811628918970154012
+    second: BrownAnt_die_41
+  - first:
+      213: -2881465888008325642
+    second: BrownAnt_die_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BrownAnt_die_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2328
+        width: 880
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e94f5279d3ec3d0800000000000000
+      internalID: -3184540167118217643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_1
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 2328
+        width: 947
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa586e45ebb9e840800000000000000
+      internalID: 5253937033841761018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_2
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 2328
+        width: 947
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1a9cbd690285460800000000000000
+      internalID: 7230565034047939068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1248
+        width: 947
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97050a5cd3e1fbb0800000000000000
+      internalID: -4903887983687170149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_4
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 1855
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1aa6c18b1643dc0800000000000000
+      internalID: -3660193153766743603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_5
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1855
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe8e19dea22be7d0800000000000000
+      internalID: -2888176601665728784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_6
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1788
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4123756e9f84d030800000000000000
+      internalID: 3518595119352848718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_7
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1687
+        width: 170
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87aacf1b21943f80800000000000000
+      internalID: -8127711813093906547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_8
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1754
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083e27b8b1cc7a6d0800000000000000
+      internalID: -2979188209806548096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_9
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1518
+        width: 238
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d01f455189f2cf0800000000000000
+      internalID: -274833834859492033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_10
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1754
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4af2d54a1f871080800000000000000
+      internalID: -9216740769387054517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_11
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1754
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f9e5ea7d33d7270800000000000000
+      internalID: 8249807093849038698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_12
+      rect:
+        serializedVersion: 2
+        x: 2901
+        y: 1754
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639cc3c6b326e06c0800000000000000
+      internalID: -4175291797167355594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_13
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1585
+        width: 170
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b407b7bc839e424f0800000000000000
+      internalID: -854301599152246709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_14
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1619
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183593b1013dee480800000000000000
+      internalID: -8867918550116248703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_15
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1619
+        width: 137
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71e26c86d66dae8e0800000000000000
+      internalID: -1663281346962379241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_16
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1653
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f18f938ab1a8bc20800000000000000
+      internalID: 3222503355827847670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_17
+      rect:
+        serializedVersion: 2
+        x: 2564
+        y: 1687
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3feacdc228ee600800000000000000
+      internalID: 499479737877328849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_18
+      rect:
+        serializedVersion: 2
+        x: 2733
+        y: 1653
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5433216403180da80800000000000000
+      internalID: -8444107256985668795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_19
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1653
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1224a57475728820800000000000000
+      internalID: 2919024651539849758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_20
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 1687
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6183b9254cebd8990800000000000000
+      internalID: -7382034463781603306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_21
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 1619
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7381abd21627fa220800000000000000
+      internalID: 2499342079918479415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_22
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1518
+        width: 103
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11cb22c795986ff0800000000000000
+      internalID: -42619717429772003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_23
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1484
+        width: 103
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400276cab68eec220800000000000000
+      internalID: 2508197591643529220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_24
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1518
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 095808a76ebe7acb0800000000000000
+      internalID: -4852650698338171504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_25
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1518
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fe437efc7ccca00800000000000000
+      internalID: 778216531379416968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_26
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1450
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124f3f420748bd570800000000000000
+      internalID: 8492527139528373281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_27
+      rect:
+        serializedVersion: 2
+        x: 2631
+        y: 1518
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e905c53697e19f30800000000000000
+      internalID: 4580696928345721320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_28
+      rect:
+        serializedVersion: 2
+        x: 2868
+        y: 1552
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0362113ef00ff60800000000000000
+      internalID: 8065964400540266670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_29
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 1484
+        width: 35
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf825ba7146e3130800000000000000
+      internalID: 3548383609235869613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_30
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1484
+        width: 104
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a767ca2dd87619ed0800000000000000
+      internalID: -2409030466843937158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_31
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1450
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05140332306d80b60800000000000000
+      internalID: 7712649670835585360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_32
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 1450
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7939903c326ba30800000000000000
+      internalID: 4230608220547422196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_33
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 1417
+        width: 36
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7cab68d1f9875b0800000000000000
+      internalID: -5370367606476060726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_34
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1450
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7bf056d48f6acd10800000000000000
+      internalID: 2146650788717460349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_35
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1450
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201dc778783f96930800000000000000
+      internalID: 4137105496135749890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_36
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 1349
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 007e6b55683c80a20800000000000000
+      internalID: 3028885731137742592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_37
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1417
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f226762f90ba38a20800000000000000
+      internalID: 3063480230751986223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_38
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1383
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78084c3a983ac5e90800000000000000
+      internalID: -7035568706306146169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_39
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 1282
+        width: 35
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea595eb86cbf6580800000000000000
+      internalID: -8831633186194105629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_40
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 1349
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559e43187bbf804d0800000000000000
+      internalID: -3168005572289828523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_41
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1248
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1c7a91e5bd07a050800000000000000
+      internalID: 5811628918970154012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_42
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1248
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5bbd0aa0af208d0800000000000000
+      internalID: -2881465888008325642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

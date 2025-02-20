@@ -1,0 +1,1280 @@
+fileFormatVersion: 2
+guid: 0075a2506bf92d44991b75c0954c9b25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5785626288041423863
+    second: BlackAntCav_dies_0
+  - first:
+      213: -2638890270570674880
+    second: BlackAntCav_dies_1
+  - first:
+      213: 3090546109916411752
+    second: BlackAntCav_dies_2
+  - first:
+      213: -3071895716730856655
+    second: BlackAntCav_dies_3
+  - first:
+      213: -1459509477392758654
+    second: BlackAntCav_dies_4
+  - first:
+      213: -8103961628679555741
+    second: BlackAntCav_dies_5
+  - first:
+      213: -716820603944910578
+    second: BlackAntCav_dies_6
+  - first:
+      213: 5889357041524968816
+    second: BlackAntCav_dies_7
+  - first:
+      213: -1382207894177096612
+    second: BlackAntCav_dies_8
+  - first:
+      213: 7978189889302784451
+    second: BlackAntCav_dies_9
+  - first:
+      213: -7025330758306795110
+    second: BlackAntCav_dies_10
+  - first:
+      213: -8145309149739309017
+    second: BlackAntCav_dies_11
+  - first:
+      213: 4635617910826850747
+    second: BlackAntCav_dies_12
+  - first:
+      213: -19826511601746196
+    second: BlackAntCav_dies_13
+  - first:
+      213: 8414265406003836577
+    second: BlackAntCav_dies_14
+  - first:
+      213: 8380861695700323802
+    second: BlackAntCav_dies_15
+  - first:
+      213: 8969495975436590892
+    second: BlackAntCav_dies_16
+  - first:
+      213: -3449249691250922719
+    second: BlackAntCav_dies_17
+  - first:
+      213: -141200608942079435
+    second: BlackAntCav_dies_18
+  - first:
+      213: 8850165308689845955
+    second: BlackAntCav_dies_19
+  - first:
+      213: 3564754957312193465
+    second: BlackAntCav_dies_20
+  - first:
+      213: 8704779146487775776
+    second: BlackAntCav_dies_21
+  - first:
+      213: -1234681483323670336
+    second: BlackAntCav_dies_22
+  - first:
+      213: -6882451020861804270
+    second: BlackAntCav_dies_23
+  - first:
+      213: 35503342161592210
+    second: BlackAntCav_dies_24
+  - first:
+      213: -8806837958590477124
+    second: BlackAntCav_dies_25
+  - first:
+      213: 4576726769132186768
+    second: BlackAntCav_dies_26
+  - first:
+      213: 5094828209875513954
+    second: BlackAntCav_dies_27
+  - first:
+      213: 5423518755185867590
+    second: BlackAntCav_dies_28
+  - first:
+      213: 2903804824362557169
+    second: BlackAntCav_dies_29
+  - first:
+      213: 3297617146511445811
+    second: BlackAntCav_dies_30
+  - first:
+      213: 4911250074825814885
+    second: BlackAntCav_dies_31
+  - first:
+      213: 1049399437252920490
+    second: BlackAntCav_dies_32
+  - first:
+      213: -7624390928459898251
+    second: BlackAntCav_dies_33
+  - first:
+      213: 942153646716553170
+    second: BlackAntCav_dies_34
+  - first:
+      213: -6918509438137015941
+    second: BlackAntCav_dies_35
+  - first:
+      213: 3000651674162258441
+    second: BlackAntCav_dies_36
+  - first:
+      213: 1662815848067955822
+    second: BlackAntCav_dies_37
+  - first:
+      213: 955099342967756494
+    second: BlackAntCav_dies_38
+  - first:
+      213: -2843013600165753062
+    second: BlackAntCav_dies_39
+  - first:
+      213: 8756532673872817719
+    second: BlackAntCav_dies_40
+  - first:
+      213: -8445955471980115992
+    second: BlackAntCav_dies_41
+  - first:
+      213: -4186269064921859428
+    second: BlackAntCav_dies_42
+  - first:
+      213: -1391547666797643820
+    second: BlackAntCav_dies_43
+  - first:
+      213: -247883746300947862
+    second: BlackAntCav_dies_44
+  - first:
+      213: 2096444560282121014
+    second: BlackAntCav_dies_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlackAntCav_dies_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2328
+        width: 880
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c012a6b8355bfa0800000000000000
+      internalID: -5785626288041423863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_1
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 2328
+        width: 947
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0458665c747c06bd0800000000000000
+      internalID: -2638890270570674880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_2
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 2328
+        width: 947
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86778830053d3ea20800000000000000
+      internalID: 3090546109916411752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1248
+        width: 947
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b96390f1f6e55d0800000000000000
+      internalID: -3071895716730856655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_4
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 1855
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28840b5fcd7cebbe0800000000000000
+      internalID: -1459509477392758654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_5
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1855
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365b829d5d1f88f80800000000000000
+      internalID: -8103961628679555741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_6
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 1788
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e01ce2665775d06f0800000000000000
+      internalID: -716820603944910578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_7
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1754
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d8a8fa6033bb150800000000000000
+      internalID: 5889357041524968816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_8
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1754
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c55d55e3961dce0800000000000000
+      internalID: -1382207894177096612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_9
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1754
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9618e1f6938be60800000000000000
+      internalID: 7978189889302784451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_10
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1518
+        width: 238
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a917f79a5e2018e90800000000000000
+      internalID: -7025330758306795110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_11
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1754
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728ac08eb7c06fe80800000000000000
+      internalID: -8145309149739309017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_12
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1754
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9d549ede5055040800000000000000
+      internalID: 4635617910826850747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_13
+      rect:
+        serializedVersion: 2
+        x: 2901
+        y: 1754
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceeb7da84ef89bff0800000000000000
+      internalID: -19826511601746196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_14
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1687
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a677ba5ec975c470800000000000000
+      internalID: 8414265406003836577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_15
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1687
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add45ebfe4dce4470800000000000000
+      internalID: 8380861695700323802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_16
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1619
+        width: 36
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f9136311d0a7c70800000000000000
+      internalID: 8969495975436590892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_17
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1619
+        width: 137
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12bec534eadc120d0800000000000000
+      internalID: -3449249691250922719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_18
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1653
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53240f55bca5a0ef0800000000000000
+      internalID: -141200608942079435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_19
+      rect:
+        serializedVersion: 2
+        x: 2564
+        y: 1687
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce81f3457a12da70800000000000000
+      internalID: 8850165308689845955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_20
+      rect:
+        serializedVersion: 2
+        x: 2733
+        y: 1653
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3f7ed2fbd887130800000000000000
+      internalID: 3564754957312193465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_21
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1653
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022c1aa83869dc870800000000000000
+      internalID: 8704779146487775776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_22
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 1687
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c08db78bb78ddee0800000000000000
+      internalID: -1234681483323670336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_23
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1585
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 211f185e24f9c70a0800000000000000
+      internalID: -6882451020861804270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_24
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 1619
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f71e10a122e7000800000000000000
+      internalID: 35503342161592210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_25
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1518
+        width: 103
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbcc9cb8983d7c580800000000000000
+      internalID: -8806837958590477124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_26
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1484
+        width: 103
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c252c7fbcc38f30800000000000000
+      internalID: 4576726769132186768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_27
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1518
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262f449634774b640800000000000000
+      internalID: 5094828209875513954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_28
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1518
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64bb583a295344b40800000000000000
+      internalID: 5423518755185867590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_29
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1450
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe123d4a136c4820800000000000000
+      internalID: 2903804824362557169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_30
+      rect:
+        serializedVersion: 2
+        x: 2631
+        y: 1518
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f4d0fb25d73cd20800000000000000
+      internalID: 3297617146511445811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_31
+      rect:
+        serializedVersion: 2
+        x: 2868
+        y: 1552
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5637a111ce3482440800000000000000
+      internalID: 4911250074825814885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_32
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 1484
+        width: 35
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa484fc6a37309e00800000000000000
+      internalID: 1049399437252920490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_33
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1484
+        width: 104
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572ef68a8d8b03690800000000000000
+      internalID: -7624390928459898251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_34
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1450
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d7016cffb3331d00800000000000000
+      internalID: 942153646716553170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_35
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 1450
+        width: 69
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71e7a462548cff90800000000000000
+      internalID: -6918509438137015941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_36
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 1417
+        width: 36
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9026f1dacc474a920800000000000000
+      internalID: 3000651674162258441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_37
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1450
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6cfafe2432831710800000000000000
+      internalID: 1662815848067955822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_38
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1450
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec65dc6cac1314d00800000000000000
+      internalID: 955099342967756494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_39
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 1349
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f048e81369b88d0800000000000000
+      internalID: -2843013600165753062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_40
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1417
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e6a42a214758970800000000000000
+      internalID: 8756532673872817719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_41
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 1383
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7cbdf2f30f9ca80800000000000000
+      internalID: -8445955471980115992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_42
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 1282
+        width: 35
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a302b177267e5c0800000000000000
+      internalID: -4186269064921859428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_43
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 1349
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7b08015ca30bce0800000000000000
+      internalID: -1391547666797643820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_44
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1248
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a62932ccb075f8cf0800000000000000
+      internalID: -247883746300947862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAntCav_dies_45
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1248
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6337aea5831181d10800000000000000
+      internalID: 2096444560282121014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
