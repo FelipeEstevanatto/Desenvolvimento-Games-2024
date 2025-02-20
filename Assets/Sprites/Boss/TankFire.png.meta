@@ -422,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TankFire_0: 165614254950249938
+      TankFire_1: -3616382901922224584
+      TankFire_10: 1532215843055352727
+      TankFire_11: 841556008140867124
+      TankFire_2: 3704426944224729717
+      TankFire_3: 6074612628825090433
+      TankFire_4: 4305531489444119910
+      TankFire_5: -9029320365132155732
+      TankFire_6: 9071322460113532219
+      TankFire_7: 7890031415362892320
+      TankFire_8: -2210022685543731223
+      TankFire_9: -3609805440666835870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

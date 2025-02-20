@@ -1197,7 +1197,50 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BrownAnt_die_0: -3184540167118217643
+      BrownAnt_die_1: 5253937033841761018
+      BrownAnt_die_10: -9216740769387054517
+      BrownAnt_die_11: 8249807093849038698
+      BrownAnt_die_12: -4175291797167355594
+      BrownAnt_die_13: -854301599152246709
+      BrownAnt_die_14: -8867918550116248703
+      BrownAnt_die_15: -1663281346962379241
+      BrownAnt_die_16: 3222503355827847670
+      BrownAnt_die_17: 499479737877328849
+      BrownAnt_die_18: -8444107256985668795
+      BrownAnt_die_19: 2919024651539849758
+      BrownAnt_die_2: 7230565034047939068
+      BrownAnt_die_20: -7382034463781603306
+      BrownAnt_die_21: 2499342079918479415
+      BrownAnt_die_22: -42619717429772003
+      BrownAnt_die_23: 2508197591643529220
+      BrownAnt_die_24: -4852650698338171504
+      BrownAnt_die_25: 778216531379416968
+      BrownAnt_die_26: 8492527139528373281
+      BrownAnt_die_27: 4580696928345721320
+      BrownAnt_die_28: 8065964400540266670
+      BrownAnt_die_29: 3548383609235869613
+      BrownAnt_die_3: -4903887983687170149
+      BrownAnt_die_30: -2409030466843937158
+      BrownAnt_die_31: 7712649670835585360
+      BrownAnt_die_32: 4230608220547422196
+      BrownAnt_die_33: -5370367606476060726
+      BrownAnt_die_34: 2146650788717460349
+      BrownAnt_die_35: 4137105496135749890
+      BrownAnt_die_36: 3028885731137742592
+      BrownAnt_die_37: 3063480230751986223
+      BrownAnt_die_38: -7035568706306146169
+      BrownAnt_die_39: -8831633186194105629
+      BrownAnt_die_4: -3660193153766743603
+      BrownAnt_die_40: -3168005572289828523
+      BrownAnt_die_41: 5811628918970154012
+      BrownAnt_die_42: -2881465888008325642
+      BrownAnt_die_5: -2888176601665728784
+      BrownAnt_die_6: 3518595119352848718
+      BrownAnt_die_7: -8127711813093906547
+      BrownAnt_die_8: -2979188209806548096
+      BrownAnt_die_9: -274833834859492033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

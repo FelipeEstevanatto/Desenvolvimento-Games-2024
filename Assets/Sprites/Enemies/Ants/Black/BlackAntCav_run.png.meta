@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BlackAntCav_run_0: -7178379704438250008
+      BlackAntCav_run_1: -3467803776823042515
+      BlackAntCav_run_2: -4139196264549934861
+      BlackAntCav_run_3: 4423171539483035409
+      BlackAntCav_run_4: 1575073350025746560
+      BlackAntCav_run_5: 4216687886921377712
+      BlackAntCav_run_6: -1011125671096512933
+      BlackAntCav_run_7: -8327101272014600385
+      BlackAntCav_run_8: -5793271419916343408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

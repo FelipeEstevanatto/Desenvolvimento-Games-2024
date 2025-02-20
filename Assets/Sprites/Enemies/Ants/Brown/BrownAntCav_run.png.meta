@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BrownAntCav_run_0: -6106795889650747733
+      BrownAntCav_run_1: -7394461161807679205
+      BrownAntCav_run_2: -4334777877879817211
+      BrownAntCav_run_3: 1016813601956377641
+      BrownAntCav_run_4: 4984477938656323739
+      BrownAntCav_run_5: -1865615371924868631
+      BrownAntCav_run_6: 8039037110851488796
+      BrownAntCav_run_7: -3509716266011620588
+      BrownAntCav_run_8: -1458741679287014248
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

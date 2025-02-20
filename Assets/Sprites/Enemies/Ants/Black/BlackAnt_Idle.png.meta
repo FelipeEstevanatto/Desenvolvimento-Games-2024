@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BlackAnt_Idle_0: -2562529413188051485
+      BlackAnt_Idle_1: 8119714876431474825
+      BlackAnt_Idle_2: 4286094895905375026
+      BlackAnt_Idle_3: 8768901280628907002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

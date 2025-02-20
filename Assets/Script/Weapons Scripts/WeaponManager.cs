@@ -36,6 +36,7 @@ public class WeaponManager : MonoBehaviour
         HandleWeaponSwitch();
         HandleWeaponFire();
         HandleWeaponInCrouch();
+        HandleDeath();
     }
 
     private void InstantiateWeapons()
@@ -212,6 +213,14 @@ public class WeaponManager : MonoBehaviour
             weaponSlot2.sprite = baseWeaponInstance.weaponIcon;
             weaponSlot2.enabled = true;
             weaponSlot2.color = Color.black;
+        }
+    }
+
+    private void HandleDeath()
+    {
+        if(playerController.IsDead)
+        {
+            Destroy(currentWeapon.gameObject);
         }
     }
 

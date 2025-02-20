@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RedAnt_Idle_0: -4112028958681500555
+      RedAnt_Idle_1: 3860771313722604491
+      RedAnt_Idle_2: 378747761596071126
+      RedAnt_Idle_3: 3668742339641864961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

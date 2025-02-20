@@ -1197,7 +1197,50 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BrownAntCav_die_0: 8310626854073108182
+      BrownAntCav_die_1: -3263995913815698892
+      BrownAntCav_die_10: 2567034438705802976
+      BrownAntCav_die_11: -5069434963379339058
+      BrownAntCav_die_12: 3783168395148841999
+      BrownAntCav_die_13: -8089598239245910748
+      BrownAntCav_die_14: -8503457392154302833
+      BrownAntCav_die_15: 6564648267154774450
+      BrownAntCav_die_16: 6731127511680828612
+      BrownAntCav_die_17: 8620663700366337560
+      BrownAntCav_die_18: 7395907427081747430
+      BrownAntCav_die_19: 5862034408845710138
+      BrownAntCav_die_2: -1958053169699853338
+      BrownAntCav_die_20: 3794864336819860180
+      BrownAntCav_die_21: -7440108155021998166
+      BrownAntCav_die_22: 9018608307505334672
+      BrownAntCav_die_23: 2990160030746975060
+      BrownAntCav_die_24: 8302940602515605573
+      BrownAntCav_die_25: -6580615486670607945
+      BrownAntCav_die_26: 7784364388409937298
+      BrownAntCav_die_27: -297699532825580412
+      BrownAntCav_die_28: -5988657898898383939
+      BrownAntCav_die_29: -2925671670693848157
+      BrownAntCav_die_3: -2604919134975060165
+      BrownAntCav_die_30: 3517373451633544978
+      BrownAntCav_die_31: -6138848517584317389
+      BrownAntCav_die_32: 5776359672814815368
+      BrownAntCav_die_33: 9192154162422831624
+      BrownAntCav_die_34: -1862079100089748915
+      BrownAntCav_die_35: 6156472775230638078
+      BrownAntCav_die_36: 3714746599093061177
+      BrownAntCav_die_37: -2563516300168359771
+      BrownAntCav_die_38: 2949828395976640293
+      BrownAntCav_die_39: -1232143010852284018
+      BrownAntCav_die_4: 8295954993102556489
+      BrownAntCav_die_40: 6220150660467236139
+      BrownAntCav_die_41: -1805360089926206593
+      BrownAntCav_die_42: -850288812622333086
+      BrownAntCav_die_5: -6926222903474586617
+      BrownAntCav_die_6: 3549254688839001427
+      BrownAntCav_die_7: -125148315223491330
+      BrownAntCav_die_8: -8969656987815915222
+      BrownAntCav_die_9: -6537315808011094297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
