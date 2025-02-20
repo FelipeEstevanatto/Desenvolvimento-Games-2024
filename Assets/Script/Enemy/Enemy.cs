@@ -4,16 +4,17 @@ using System.Collections;
 public abstract class Enemy : MonoBehaviour
 {
     [Header("Enemy Settings")]
-    [SerializeField] protected float health = 100f;
+    [SerializeField] protected float maxHealth = 100f;
     [SerializeField] protected float attackDistance;
     [SerializeField] protected int scoreValue = 10;
+    [SerializeField] protected HealthBarBehaviour healthBar;
 
     protected bool facingRight = true;
     protected PlayerController player;
+    protected float currentHealth;
     protected float targetDistance;
     protected Rigidbody2D rb;
     protected SpriteRenderer sprite;
-
     protected bool isFlipping = false; 
     private float flipDelay = 0.1f;  
 
@@ -22,6 +23,11 @@ public abstract class Enemy : MonoBehaviour
         player = FindFirstObjectByType<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        currentHealth = maxHealth;
+        if(healthBar != null)
+        {
+            healthBar.SetHealth(currentHealth, maxHealth);
+        }
     }
 
 
@@ -58,10 +64,14 @@ public abstract class Enemy : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
-        health -= damageAmount;
-        Debug.Log($"Dano recebido: {damageAmount}, health restante: {health}");
+        currentHealth -= damageAmount;
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(currentHealth, maxHealth);
+        } 
+        Debug.Log($"Dano recebido: {damageAmount}, health restante: {currentHealth}");
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
