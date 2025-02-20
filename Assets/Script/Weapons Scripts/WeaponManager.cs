@@ -102,7 +102,7 @@ public class WeaponManager : MonoBehaviour
             if (currentWeapon != null)
             {
                 Vector3 newPosition = weaponHolderPos.localPosition;
-                newPosition.y = -0.05f;  
+                newPosition.y = -0.5f;  
                 weaponHolderPos.localPosition = newPosition;
             }
         }
