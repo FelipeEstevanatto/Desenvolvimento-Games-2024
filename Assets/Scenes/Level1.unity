@@ -11216,7 +11216,7 @@ MonoBehaviour:
   distanceToGround: 2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 512
   normalCollider: {fileID: 1038564665}
   crouchCollider: {fileID: 1038564669}
   dashingPower: 3
