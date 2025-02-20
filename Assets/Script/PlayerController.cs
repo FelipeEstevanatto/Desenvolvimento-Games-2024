@@ -18,10 +18,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float crouchSpeedMultiplier;
     [SerializeField] private float distanceToGround;
+    [SerializeField] private float maxSlopeAngle = 45f;
     [SerializeField] private LayerMask groundLayer;
-
     [SerializeField] private Collider2D normalCollider; 
-    [SerializeField] private Collider2D crouchCollider; 
+    [SerializeField] private Collider2D crouchCollider;
+    public PhysicsMaterial2D normalMaterial; // Material normal (menor fricção)
+    public PhysicsMaterial2D slopeMaterial; // Material com maior fricção
 
     [Header("Dash Settings")]
     [SerializeField] private float dashingPower = 24f;
@@ -40,7 +42,9 @@ public class PlayerController : MonoBehaviour
     private bool isDashing;
     private float maxHealth;
     public GameObject deathMenuUI;
-
+    private bool isOnSlope;
+    private float slopeAngle;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -76,6 +80,7 @@ public class PlayerController : MonoBehaviour
             HandleMovement();
         }
         CheckGrounded();
+        CheckSlope();
     }
 
     private void HandleInput()
@@ -139,6 +144,17 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
 
+        if (isOnSlope)
+        {
+            normalCollider.sharedMaterial = slopeMaterial;
+            crouchCollider.sharedMaterial = slopeMaterial;
+        }
+        else
+        {
+            normalCollider.sharedMaterial = normalMaterial;
+            crouchCollider.sharedMaterial = normalMaterial;
+        }
+
         // Flip the player sprite
         if (horizontalInput != 0)
         {
@@ -168,6 +184,21 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Grounded", isGrounded);
         }
     }
+
+    private void CheckSlope()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, groundLayer);
+        if (hit)
+        {
+            slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
+            isOnSlope = slopeAngle > 0 && slopeAngle < maxSlopeAngle;
+        }
+        else
+        {
+            isOnSlope = false;
+        }
+    }
+
 
     private IEnumerator Dash()
     {
