@@ -108,7 +108,7 @@ MonoBehaviour:
   shotSpeed: 25
   firePoint: {fileID: 0}
   bulletDamage: 35
-  fireRate: 0.05
+  fireRate: 0.3
   bulletsPerShot: 1
   ammoCapacity: 75
   currentAmmo: 0
