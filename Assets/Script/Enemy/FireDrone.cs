@@ -159,7 +159,7 @@ public class EnemyDrone : Enemy
         isDead = true;
         StartCoroutine(DeathBehaviour());
     }
-    IEnumerator DeathBehaviour()
+    private IEnumerator DeathBehaviour()
     {
         rb.linearVelocity = Vector2.zero;
         anim.SetBool("isDead", true);

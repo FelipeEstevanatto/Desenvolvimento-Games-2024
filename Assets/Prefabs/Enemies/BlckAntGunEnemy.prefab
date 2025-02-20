@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 3951434888963242580}
   - component: {fileID: 5746221320032503808}
   m_Layer: 8
-  m_Name: BAntGunEnemy
+  m_Name: BlckAntGunEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

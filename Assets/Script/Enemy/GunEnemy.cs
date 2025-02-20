@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem.Utilities;
+using System.Collections;
 
 public class GunEnemy : Enemy
 {
@@ -173,11 +174,20 @@ public class GunEnemy : Enemy
 
     protected override void Die()
     {
+        StartCoroutine(DeathBehaviour());
+        ScoreManager.instance.AddScore(scoreValue);
+    }
+
+    private IEnumerator DeathBehaviour()
+    {
+        rb.linearVelocity = Vector2.zero;
+        anim.SetBool("isDead", true);
+        yield return new WaitForSeconds(0.5f); // death animation time
+        Destroy(gameObject);
         if (weaponPickup != null)
         {
             Instantiate(weaponPickup, transform.position + Vector3.up * 0.5f, Quaternion.identity);
         }
-        base.Die();
     }
 
     private void OnDrawGizmos()
