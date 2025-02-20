@@ -25,7 +25,7 @@ public class GravityBomb : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // If the collided object has the tag "Ground", we explode
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Player"))
         {
             Explode();
         }
