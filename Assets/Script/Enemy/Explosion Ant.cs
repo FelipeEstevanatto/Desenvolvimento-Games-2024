@@ -50,7 +50,7 @@ public class ExplosionAnt : Enemy
 
     private IEnumerator ExplodeAfterDelay()
     {
-        rb.linearVelocity = Vector2.zero;
+        //rb.linearVelocity = Vector2.zero;
         yield return new WaitForSeconds(1.5f);
 
         Explode();
