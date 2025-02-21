@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 3170236193717635301}
   - component: {fileID: 8904080067519682066}
   - component: {fileID: 1769687372996191710}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: FireDrone
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -503,6 +503,7 @@ MonoBehaviour:
   attackDistance: 10
   scoreValue: 10
   healthBar: {fileID: 5806796117013137684}
+  deathSFX: {fileID: 0}
   speed: 3
   detectionRadius: 5
   waitTime: 3
@@ -609,7 +610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7042905286458668215}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Enemy
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
