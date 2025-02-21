@@ -10997,7 +10997,7 @@ MonoBehaviour:
   drumsOfWar: {fileID: 8300000, guid: b39a65f69156aff4e8db79637726622b, type: 3}
   jumpClip: {fileID: 8300000, guid: bedca029cbd6b544a8323a82875d9778, type: 3}
   menuMusic: {fileID: 8300000, guid: b784b118d2211d34a84e3e531727566c, type: 3}
-  inGameMusic: {fileID: 8300000, guid: 3db1e92c4696aae40a591d216df9fafd, type: 3}
+  inGameMusic: {fileID: 8300000, guid: ae0f45574b393154c885415b7647bd3d, type: 3}
   musicVolume: 1
   sfxVolume: 1
 --- !u!1 &1038564662

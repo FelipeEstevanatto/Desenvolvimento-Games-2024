@@ -109,7 +109,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1293178893648271222, guid: 609e0cf7e585ce245bd6a6321f1383f9, type: 3}
   shotSpeed: 20
   firePoint: {fileID: 0}
-  bulletDamage: 50
+  bulletDamage: 30
   fireRate: 1
   bulletsPerShot: 3
   ammoCapacity: 25
