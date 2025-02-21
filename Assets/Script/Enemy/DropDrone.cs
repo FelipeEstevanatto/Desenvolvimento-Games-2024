@@ -11,6 +11,8 @@ public class DropDrone : Enemy
     [SerializeField] private int dropTotal = 3;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] public GameObject explosionEffect;
+
     [SerializeField] private float dropDelay = 0.1f;
     private Animator anim;
     private float dropCount;
@@ -100,5 +102,13 @@ public class DropDrone : Enemy
             GravityBomb bombController = gravityBomb.GetComponent<GravityBomb>();
             bombController.throwerTag = transform.root.tag;
         }
+    }
+
+    protected override void Die()
+    {
+        base.Die();
+        Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        // Play your explosion sound
+        AudioManager.instance.PlaySFX(AudioManager.instance.bombClip);
     }
 }
