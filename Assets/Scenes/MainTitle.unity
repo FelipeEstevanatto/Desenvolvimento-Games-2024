@@ -1320,7 +1320,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level1
+          m_StringArgument: Tutorial
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1217771436
@@ -2310,13 +2310,8 @@ MonoBehaviour:
   isMuted: 0
   musicSource: {fileID: 1102990394}
   sfxSource: {fileID: 225283913}
-  grenadeLauncherThump: {fileID: 8300000, guid: af62bb3ebfaf7a6409e11842d86509b2, type: 3}
   explosionClip: {fileID: 8300000, guid: 91007cc206f10d8478e4552fa33d33b1, type: 3}
   bombClip: {fileID: 8300000, guid: cd1bb384616935c428aa7579e5402fa5, type: 3}
-  shotgunClip: {fileID: 8300000, guid: 425d169970421ca46b9cac394cba23b8, type: 3}
-  shotgunShellClip: {fileID: 8300000, guid: 0c228edf36bcfcf4facb0b6c40ca2ead, type: 3}
-  shotgunPumpClip: {fileID: 8300000, guid: c099d85c5fad7df42adb87d714e8c3c3, type: 3}
-  pistolClip: {fileID: 8300000, guid: 9abbd4ed24e9b99488a7584a9980d9fa, type: 3}
   rifleSingleClip: {fileID: 8300000, guid: 742c4c181c95aab479f38fb6be4ad786, type: 3}
   rifleBurstClip: {fileID: 8300000, guid: 3a6eaff86aaca2e4dac134c270329b3d, type: 3}
   errorSoundClip: {fileID: 0}
