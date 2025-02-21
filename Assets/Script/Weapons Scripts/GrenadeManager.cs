@@ -22,8 +22,8 @@ public class GrenadeManager : MonoBehaviour
         // key '3' throws grenade
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            float direction = Mathf.Sign(player.transform.localScale.x); // gets the player's direction 
-            ThrowGrenade(direction); 
+            float direction = player.transform.localScale.x >= 0 ? 1 : -1; // ensure direction is always 1 or -1
+            ThrowGrenade(direction);
         }
     }
 
@@ -31,6 +31,12 @@ public class GrenadeManager : MonoBehaviour
     {
         if (currentGrenades > 0) 
         {
+            // // If the player is crouching, we need to get the grenadeSpawnPoint again
+            // if (player.GetComponent<PlayerController>().IsCrouching)
+            // {
+            //     grenadeSpawnPoint = player.GetComponent<PlayerController>().crouchGrenadeSpawnPoint;
+            // }
+
             // instantiate the grenade 
             GameObject grenadeInstance = Instantiate(grenadePrefab, grenadeSpawnPoint.position, Quaternion.identity);
             //updates the thrower tag in grenade script, so it gives damage to enemy
@@ -62,7 +68,7 @@ public class GrenadeManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Sem granadas disponíveis"); // If no grenades are left, print a message
+            Debug.Log("Sem granadas disponï¿½veis"); // If no grenades are left, print a message
         }
     }
 }

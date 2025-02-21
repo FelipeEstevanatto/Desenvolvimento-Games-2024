@@ -5,6 +5,7 @@ public class Grenade : MonoBehaviour
     [SerializeField] private float explosionDelay = 2f; // time before the explosion occurs
     [SerializeField] private float explosionRadius = 3f; // radius of the explosion's damage
     [SerializeField] private float grenadeDamage = 50f; // damage caused by the explosion
+    [SerializeField] private AudioClip explosionClip; // sound effect of the explosion
     [SerializeField] private GameObject explosionEffect; // visual effect of the explosion
     [HideInInspector] public GameObject thrower;
     private void Start()
@@ -23,7 +24,7 @@ public class Grenade : MonoBehaviour
             Instantiate(explosionEffect, transform.position, randomRotation);
         }
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.explosionClip);
+        AudioManager.instance.PlaySFX(explosionClip);
 
         // detect all objects within the explosion radius
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);

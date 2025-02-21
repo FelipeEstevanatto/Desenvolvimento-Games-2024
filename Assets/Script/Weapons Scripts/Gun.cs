@@ -43,7 +43,7 @@ public abstract class Gun : Weapon
         {
             FireBullet(direction);
             currentAmmo -= bulletsPerShot;
-            Debug.Log("Ammo: " + currentAmmo);
+            // Debug.Log("Ammo: " + currentAmmo);
         }
     }
 

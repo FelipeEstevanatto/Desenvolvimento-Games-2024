@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxSlopeAngle = 45f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Collider2D normalCollider; 
-    [SerializeField] private Collider2D crouchCollider;
     public PhysicsMaterial2D normalMaterial; // Material normal (menor fricção)
     public PhysicsMaterial2D slopeMaterial; // Material com maior fricção
 
@@ -51,9 +50,6 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         maxHealth = health;
-
-        normalCollider.enabled = true;
-        crouchCollider.enabled = false;
     }
 
     void Update()
@@ -117,9 +113,6 @@ public class PlayerController : MonoBehaviour
                 isCrouching = true;
                 speed *= crouchSpeedMultiplier;
                 animator.SetBool("Crouched", true);
-
-                normalCollider.enabled = false;
-                crouchCollider.enabled = true;
             }
         }
         else if (isCrouching && CanStandUp())
@@ -127,9 +120,6 @@ public class PlayerController : MonoBehaviour
             isCrouching = false;
             speed /= crouchSpeedMultiplier;
             animator.SetBool("Crouched", false);
-
-            normalCollider.enabled = true;
-            crouchCollider.enabled = false;
         }
     }
 
@@ -144,16 +134,16 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
 
-        if (isOnSlope)
-        {
-            normalCollider.sharedMaterial = slopeMaterial;
-            crouchCollider.sharedMaterial = slopeMaterial;
-        }
-        else
-        {
-            normalCollider.sharedMaterial = normalMaterial;
-            crouchCollider.sharedMaterial = normalMaterial;
-        }
+        // if (isOnSlope)
+        // {
+        //     normalCollider.sharedMaterial = slopeMaterial;
+        //     crouchCollider.sharedMaterial = slopeMaterial;
+        // }
+        // else
+        // {
+        //     normalCollider.sharedMaterial = normalMaterial;
+        //     crouchCollider.sharedMaterial = normalMaterial;
+        // }
 
         // Flip the player sprite
         if (horizontalInput != 0)
@@ -262,8 +252,8 @@ public class PlayerController : MonoBehaviour
 
         isDead = true;
 
-        // Stop the player's movement gradually
-        
+        // Disable the horizontal player's movement
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
         // Destroy(gameObject);
     }
