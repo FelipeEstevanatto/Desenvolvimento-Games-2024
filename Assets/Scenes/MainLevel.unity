@@ -747,11 +747,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1840964467909455513, guid: 53410aca9e9cc6a48bfddccfbcf05739, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 227.89
+      value: 227.96
       objectReference: {fileID: 0}
     - target: {fileID: 1840964467909455513, guid: 53410aca9e9cc6a48bfddccfbcf05739, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.42
+      value: -1.56
       objectReference: {fileID: 0}
     - target: {fileID: 1840964467909455513, guid: 53410aca9e9cc6a48bfddccfbcf05739, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26862,8 +26862,6 @@ MonoBehaviour:
   rifleBurstClip: {fileID: 8300000, guid: 3a6eaff86aaca2e4dac134c270329b3d, type: 3}
   errorSoundClip: {fileID: 0}
   HealSoundClip: {fileID: 8300000, guid: 2af67380de3dc4347ad199753a89b621, type: 3}
-  drumsOfWar: {fileID: 8300000, guid: b39a65f69156aff4e8db79637726622b, type: 3}
-  jumpClip: {fileID: 8300000, guid: bedca029cbd6b544a8323a82875d9778, type: 3}
   menuMusic: {fileID: 8300000, guid: b784b118d2211d34a84e3e531727566c, type: 3}
   inGameMusic: {fileID: 8300000, guid: ae0f45574b393154c885415b7647bd3d, type: 3}
   musicVolume: 1
@@ -30366,6 +30364,63 @@ RectTransform:
   m_AnchoredPosition: {x: -5.0000305, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1565576756
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 224.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042416332410613795, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948749210931437583, guid: 28589b5395b66c7428a464676b81505c, type: 3}
+      propertyPath: m_Name
+      value: AmmoCrate
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 28589b5395b66c7428a464676b81505c, type: 3}
 --- !u!1 &1581308130
 GameObject:
   m_ObjectHideFlags: 0
@@ -33097,3 +33152,4 @@ SceneRoots:
   - {fileID: 432321556}
   - {fileID: 176362088}
   - {fileID: 1381218436}
+  - {fileID: 1565576756}

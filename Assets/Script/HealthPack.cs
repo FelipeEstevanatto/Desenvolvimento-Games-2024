@@ -25,6 +25,7 @@ public class HealthPack : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player is in range");
+            playerController = other.GetComponent<PlayerController>();
         }
     }
 
