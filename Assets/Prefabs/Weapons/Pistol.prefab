@@ -113,6 +113,7 @@ MonoBehaviour:
   ammoCapacity: 2147483647
   currentAmmo: 0
   nextFireTime: 0
+  pistolClip: {fileID: 8300000, guid: 9abbd4ed24e9b99488a7584a9980d9fa, type: 3}
 --- !u!1 &5608890095939147266
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class EnemyDrone : Enemy
     [SerializeField] private float waitTime = 3f;
 
     [Header("Shooting Settings")]
+    [SerializeField] private AudioClip pistolClip;
     [SerializeField] private float shootingCooldown = 1f;
     [SerializeField] private float damage = 10f;
     [SerializeField] private Transform firePoint;
@@ -136,7 +137,7 @@ public class EnemyDrone : Enemy
             bulletController.SetDamage(damage); // Set the bullet damage
         }
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.pistolClip, 0.75f);
+        AudioManager.instance.PlaySFX(pistolClip, 0.75f);
 
         yield return new WaitForSeconds(shootingCooldown);
         isShooting = false;

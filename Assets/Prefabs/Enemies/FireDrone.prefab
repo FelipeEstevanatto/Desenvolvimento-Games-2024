@@ -506,6 +506,7 @@ MonoBehaviour:
   speed: 3
   detectionRadius: 5
   waitTime: 3
+  pistolClip: {fileID: 8300000, guid: 9abbd4ed24e9b99488a7584a9980d9fa, type: 3}
   shootingCooldown: 1
   damage: 10
   firePoint: {fileID: 7042905286458668215}
