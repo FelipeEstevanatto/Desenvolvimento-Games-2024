@@ -28,6 +28,7 @@ public class ExplosionAnt : Enemy
             {
                 isChasing = false;
                 anim.SetBool("isRunning", false);
+                StartCoroutine(ExplosionAlert());
                 StartCoroutine(ExplodeAfterDelay());
             }
 
@@ -50,7 +51,7 @@ public class ExplosionAnt : Enemy
     private IEnumerator ExplodeAfterDelay()
     {
         rb.linearVelocity = Vector2.zero;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
 
         Explode();
     }
@@ -66,5 +67,14 @@ public class ExplosionAnt : Enemy
         Instantiate(explosionEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
-
+    private IEnumerator ExplosionAlert()
+    {
+        for (int i = 0; i <= 8; i++)
+        {
+            sprite.color = Color.black;
+            yield return new WaitForSeconds(0.1f);
+            sprite.color = Color.white;
+        }
+    }
+    
 }

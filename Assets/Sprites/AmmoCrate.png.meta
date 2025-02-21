@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AmmoCrate_0: 4686880815140300550
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

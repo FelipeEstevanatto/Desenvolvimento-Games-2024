@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour
         if (hit)
         {
             slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
-            isOnSlope = slopeAngle > 0 && slopeAngle < maxSlopeAngle;
+            isOnSlope = Mathf.Abs(slopeAngle) > 0 && Mathf.Abs(slopeAngle) < maxSlopeAngle;
         }
         else
         {
