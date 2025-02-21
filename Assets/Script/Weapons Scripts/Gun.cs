@@ -88,6 +88,7 @@ public abstract class Gun : Weapon
         Bullet bulletController = bullet.GetComponent<Bullet>();
         if (bulletController != null)
         {
+            Debug.Log("Shooter: " + shooter.tag);
             bulletController.shooter = shooter;
         }
     }
