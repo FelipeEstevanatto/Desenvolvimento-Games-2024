@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3476565335050052589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2324174749612942003}
+  - component: {fileID: 2523233078649441179}
+  m_Layer: 0
+  m_Name: Weapon Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2324174749612942003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3476565335050052589}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.586327, y: 2.8251586, z: 0.21607557}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2523233078649441179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3476565335050052589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d1aedd143e22b4ba1abecabefe80bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commonWeapons:
+  - {fileID: 322487306209953797, guid: 58bb9c14b6483b54d972bc36f4904b39, type: 3}
+  rareWeapons:
+  - {fileID: 294748280808656515, guid: cd6b21a7d22994c468c5458e5143f80d, type: 3}
+  - {fileID: 7124379075325793118, guid: 122c72128133199458ee2390c05b2dd3, type: 3}
+  - {fileID: 5512621752847848396, guid: 766ee96a6e4b4964da45253a5f44cf12, type: 3}
+  legendaryWeapons:
+  - {fileID: 9156546139121308913, guid: f3c19a327128b7c4e9c5fc490b19d139, type: 3}
+  - {fileID: 3050283379098506828, guid: 4b4275790aed1724bb2e0eece2b5a95d, type: 3}
+  spawnPoint: {fileID: 2324174749612942003}

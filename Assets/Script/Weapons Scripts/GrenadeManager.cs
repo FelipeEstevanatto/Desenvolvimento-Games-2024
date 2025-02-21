@@ -22,8 +22,8 @@ public class GrenadeManager : MonoBehaviour
         // key '3' throws grenade
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            float direction = Mathf.Sign(player.transform.localScale.x); // gets the player's direction 
-            ThrowGrenade(direction); 
+            float direction = player.transform.localScale.x >= 0 ? 1 : -1; // ensure direction is always 1 or -1
+            ThrowGrenade(direction);
         }
     }
 
@@ -31,6 +31,12 @@ public class GrenadeManager : MonoBehaviour
     {
         if (currentGrenades > 0) 
         {
+            // // If the player is crouching, we need to get the grenadeSpawnPoint again
+            // if (player.GetComponent<PlayerController>().IsCrouching)
+            // {
+            //     grenadeSpawnPoint = player.GetComponent<PlayerController>().crouchGrenadeSpawnPoint;
+            // }
+
             // instantiate the grenade 
             GameObject grenadeInstance = Instantiate(grenadePrefab, grenadeSpawnPoint.position, Quaternion.identity);
             //updates the thrower tag in grenade script, so it gives damage to enemy
@@ -48,12 +54,13 @@ public class GrenadeManager : MonoBehaviour
 
             Rigidbody2D grenadeRb = grenadeInstance.GetComponent<Rigidbody2D>(); 
             
-            // ignore collision between the player and the grenade (CASO A GRANADA NÃO DEVA INTERAGIR COM OUTROS OBJETOS EM CENA, FAZER COM LAYERS EM VEZ DE SCRIPT)
+            // ignore collision between the player and the grenade 
             Physics2D.IgnoreCollision(grenadeInstance.GetComponent<Collider2D>(), player.GetComponent<Collider2D>());
 
             if (grenadeRb != null)
             {
                 grenadeRb.linearVelocity = throwVelocity; // apply the calculated velocity to the grenade
+                grenadeRb.AddTorque(direction * 50f, ForceMode2D.Impulse); //ForceMode2D.Impulse -> based on object's mass
             }
 
             currentGrenades--; // decrease the number of grenades
@@ -61,7 +68,16 @@ public class GrenadeManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Sem granadas disponíveis"); // If no grenades are left, print a message
+            Debug.Log("Sem granadas disponï¿½veis"); // If no grenades are left, print a message
         }
     }
+
+    public void AddGrenades(int amount)
+    {
+        currentGrenades += amount;
+        if (currentGrenades > maxGrenades)
+        {
+            currentGrenades = maxGrenades;
+        }
+    }   
 }

@@ -106,9 +106,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 1168568993
+  m_SortingLayer: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 6603768529591910757, guid: 1379bccac98d2ab4f9260dc272735b44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -144,6 +144,7 @@ MonoBehaviour:
   ammoCapacity: 20
   currentAmmo: 0
   nextFireTime: 0
+  grenadeLauncherThump: {fileID: 8300000, guid: af62bb3ebfaf7a6409e11842d86509b2, type: 3}
   grenadePrefab: {fileID: 86678154571384049, guid: 8708277a4f6dd3d42adcd16ac3d9c766, type: 3}
   launchForce: 20
   launchAngle: 30

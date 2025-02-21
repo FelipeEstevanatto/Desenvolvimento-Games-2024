@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public bool IsMuted => isMuted;
     [SerializeField] private bool isMuted = false;
 
     [Header("Audio Source")]
@@ -10,21 +11,13 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Clips")]
 
-    public AudioClip grenadeLauncherThump;
     public AudioClip explosionClip;
     public AudioClip bombClip;
-    public AudioClip shotgunClip;
-    public AudioClip shotgunShellClip;
-    public AudioClip shotgunPumpClip;
-    public AudioClip pistolClip;
     public AudioClip rifleSingleClip;
 
     public AudioClip rifleBurstClip;
     public AudioClip errorSoundClip;
     public AudioClip HealSoundClip;
-
-    public AudioClip drumsOfWar;
-    public AudioClip jumpClip;
     public AudioClip menuMusic;
     public AudioClip inGameMusic;
 
@@ -49,7 +42,7 @@ public class AudioManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PlayMusic(inGameMusic);
+        // PlayMusic(inGameMusic);
     }
 
     // Update is called once per frame
@@ -57,11 +50,15 @@ public class AudioManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.M))
         {
-            isMuted = !isMuted;
-            // AudioListener.pause = !isMuted;
-            AudioListener.volume = isMuted ? 0 : 1;
+            ToggleMute();
         }
 
+    }
+
+    public void ToggleMute()
+    {
+        isMuted = !isMuted;
+        AudioListener.volume = isMuted ? 0 : 1;
     }
 
     public void PlayMusic(AudioClip musicClip, float volume = 1f)

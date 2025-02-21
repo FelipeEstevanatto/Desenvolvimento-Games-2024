@@ -36,6 +36,7 @@ public class WeaponManager : MonoBehaviour
         HandleWeaponSwitch();
         HandleWeaponFire();
         HandleWeaponInCrouch();
+        HandleDeath();
     }
 
     private void InstantiateWeapons()
@@ -44,16 +45,12 @@ public class WeaponManager : MonoBehaviour
         {
             baseWeaponInstance = InstantiateWeapon(baseWeaponPrefab);
             EquipWeapon(baseWeaponInstance);
-            //Renderer weaponRenderer = baseWeaponInstance.GetComponent<Renderer>();
-            //weaponRenderer.sortingLayerName = "Player";
         }
 
         if (pickupWeaponPrefab != null)
         {
             pickupWeaponInstance = InstantiateWeapon(pickupWeaponPrefab);
             pickupWeaponInstance.gameObject.SetActive(false);
-            //Renderer weaponRenderer = pickupWeaponInstance.GetComponent<Renderer>();
-            //weaponRenderer.sortingLayerName = "Player";
         }
     }
 
@@ -102,7 +99,7 @@ public class WeaponManager : MonoBehaviour
             if (currentWeapon != null)
             {
                 Vector3 newPosition = weaponHolderPos.localPosition;
-                newPosition.y = -0.05f;  
+                newPosition.y = -0.5f;  
                 weaponHolderPos.localPosition = newPosition;
             }
         }
@@ -189,11 +186,13 @@ public class WeaponManager : MonoBehaviour
         {
             weaponSlot1.sprite = baseWeaponInstance.weaponIcon;
             weaponSlot1.enabled = true;
+            weaponSlot1.color = Color.white;
 
             if (pickupWeaponInstance != null)
             {
                 weaponSlot2.sprite = pickupWeaponInstance.weaponIcon;
                 weaponSlot2.enabled = true;
+                weaponSlot2.color = Color.black;
             }
             else
             {
@@ -205,9 +204,19 @@ public class WeaponManager : MonoBehaviour
         {
             weaponSlot1.sprite = pickupWeaponInstance.weaponIcon;
             weaponSlot1.enabled = true;
+            weaponSlot1.color = Color.white;
 
             weaponSlot2.sprite = baseWeaponInstance.weaponIcon;
             weaponSlot2.enabled = true;
+            weaponSlot2.color = Color.black;
+        }
+    }
+
+    private void HandleDeath()
+    {
+        if (playerController.IsDead && currentWeapon != null)
+        {
+            Destroy(currentWeapon.gameObject);
         }
     }
 

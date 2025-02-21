@@ -40,10 +40,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7379788741092372888}
+  - component: {fileID: 368388178252083814}
   - component: {fileID: 466331979730809474}
   - component: {fileID: 5452284640350170914}
   - component: {fileID: 8190759191692039875}
-  - component: {fileID: 368388178252083814}
   - component: {fileID: 201026638228408829}
   - component: {fileID: 8266912219152801006}
   m_Layer: 8
@@ -69,6 +69,33 @@ Transform:
   - {fileID: 790549590707188279}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368388178252083814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222807837940563876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f6783c59ed9394698d611ed028a528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  attackDistance: 0
+  scoreValue: 10
+  healthBar: {fileID: 0}
+  deathSFX: {fileID: 0}
+  speed: 5
+  dropPoint: {fileID: 790549590707188279}
+  dropBombPrefab: {fileID: 8710654606505095344, guid: 5e1ee35b77065aa48a2d93e2aa0f9b9d, type: 3}
+  dropSpeedX: 5
+  dropTime: 2
+  dropTotal: 3
+  audioSource: {fileID: 8266912219152801006}
+  playerTransform: {fileID: 0}
+  explosionEffect: {fileID: 5131202284976828051, guid: c077836f3618e5a41943b11bb3ef5874, type: 3}
+  dropDelay: 0.1
 --- !u!212 &466331979730809474
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -111,7 +138,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168568993
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 253005588072490991, guid: dcbabeece6076704bb981ea36949e3d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -188,30 +215,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &368388178252083814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8222807837940563876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f6783c59ed9394698d611ed028a528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  attackDistance: 0
-  scoreValue: 10
-  speed: 5
-  dropPoint: {fileID: 790549590707188279}
-  dropBombPrefab: {fileID: 8710654606505095344, guid: 5e1ee35b77065aa48a2d93e2aa0f9b9d, type: 3}
-  dropSpeedX: 5
-  dropTime: 2
-  dropTotal: 3
-  audioSource: {fileID: 8266912219152801006}
-  playerTransform: {fileID: 0}
-  dropDelay: 0.1
 --- !u!95 &201026638228408829
 Animator:
   serializedVersion: 7

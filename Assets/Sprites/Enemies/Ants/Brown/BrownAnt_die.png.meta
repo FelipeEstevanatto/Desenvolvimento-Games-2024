@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: 4de9f937d5e4d014493bc3a9636b36d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3184540167118217643
+    second: BrownAnt_die_0
+  - first:
+      213: 5253937033841761018
+    second: BrownAnt_die_1
+  - first:
+      213: 7230565034047939068
+    second: BrownAnt_die_2
+  - first:
+      213: -4903887983687170149
+    second: BrownAnt_die_3
+  - first:
+      213: -3660193153766743603
+    second: BrownAnt_die_4
+  - first:
+      213: -2888176601665728784
+    second: BrownAnt_die_5
+  - first:
+      213: 3518595119352848718
+    second: BrownAnt_die_6
+  - first:
+      213: -8127711813093906547
+    second: BrownAnt_die_7
+  - first:
+      213: -2979188209806548096
+    second: BrownAnt_die_8
+  - first:
+      213: -274833834859492033
+    second: BrownAnt_die_9
+  - first:
+      213: -9216740769387054517
+    second: BrownAnt_die_10
+  - first:
+      213: 8249807093849038698
+    second: BrownAnt_die_11
+  - first:
+      213: -4175291797167355594
+    second: BrownAnt_die_12
+  - first:
+      213: -854301599152246709
+    second: BrownAnt_die_13
+  - first:
+      213: -8867918550116248703
+    second: BrownAnt_die_14
+  - first:
+      213: -1663281346962379241
+    second: BrownAnt_die_15
+  - first:
+      213: 3222503355827847670
+    second: BrownAnt_die_16
+  - first:
+      213: 499479737877328849
+    second: BrownAnt_die_17
+  - first:
+      213: -8444107256985668795
+    second: BrownAnt_die_18
+  - first:
+      213: 2919024651539849758
+    second: BrownAnt_die_19
+  - first:
+      213: -7382034463781603306
+    second: BrownAnt_die_20
+  - first:
+      213: 2499342079918479415
+    second: BrownAnt_die_21
+  - first:
+      213: -42619717429772003
+    second: BrownAnt_die_22
+  - first:
+      213: 2508197591643529220
+    second: BrownAnt_die_23
+  - first:
+      213: -4852650698338171504
+    second: BrownAnt_die_24
+  - first:
+      213: 778216531379416968
+    second: BrownAnt_die_25
+  - first:
+      213: 8492527139528373281
+    second: BrownAnt_die_26
+  - first:
+      213: 4580696928345721320
+    second: BrownAnt_die_27
+  - first:
+      213: 8065964400540266670
+    second: BrownAnt_die_28
+  - first:
+      213: 3548383609235869613
+    second: BrownAnt_die_29
+  - first:
+      213: -2409030466843937158
+    second: BrownAnt_die_30
+  - first:
+      213: 7712649670835585360
+    second: BrownAnt_die_31
+  - first:
+      213: 4230608220547422196
+    second: BrownAnt_die_32
+  - first:
+      213: -5370367606476060726
+    second: BrownAnt_die_33
+  - first:
+      213: 2146650788717460349
+    second: BrownAnt_die_34
+  - first:
+      213: 4137105496135749890
+    second: BrownAnt_die_35
+  - first:
+      213: 3028885731137742592
+    second: BrownAnt_die_36
+  - first:
+      213: 3063480230751986223
+    second: BrownAnt_die_37
+  - first:
+      213: -7035568706306146169
+    second: BrownAnt_die_38
+  - first:
+      213: -8831633186194105629
+    second: BrownAnt_die_39
+  - first:
+      213: -3168005572289828523
+    second: BrownAnt_die_40
+  - first:
+      213: 5811628918970154012
+    second: BrownAnt_die_41
+  - first:
+      213: -2881465888008325642
+    second: BrownAnt_die_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BrownAnt_die_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55e94f5279d3ec3d0800000000000000
+      internalID: -3184540167118217643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_1
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2160
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa586e45ebb9e840800000000000000
+      internalID: 5253937033841761018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_2
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2160
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1a9cbd690285460800000000000000
+      internalID: 7230565034047939068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97050a5cd3e1fbb0800000000000000
+      internalID: -4903887983687170149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1080
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1aa6c18b1643dc0800000000000000
+      internalID: -3660193153766743603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownAnt_die_5
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1080
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe8e19dea22be7d0800000000000000
+      internalID: -2888176601665728784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f4974e9956046984a8d895c82f14c2c5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BrownAnt_die_0: -3184540167118217643
+      BrownAnt_die_1: 5253937033841761018
+      BrownAnt_die_2: 7230565034047939068
+      BrownAnt_die_3: -4903887983687170149
+      BrownAnt_die_4: -3660193153766743603
+      BrownAnt_die_5: -2888176601665728784
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -21,6 +21,10 @@ public abstract class Gun : Weapon
         currentAmmo = ammoCapacity;
         nextFireTime = 0f;
         shooter = transform.root.gameObject;
+        if (shooter.tag == "Enemy")
+        {
+            currentAmmo = int.MaxValue;
+        }
         if (firePoint == null)
         {
             firePoint = transform.Find("FirePoint");
@@ -39,7 +43,7 @@ public abstract class Gun : Weapon
         {
             FireBullet(direction);
             currentAmmo -= bulletsPerShot;
-            Debug.Log("Ammo: " + currentAmmo);
+            // Debug.Log("Ammo: " + currentAmmo);
         }
     }
 
@@ -84,6 +88,7 @@ public abstract class Gun : Weapon
         Bullet bulletController = bullet.GetComponent<Bullet>();
         if (bulletController != null)
         {
+            Debug.Log("Shooter: " + shooter.tag);
             bulletController.shooter = shooter;
         }
     }

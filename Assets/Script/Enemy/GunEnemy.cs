@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem.Utilities;
+using System.Collections;
 
 public class GunEnemy : Enemy
 {
@@ -11,14 +12,13 @@ public class GunEnemy : Enemy
 
     [Header("Enemy Components")]
     [SerializeField] private Animator anim;
-    [SerializeField] private Animator handsAnim;
     [SerializeField] private float chaseDistance = 5f;
     [SerializeField] private float speed = 2f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform obstacleCheck;
-    [SerializeField] private float obstacleCheckDistance = 1f;
+    [SerializeField] private float obstacleCheckDistance = 2f;
 
     [Header("Patrol Components")]
     [SerializeField] private Transform[] patrolPoints;
@@ -42,7 +42,12 @@ public class GunEnemy : Enemy
         {
             weapon = Instantiate(weaponPrefab, weaponHolder.position, Quaternion.identity, weaponHolder);
             weapon.transform.localScale /= Mathf.Abs(transform.localScale.x);
+            //if(weapon is Gun gun)
+            //{
+            //    fireRate = gun.fireRate;
+            //}
         }
+
         waitCounter = waitAtPoint;
 
         foreach(Transform pPoint in patrolPoints)
@@ -52,36 +57,37 @@ public class GunEnemy : Enemy
     }
     protected override void Update()
     {
-        base.Update();
-
-        float distanceToTarget = Mathf.Abs(targetDistance);
-        isChasing = distanceToTarget < chaseDistance && distanceToTarget > attackDistance;
-        isAttacking = distanceToTarget <= attackDistance && Time.time >= nextFireTime;
-        isRunning = rb.linearVelocity.x != 0 ? true : false;
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
-
-        if (distanceToTarget < chaseDistance)
+        if (!player.IsDead)
         {
-            isPatrolling = false; 
-            CheckFlip();
-        }
-        else if (!isPatrolling)
-        {
-            isPatrolling = true; 
-        }
+            base.Update();
 
-        if (anim != null)
-        {
-            anim.SetBool("isRunning", isRunning);
-            handsAnim.SetBool("isRunning", isRunning);
-        }
+            float distanceToTarget = Mathf.Abs(targetDistance);
+            isChasing = distanceToTarget < chaseDistance && distanceToTarget > attackDistance;
+            isAttacking = distanceToTarget <= attackDistance && Time.time >= nextFireTime;
+            isRunning = rb.linearVelocity.x != 0 ? true : false;
 
-        if (isAttacking)
-        {
-            Attack();
-        }
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
+            if (distanceToTarget < chaseDistance)
+            {
+                isPatrolling = false; 
+                CheckFlip();
+            }
+            else if (!isPatrolling)
+            {
+                isPatrolling = true; 
+            }
+
+            if (anim != null)
+            {
+                anim.SetBool("isRunning", isRunning);
+            }
+
+            if (isAttacking)
+            {
+                Attack();
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -148,7 +154,10 @@ public class GunEnemy : Enemy
 
     private void Attack()
     {
-        weapon.Attack(transform.localScale.x);
+        if (weapon != null)
+        {
+            weapon.Attack(transform.localScale.x);
+        }
         nextFireTime = Time.time + fireRate;
     }
 
@@ -170,11 +179,20 @@ public class GunEnemy : Enemy
 
     protected override void Die()
     {
+        StartCoroutine(DeathBehaviour());
+        ScoreManager.instance.AddScore(scoreValue);
+    }
+
+    private IEnumerator DeathBehaviour()
+    {
+        rb.linearVelocity = Vector2.zero;
+        anim.SetBool("isDead", true);
+        yield return new WaitForSeconds(0.5f); // death animation time
+        Destroy(gameObject);
         if (weaponPickup != null)
         {
             Instantiate(weaponPickup, transform.position + Vector3.up * 0.5f, Quaternion.identity);
         }
-        base.Die();
     }
 
     private void OnDrawGizmos()

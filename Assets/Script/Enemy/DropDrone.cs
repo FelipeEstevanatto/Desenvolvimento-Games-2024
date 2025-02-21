@@ -11,6 +11,8 @@ public class DropDrone : Enemy
     [SerializeField] private int dropTotal = 3;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] public GameObject explosionEffect;
+
     [SerializeField] private float dropDelay = 0.1f;
     private Animator anim;
     private float dropCount;
@@ -37,33 +39,36 @@ public class DropDrone : Enemy
 
     protected override void Update()
     {
-        base.Update();
-        anim.SetBool("isDroping", isDroping);
-        if (isActive)
+        if (!player.IsDead)
         {
-            isDroping = true;
-            dropCount -= Time.deltaTime;
-            if (dropCount <= 0)
+            base.Update();
+            anim.SetBool("isDroping", isDroping);
+            if (isActive)
             {
-                dropCount = dropTime;
-                StartCoroutine(DropBomb());
+                isDroping = true;
+                dropCount -= Time.deltaTime;
+                if (dropCount <= 0)
+                {
+                    dropCount = dropTime;
+                    StartCoroutine(DropBomb());
+                }
+                else
+                {
+                    isDroping = false;
+                }
             }
-            else
+
+            // Calculate the distance between the player and the plane
+            float distance = Vector3.Distance(transform.position, playerTransform.position);
+            float screenHeight = Camera.main.orthographicSize * 2;
+            float screenWidth = screenHeight * Camera.main.aspect;
+            float maxDistance = screenWidth * 2;
+
+            // Destroy the game object if the distance is greater than twice the screen width
+            if (isActive && distance > maxDistance)
             {
-                isDroping = false;
+                Destroy(gameObject);
             }
-        }
-
-        // Calculate the distance between the player and the plane
-        float distance = Vector3.Distance(transform.position, playerTransform.position);
-        float screenHeight = Camera.main.orthographicSize * 2;
-        float screenWidth = screenHeight * Camera.main.aspect;
-        float maxDistance = screenWidth * 2;
-
-        // Destroy the game object if the distance is greater than twice the screen width
-        if (isActive && distance > maxDistance)
-        {
-            Destroy(gameObject);
         }
     }
 
@@ -97,5 +102,13 @@ public class DropDrone : Enemy
             GravityBomb bombController = gravityBomb.GetComponent<GravityBomb>();
             bombController.throwerTag = transform.root.tag;
         }
+    }
+
+    protected override void Die()
+    {
+        base.Die();
+        Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        // Play your explosion sound
+        AudioManager.instance.PlaySFX(AudioManager.instance.bombClip);
     }
 }

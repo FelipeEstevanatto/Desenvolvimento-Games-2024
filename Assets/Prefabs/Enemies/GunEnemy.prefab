@@ -264,7 +264,7 @@ MonoBehaviour:
   groundCheck: {fileID: 2561222627155706411}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 512
   obstacleCheck: {fileID: 2650256350918943051}
   obstacleCheckDistance: 1
   patrolPoints:

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6722277835949233285}
   - component: {fileID: -643280783141691973}
   - component: {fileID: 652879827748978695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HandGrenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,12 +139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e1216df95fc3f489c5c1ed7278e0d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 5131202284976828051, guid: c077836f3618e5a41943b11bb3ef5874, type: 3}
   explosionDelay: 2
   explosionRadius: 3
   grenadeDamage: 40
+  explosionClip: {fileID: 8300000, guid: 6c1fb2d8a3e367f4991be1c4a6728e5b, type: 3}
   explosionEffect: {fileID: 5131202284976828051, guid: c077836f3618e5a41943b11bb3ef5874, type: 3}
-  throwerTag: 
+  thrower: {fileID: 0}
 --- !u!50 &652879827748978695
 Rigidbody2D:
   serializedVersion: 5

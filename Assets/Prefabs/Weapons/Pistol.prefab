@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8889507358168998332}
   m_Father: {fileID: 0}
@@ -75,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 5155163167032735316, guid: 530554528a0474f418b50b01ffcd8bb1, type: 3}
+  m_SortingLayerID: 1168568993
+  m_SortingLayer: 3
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 5288640683546135796, guid: d18fbf2b62351604297afacdd5bd0b35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,16 +103,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Pistol
   description: Basic Shooting.
-  weaponIcon: {fileID: 21300000, guid: 51c7327f715afd345818b70aaefb7c6e, type: 3}
+  weaponIcon: {fileID: 4459758276061437739, guid: 92988b534bcbb5048b247c8589d2a598, type: 3}
   bulletPrefab: {fileID: 3193756969829563608, guid: 22baca3810751d3478b23408ea10f72b, type: 3}
   shotSpeed: 20
   firePoint: {fileID: 0}
-  bulletDamage: 20
-  fireRate: 0.1
+  bulletDamage: 25
+  fireRate: 0.5
   bulletsPerShot: 1
   ammoCapacity: 2147483647
   currentAmmo: 0
   nextFireTime: 0
+  pistolClip: {fileID: 8300000, guid: 9abbd4ed24e9b99488a7584a9980d9fa, type: 3}
 --- !u!1 &5608890095939147266
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 5608890095939147266}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.332, y: 0.085, z: 0}
+  m_LocalPosition: {x: 0.504, y: 0.228, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

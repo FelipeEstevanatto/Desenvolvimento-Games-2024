@@ -4,32 +4,39 @@ using System.Collections;
 public abstract class Enemy : MonoBehaviour
 {
     [Header("Enemy Settings")]
-    [SerializeField] protected float health = 100f;
+    [SerializeField] protected float maxHealth = 100f;
     [SerializeField] protected float attackDistance;
     [SerializeField] protected int scoreValue = 10;
+    [SerializeField] protected HealthBarBehaviour healthBar;
+    [SerializeField] protected AudioClip deathSFX;
 
     protected bool facingRight = true;
-    protected Transform target;
+    protected PlayerController player;
+    protected float currentHealth;
     protected float targetDistance;
     protected Rigidbody2D rb;
     protected SpriteRenderer sprite;
-
     protected bool isFlipping = false; 
     private float flipDelay = 0.1f;  
 
     private void Awake()
     {
-        target = FindFirstObjectByType<PlayerController>()?.transform;
+        player = FindFirstObjectByType<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        currentHealth = maxHealth;
+        if(healthBar != null)
+        {
+            healthBar.SetHealth(currentHealth, maxHealth);
+        }
     }
 
 
     protected virtual void Update()
     {
-        if (target != null)
+        if (player != null)
         {
-            targetDistance = transform.position.x - target.position.x;
+            targetDistance = transform.position.x - player.transform.position.x;
         }
     }
 
@@ -58,10 +65,14 @@ public abstract class Enemy : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
-        health -= damageAmount;
-        Debug.Log($"Dano recebido: {damageAmount}, health restante: {health}");
+        currentHealth -= damageAmount;
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(currentHealth, maxHealth);
+        } 
+        Debug.Log($"Dano recebido: {damageAmount}, health restante: {currentHealth}");
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -73,6 +84,11 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        if (deathSFX != null)
+        {
+            AudioManager.instance.PlaySFX(deathSFX);
+        }
+
         Debug.Log("Enemy dead, score: " + scoreValue);
         ScoreManager.instance.AddScore(scoreValue);
 

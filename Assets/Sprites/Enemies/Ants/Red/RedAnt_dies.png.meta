@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: 1907f714fffe4bf43825b7273e5b2b0b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2779168585917883714
+    second: RedAnt_dies_0
+  - first:
+      213: -6631112343073911526
+    second: RedAnt_dies_1
+  - first:
+      213: 8744322020902658103
+    second: RedAnt_dies_2
+  - first:
+      213: 3641415797352215484
+    second: RedAnt_dies_3
+  - first:
+      213: 5969759967287717860
+    second: RedAnt_dies_4
+  - first:
+      213: -4699209688668683534
+    second: RedAnt_dies_5
+  - first:
+      213: -3811591667169367151
+    second: RedAnt_dies_6
+  - first:
+      213: -7322968707829884937
+    second: RedAnt_dies_7
+  - first:
+      213: 8683178287883113128
+    second: RedAnt_dies_8
+  - first:
+      213: 918454799815641861
+    second: RedAnt_dies_9
+  - first:
+      213: 3234483289100943924
+    second: RedAnt_dies_10
+  - first:
+      213: 5207767226966402801
+    second: RedAnt_dies_11
+  - first:
+      213: -252875704071716862
+    second: RedAnt_dies_12
+  - first:
+      213: 4225821667087345503
+    second: RedAnt_dies_13
+  - first:
+      213: -5689626195421662430
+    second: RedAnt_dies_14
+  - first:
+      213: -4132186455264624724
+    second: RedAnt_dies_15
+  - first:
+      213: -287960848014684724
+    second: RedAnt_dies_16
+  - first:
+      213: -4632712658981362992
+    second: RedAnt_dies_17
+  - first:
+      213: 8638295164092941913
+    second: RedAnt_dies_18
+  - first:
+      213: -8736056857829063499
+    second: RedAnt_dies_19
+  - first:
+      213: 3876328032338758986
+    second: RedAnt_dies_20
+  - first:
+      213: -7483808583355406199
+    second: RedAnt_dies_21
+  - first:
+      213: -6522469088316446092
+    second: RedAnt_dies_22
+  - first:
+      213: -7036568530258731785
+    second: RedAnt_dies_23
+  - first:
+      213: 5666180481982164469
+    second: RedAnt_dies_24
+  - first:
+      213: -934513992943870049
+    second: RedAnt_dies_25
+  - first:
+      213: -8335178248209191478
+    second: RedAnt_dies_26
+  - first:
+      213: -5864092807425411499
+    second: RedAnt_dies_27
+  - first:
+      213: -42336225192883746
+    second: RedAnt_dies_28
+  - first:
+      213: -5038863745244119703
+    second: RedAnt_dies_29
+  - first:
+      213: -7812135771453878794
+    second: RedAnt_dies_30
+  - first:
+      213: 1045230279743352296
+    second: RedAnt_dies_31
+  - first:
+      213: -5077283549179213194
+    second: RedAnt_dies_32
+  - first:
+      213: 5126405524606734777
+    second: RedAnt_dies_33
+  - first:
+      213: 8965741664762391399
+    second: RedAnt_dies_34
+  - first:
+      213: -7920405676397528396
+    second: RedAnt_dies_35
+  - first:
+      213: -3558920585536289748
+    second: RedAnt_dies_36
+  - first:
+      213: -4712960616940294852
+    second: RedAnt_dies_37
+  - first:
+      213: 4343565350240162293
+    second: RedAnt_dies_38
+  - first:
+      213: 3104178809343409716
+    second: RedAnt_dies_39
+  - first:
+      213: -3041193459741145244
+    second: RedAnt_dies_40
+  - first:
+      213: -4679210851511282284
+    second: RedAnt_dies_41
+  - first:
+      213: -3657907665535053675
+    second: RedAnt_dies_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RedAnt_dies_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba907155e86e69d0800000000000000
+      internalID: -2779168585917883714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_1
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2160
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d0f55057e89f3a0800000000000000
+      internalID: -6631112343073911526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_2
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2160
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73067817c821a5970800000000000000
+      internalID: 8744322020902658103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3bca8ef58e88230800000000000000
+      internalID: 3641415797352215484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1080
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef2884af09d8d250800000000000000
+      internalID: 5969759967287717860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedAnt_dies_5
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1080
+        width: 1080
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f244d58fad09ceb0800000000000000
+      internalID: -4699209688668683534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 88c571cc3b7a30e478bca2b01b55bf4d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RedAnt_dies_0: -2779168585917883714
+      RedAnt_dies_1: -6631112343073911526
+      RedAnt_dies_2: 8744322020902658103
+      RedAnt_dies_3: 3641415797352215484
+      RedAnt_dies_4: 5969759967287717860
+      RedAnt_dies_5: -4699209688668683534
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -18,10 +18,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float crouchSpeedMultiplier;
     [SerializeField] private float distanceToGround;
+    [SerializeField] private float maxSlopeAngle = 45f;
     [SerializeField] private LayerMask groundLayer;
-
     [SerializeField] private Collider2D normalCollider; 
-    [SerializeField] private Collider2D crouchCollider; 
+    public PhysicsMaterial2D normalMaterial; // Material normal (menor fricção)
+    public PhysicsMaterial2D slopeMaterial; // Material com maior fricção
 
     [Header("Dash Settings")]
     [SerializeField] private float dashingPower = 24f;
@@ -40,19 +41,21 @@ public class PlayerController : MonoBehaviour
     private bool isDashing;
     private float maxHealth;
     public GameObject deathMenuUI;
+    private bool isOnSlope;
+    private float slopeAngle;
 
+    [Header("Sound Settings")]
+    [SerializeField] private AudioClip jumpClip;
+    [SerializeField] private AudioClip drumsOfWarClip;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         maxHealth = health;
-
-        normalCollider.enabled = true;
-        crouchCollider.enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {   
         if (health <= 0)
@@ -60,15 +63,8 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (isDashing == false) {
-            HandleInput();
-            HandleCrouch();
-        }
-        Debug.Log(isGrounded);
+        HandleInput();
         HandleAnimation();
-        if(Input.GetKey(KeyCode.LeftShift) && canDash) {
-            StartCoroutine(Dash());
-        }
     }
 
     // This stays in check with the physics engine, things messing with the rigidbody should be here
@@ -84,15 +80,28 @@ public class PlayerController : MonoBehaviour
             HandleMovement();
         }
         CheckGrounded();
+        CheckSlope();
     }
 
     private void HandleInput()
+    {
+        if (isDashing == false) {
+            HandleJump();
+            HandleCrouch();
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift) && canDash) {
+            StartCoroutine(Dash());
+        }
+    }
+
+    private void HandleJump()
     {
         if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Jump", true);
-            AudioManager.instance.PlaySFX(AudioManager.instance.jumpClip);
+            AudioManager.instance.PlaySFX(jumpClip);
         }
 
         isLookingUp = Input.GetKey(KeyCode.W);
@@ -108,9 +117,6 @@ public class PlayerController : MonoBehaviour
                 isCrouching = true;
                 speed *= crouchSpeedMultiplier;
                 animator.SetBool("Crouched", true);
-
-                normalCollider.enabled = false;
-                crouchCollider.enabled = true;
             }
         }
         else if (isCrouching && CanStandUp())
@@ -118,9 +124,6 @@ public class PlayerController : MonoBehaviour
             isCrouching = false;
             speed /= crouchSpeedMultiplier;
             animator.SetBool("Crouched", false);
-
-            normalCollider.enabled = true;
-            crouchCollider.enabled = false;
         }
     }
 
@@ -134,6 +137,15 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
+
+        if (isOnSlope)
+        {
+            normalCollider.sharedMaterial = slopeMaterial;
+        }
+        else
+        {
+            normalCollider.sharedMaterial = normalMaterial;
+        }
 
         // Flip the player sprite
         if (horizontalInput != 0)
@@ -164,6 +176,21 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Grounded", isGrounded);
         }
     }
+
+    private void CheckSlope()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, distanceToGround, groundLayer);
+        if (hit)
+        {
+            slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
+            isOnSlope = Mathf.Abs(slopeAngle) > 0 && Mathf.Abs(slopeAngle) < maxSlopeAngle;
+        }
+        else
+        {
+            isOnSlope = false;
+        }
+    }
+
 
     private IEnumerator Dash()
     {
@@ -217,14 +244,18 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player morreu");
 
         AudioManager.instance.PauseMusic();
-        AudioManager.instance.PlaySFX(AudioManager.instance.drumsOfWar);
+        AudioManager.instance.PlaySFX(drumsOfWarClip);
 
         // Activate game over screen on the canvas
         deathMenuUI.SetActive(true);
 
+        animator.SetBool("Jump", false);
         animator.SetTrigger("Death");
 
         isDead = true;
+
+        // Disable the horizontal player's movement
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
         // Destroy(gameObject);
     }
@@ -233,5 +264,15 @@ public class PlayerController : MonoBehaviour
     {
         health += healthAmount;
         health = Mathf.Clamp(health, 0, maxHealth);
+    }
+
+    public void GiveGrenades(int ammoAmount)
+    {
+        // Give ammo to the player
+        GrenadeManager grenadeManager = GetComponent<GrenadeManager>();
+        if (grenadeManager != null)
+        {
+            grenadeManager.AddGrenades(ammoAmount);
+        }
     }
 }

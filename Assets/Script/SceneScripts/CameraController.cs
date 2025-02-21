@@ -4,7 +4,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private PlayerController player;
-    [SerializeField] private BoxCollider2D boundsBox;
+    [SerializeField] private PolygonCollider2D boundsBox;
     [SerializeField] private float smoothTime;
 
     private float halfHeight, halfWidth;
