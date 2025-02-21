@@ -134,16 +134,14 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(horizontalInput * speed, rb.linearVelocity.y);
 
-        // if (isOnSlope)
-        // {
-        //     normalCollider.sharedMaterial = slopeMaterial;
-        //     crouchCollider.sharedMaterial = slopeMaterial;
-        // }
-        // else
-        // {
-        //     normalCollider.sharedMaterial = normalMaterial;
-        //     crouchCollider.sharedMaterial = normalMaterial;
-        // }
+        if (isOnSlope)
+        {
+            normalCollider.sharedMaterial = slopeMaterial;
+        }
+        else
+        {
+            normalCollider.sharedMaterial = normalMaterial;
+        }
 
         // Flip the player sprite
         if (horizontalInput != 0)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class UIHandler : MonoBehaviour
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI grenadesText;
     public TextMeshProUGUI ammoText;
+    [SerializeField] private Slider healthBar;
 
     [Header("Scripts")]
     [SerializeField] private PlayerController player;
@@ -20,13 +22,25 @@ public class UIHandler : MonoBehaviour
 
     void Start()
     {
-        //score = 0;
+        if (healthBar != null)
+        {
+            healthBar.maxValue = player.MaxHealth;
+        }
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
-        healthText.text = "Health: " + player.Health.ToString() + "/" + player.MaxHealth.ToString();
+        //healthText.text = "Health: " + player.Health.ToString() + "/" + player.MaxHealth.ToString();
+        if (healthBar != null)
+        {
+            healthBar.maxValue = player.MaxHealth;
+            healthBar.value = player.Health;
+        }
+        else
+        {
+            Debug.Log("No Healthbar");
+        }
         grenadesText.text = grenadeManager.CurrentGrenades.ToString() + "/" + grenadeManager.MaxGrenades.ToString();
         if (weaponManager.currentWeapon is Gun gun)
         {
@@ -40,4 +54,5 @@ public class UIHandler : MonoBehaviour
             }
         }
     }
+
 }
