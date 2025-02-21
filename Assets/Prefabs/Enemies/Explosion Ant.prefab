@@ -194,6 +194,7 @@ MonoBehaviour:
   attackDistance: 3
   scoreValue: 10
   healthBar: {fileID: 522894075090257763}
+  deathSFX: {fileID: 8300000, guid: 91007cc206f10d8478e4552fa33d33b1, type: 3}
   chaseSpeed: 5
   stopDistance: 3
   startChaseDistance: 20
