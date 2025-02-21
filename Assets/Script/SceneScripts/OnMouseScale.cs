@@ -40,10 +40,7 @@ public class OnMouseScale : MonoBehaviour
     {
         if (scaleCoroutine != null)
         {
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.enabled = false;
-            }
+
             StopCoroutine(scaleCoroutine);
         }
         scaleCoroutine = StartCoroutine(ScaleHoverSprite(originalScale, 0.2f)); // Scale back to original
