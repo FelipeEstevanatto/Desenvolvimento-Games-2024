@@ -214,11 +214,10 @@ MonoBehaviour:
   normalCollider: {fileID: 5567696538195309487}
   normalMaterial: {fileID: 6200000, guid: c6b80bb0b0e20eb41a775ec4840184d4, type: 2}
   slopeMaterial: {fileID: 6200000, guid: 1fa1d93cb61956545a8914ce0cb97ad5, type: 2}
-  dashingPower: 20
+  dashingPower: 25
   dashingTime: 0.2
   dashingCooldown: 1
   tr: {fileID: 4751948044338588646}
-  uiHandler: {fileID: 0}
   deathMenuUI: {fileID: 0}
 --- !u!114 &5002326481241761142
 MonoBehaviour:
