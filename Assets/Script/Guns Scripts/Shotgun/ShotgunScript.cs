@@ -2,6 +2,10 @@
 
 public class Shotgun : Gun
 {
+    [SerializeField] private AudioClip shotgunClip;
+    [SerializeField] private AudioClip shotgunPumpClip;
+    [SerializeField] private AudioClip shotgunShellClip;
+
     [SerializeField] private int bulletCount = 3;
     [SerializeField] private float spreadAngle = 10f; // angle between the two extreme bullets 
 
@@ -13,7 +17,7 @@ public class Shotgun : Gun
             return;
         }
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.shotgunClip);
+        AudioManager.instance.PlaySFX(shotgunClip);
 
         // angle for the extreme bullet below the origin bullet
         float startAngle = -spreadAngle / 2f;
@@ -52,12 +56,12 @@ public class Shotgun : Gun
         }
 
         // wait for the pump sound to finish before playing the shell sound
-        AudioManager.instance.PlaySFX(AudioManager.instance.shotgunPumpClip);
+        AudioManager.instance.PlaySFX(shotgunPumpClip);
         Invoke("PlayShellSound", 0.5f);
     }
 
     private void PlayShellSound()
     {
-        AudioManager.instance.PlaySFX(AudioManager.instance.shotgunShellClip);
+        AudioManager.instance.PlaySFX(shotgunShellClip);
     }
 }

@@ -115,6 +115,9 @@ MonoBehaviour:
   ammoCapacity: 25
   currentAmmo: 0
   nextFireTime: 0
+  shotgunClip: {fileID: 8300000, guid: 425d169970421ca46b9cac394cba23b8, type: 3}
+  shotgunPumpClip: {fileID: 8300000, guid: c099d85c5fad7df42adb87d714e8c3c3, type: 3}
+  shotgunShellClip: {fileID: 8300000, guid: 0c228edf36bcfcf4facb0b6c40ca2ead, type: 3}
   bulletCount: 3
   spreadAngle: 10
 --- !u!1 &6775478366555580604

@@ -14,9 +14,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip grenadeLauncherThump;
     public AudioClip explosionClip;
     public AudioClip bombClip;
-    public AudioClip shotgunClip;
-    public AudioClip shotgunShellClip;
-    public AudioClip shotgunPumpClip;
     public AudioClip rifleSingleClip;
 
     public AudioClip rifleBurstClip;
