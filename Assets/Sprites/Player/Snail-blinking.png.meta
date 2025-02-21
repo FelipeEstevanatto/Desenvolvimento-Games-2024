@@ -360,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Snail-blinking_0: 9018515504469725241
+      Snail-blinking_1: -7694369704461426258
+      Snail-blinking_2: -1649497522452854325
+      Snail-blinking_3: -6608428957600052581
+      Snail-blinking_4: 8205771992705235708
+      Snail-blinking_5: -6547677928218571660
+      Snail-blinking_6: 1578673821091619225
+      Snail-blinking_7: -166347030535916064
+      Snail-blinking_8: 848383236711952818
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
