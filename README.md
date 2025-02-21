@@ -1,11 +1,15 @@
-Criar sprites
-https://www.piskelapp.com/
+# Tharium
+## Projeto da disciplina de Desenvolvimento de Games 2024 - UNIFESP SJC
 
+Membros:
+- Estevan Teixeira Santos
+- Felipe Lima Estevanatto
+- Vinícius Augusto Landim Andrade
+- Vinícius Martins Goulart 
 
-Se o github estiver reclamando:
-This diff contains a change in line endings from ‘LF’ to ‘CRLF’
+Primeiro projeto de jogo, no formato 2D shoot and run baseado em Metal Slug e Contra
+Feito na Unity 6 6000.0.24f1
 
-git config --global core.autocrlf true
-This will make git handle line endings in a much better way. It will also, annoyingly, make git complain a bunch, so you’ll also want to turn off the complaints:
+![image](https://github.com/user-attachments/assets/a803c117-296f-444e-a0aa-426ab6eed04b)
 
-git config --global core.safecrlf false
+* Sprites autorais foram criados utilizando o [Piskel](https://www.piskelapp.com/) e [pixilart.com](https://www.pixilart.com/)
