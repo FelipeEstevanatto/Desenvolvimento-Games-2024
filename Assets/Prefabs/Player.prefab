@@ -219,6 +219,8 @@ MonoBehaviour:
   dashingCooldown: 1
   tr: {fileID: 4751948044338588646}
   deathMenuUI: {fileID: 0}
+  jumpClip: {fileID: 8300000, guid: 66ae81cb32bd5ef408e5467f440f2e19, type: 3}
+  drumsOfWarClip: {fileID: 8300000, guid: b39a65f69156aff4e8db79637726622b, type: 3}
 --- !u!114 &5002326481241761142
 MonoBehaviour:
   m_ObjectHideFlags: 0

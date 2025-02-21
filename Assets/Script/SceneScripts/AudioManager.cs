@@ -18,9 +18,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip rifleBurstClip;
     public AudioClip errorSoundClip;
     public AudioClip HealSoundClip;
-
-    public AudioClip drumsOfWar;
-    public AudioClip jumpClip;
     public AudioClip menuMusic;
     public AudioClip inGameMusic;
 

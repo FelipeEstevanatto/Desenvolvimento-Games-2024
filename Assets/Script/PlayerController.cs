@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
     public GameObject deathMenuUI;
     private bool isOnSlope;
     private float slopeAngle;
+
+    [Header("Sound Settings")]
+    [SerializeField] private AudioClip jumpClip;
+    [SerializeField] private AudioClip drumsOfWarClip;
     
     void Start()
     {
@@ -97,7 +101,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Jump", true);
-            AudioManager.instance.PlaySFX(AudioManager.instance.jumpClip);
+            AudioManager.instance.PlaySFX(jumpClip);
         }
 
         isLookingUp = Input.GetKey(KeyCode.W);
@@ -240,7 +244,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player morreu");
 
         AudioManager.instance.PauseMusic();
-        AudioManager.instance.PlaySFX(AudioManager.instance.drumsOfWar);
+        AudioManager.instance.PlaySFX(drumsOfWarClip);
 
         // Activate game over screen on the canvas
         deathMenuUI.SetActive(true);

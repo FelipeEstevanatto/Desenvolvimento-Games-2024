@@ -1584,12 +1584,12 @@ Transform:
   m_GameObject: {fileID: 378859524}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.24, y: 16.09, z: 0}
+  m_LocalPosition: {x: 68.44, y: 12.190001, z: 0}
   m_LocalScale: {x: 10.376827, y: 1.8606614, z: 0.6522}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1833036485}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 399061864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392972208
 GameObject:
@@ -1666,6 +1666,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392972208}
   m_CullTransparentMesh: 1
+--- !u!1 &399061863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 399061864}
+  m_Layer: 0
+  m_Name: Tips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &399061864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399061863}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.8, y: 3.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1177187845}
+  - {fileID: 2068615807}
+  - {fileID: 427967946}
+  - {fileID: 378859526}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404726782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,12 +1872,12 @@ Transform:
   m_GameObject: {fileID: 427967944}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 129.4, y: 14.5, z: 0}
+  m_LocalPosition: {x: 94.59999, y: 10.6, z: 0}
   m_LocalScale: {x: 15.9105, y: 2.8529, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1989249317}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 399061864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &442150135
 GameObject:
@@ -3186,7 +3221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971c4feee9583a24abc822185c325215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: Level1
+  levelName: MainLevel
 --- !u!4 &715950676
 Transform:
   m_ObjectHideFlags: 0
@@ -5145,13 +5180,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177187843}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.8, y: 3.9, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 15.9105, y: 2.8529, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 968713072}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 399061864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1243578027
 GameObject:
@@ -14145,12 +14180,12 @@ Transform:
   m_GameObject: {fileID: 2068615805}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 84.2, y: 5.5, z: 0}
+  m_LocalPosition: {x: 49.399998, y: 1.5999999, z: 0}
   m_LocalScale: {x: 15.9105, y: 2.8529, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1383591131}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 399061864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082094351
 GameObject:
@@ -14190,8 +14225,6 @@ MonoBehaviour:
   rifleBurstClip: {fileID: 8300000, guid: 3a6eaff86aaca2e4dac134c270329b3d, type: 3}
   errorSoundClip: {fileID: 0}
   HealSoundClip: {fileID: 8300000, guid: 2af67380de3dc4347ad199753a89b621, type: 3}
-  drumsOfWar: {fileID: 8300000, guid: b39a65f69156aff4e8db79637726622b, type: 3}
-  jumpClip: {fileID: 8300000, guid: bedca029cbd6b544a8323a82875d9778, type: 3}
   menuMusic: {fileID: 8300000, guid: b784b118d2211d34a84e3e531727566c, type: 3}
   inGameMusic: {fileID: 8300000, guid: ae0f45574b393154c885415b7647bd3d, type: 3}
   musicVolume: 1
@@ -14660,12 +14693,9 @@ SceneRoots:
   - {fileID: 916067154}
   - {fileID: 1266350686}
   - {fileID: 809636479}
-  - {fileID: 2082094353}
-  - {fileID: 1177187845}
-  - {fileID: 2068615807}
-  - {fileID: 427967946}
-  - {fileID: 378859526}
+  - {fileID: 399061864}
   - {fileID: 905509329}
+  - {fileID: 1829180162294931021}
   - {fileID: 715950676}
   - {fileID: 982732486}
-  - {fileID: 1829180162294931021}
+  - {fileID: 2082094353}
