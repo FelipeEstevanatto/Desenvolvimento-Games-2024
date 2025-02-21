@@ -71,4 +71,13 @@ public class GrenadeManager : MonoBehaviour
             Debug.Log("Sem granadas dispon�veis"); // If no grenades are left, print a message
         }
     }
+
+    public void AddGrenades(int amount)
+    {
+        currentGrenades += amount;
+        if (currentGrenades > maxGrenades)
+        {
+            currentGrenades = maxGrenades;
+        }
+    }   
 }

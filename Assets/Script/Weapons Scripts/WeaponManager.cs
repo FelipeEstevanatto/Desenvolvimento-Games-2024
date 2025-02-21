@@ -45,16 +45,12 @@ public class WeaponManager : MonoBehaviour
         {
             baseWeaponInstance = InstantiateWeapon(baseWeaponPrefab);
             EquipWeapon(baseWeaponInstance);
-            //Renderer weaponRenderer = baseWeaponInstance.GetComponent<Renderer>();
-            //weaponRenderer.sortingLayerName = "Player";
         }
 
         if (pickupWeaponPrefab != null)
         {
             pickupWeaponInstance = InstantiateWeapon(pickupWeaponPrefab);
             pickupWeaponInstance.gameObject.SetActive(false);
-            //Renderer weaponRenderer = pickupWeaponInstance.GetComponent<Renderer>();
-            //weaponRenderer.sortingLayerName = "Player";
         }
     }
 

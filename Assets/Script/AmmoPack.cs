@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class HealthPack : MonoBehaviour
+public class AmmoPack : MonoBehaviour
 {
-    [SerializeField] private float healthAmount = 50f; // health amount that the player will receive
+    [SerializeField] private int ammo = 50;
     private PlayerController playerController;
 
     // Update is called once per frame
@@ -11,8 +11,8 @@ public class HealthPack : MonoBehaviour
         if (playerController != null && Input.GetKeyDown(KeyCode.E))
         {
             AudioManager.instance.PlaySFX(AudioManager.instance.HealSoundClip);
-            // Give health to the player
-            playerController.GiveHealth(healthAmount);
+            // Give grenades to the player
+            playerController.GiveGrenades(ammo);
 
             // Destroy the health pack
             Destroy(gameObject);
@@ -25,6 +25,7 @@ public class HealthPack : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player is in range");
+            playerController = other.GetComponent<PlayerController>();
         }
     }
 

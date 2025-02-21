@@ -261,4 +261,14 @@ public class PlayerController : MonoBehaviour
         health += healthAmount;
         health = Mathf.Clamp(health, 0, maxHealth);
     }
+
+    public void GiveGrenades(int ammoAmount)
+    {
+        // Give ammo to the player
+        GrenadeManager grenadeManager = GetComponent<GrenadeManager>();
+        if (grenadeManager != null)
+        {
+            grenadeManager.AddGrenades(ammoAmount);
+        }
+    }
 }
