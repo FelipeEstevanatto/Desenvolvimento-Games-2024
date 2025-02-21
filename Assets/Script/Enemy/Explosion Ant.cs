@@ -5,10 +5,10 @@ public class ExplosionAnt : Enemy
 {
     [Header("Explosion Ant Settings")]
     [SerializeField] private float chaseSpeed = 2f;
-    [SerializeField] private float stopDistance = 3f; // Distância em que o inimigo para
-    [SerializeField] private float startChaseDistance = 10f; // Distância para começar a perseguição
-    [SerializeField] private float explosionRadius = 5f; // Raio da explosão
-    [SerializeField] private float explosionDamage = 20f; // Dano da explosão
+    [SerializeField] private float stopDistance = 3f; // Distï¿½ncia em que o inimigo para
+    [SerializeField] private float startChaseDistance = 10f; // Distï¿½ncia para comeï¿½ar a perseguiï¿½ï¿½o
+    [SerializeField] private float explosionRadius = 5f; // Raio da explosï¿½o
+    [SerializeField] private float explosionDamage = 20f; // Dano da explosï¿½o
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject explosionEffect;
     private bool isChasing = false;
