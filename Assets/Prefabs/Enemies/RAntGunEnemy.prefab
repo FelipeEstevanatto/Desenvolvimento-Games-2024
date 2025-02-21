@@ -389,6 +389,7 @@ MonoBehaviour:
   attackDistance: 10
   scoreValue: 10
   healthBar: {fileID: 2463067453302908436}
+  deathSFX: {fileID: 8300000, guid: e8909eb60c41c1d47bb4317eff41c9ee, type: 3}
   weaponPickup: {fileID: 0}
   weaponPrefab: {fileID: 0}
   weaponHolder: {fileID: 6911850985731952748}

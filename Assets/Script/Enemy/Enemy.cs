@@ -8,6 +8,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float attackDistance;
     [SerializeField] protected int scoreValue = 10;
     [SerializeField] protected HealthBarBehaviour healthBar;
+    [SerializeField] protected AudioClip deathSFX;
 
     protected bool facingRight = true;
     protected PlayerController player;
@@ -83,6 +84,11 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        if (deathSFX != null)
+        {
+            AudioManager.instance.PlaySFX(deathSFX);
+        }
+
         Debug.Log("Enemy dead, score: " + scoreValue);
         ScoreManager.instance.AddScore(scoreValue);
 
