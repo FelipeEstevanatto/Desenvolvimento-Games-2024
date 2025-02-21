@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class GrenadeLauncher : Gun
 {
+
+    [Header("Grenade Launcher Settings")]
+    [SerializeField] private AudioClip grenadeLauncherThump;
     [SerializeField] private GameObject grenadePrefab;
     [SerializeField] private float launchForce = 10f; 
     [SerializeField] private float launchAngle = 45f; 
@@ -14,7 +17,7 @@ public class GrenadeLauncher : Gun
             return;
         }
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.grenadeLauncherThump);
+        AudioManager.instance.PlaySFX(grenadeLauncherThump);
 
         GameObject grenadeInstance = Instantiate(grenadePrefab, firePoint.position, Quaternion.identity);
         Rigidbody2D grenadeRb = grenadeInstance.GetComponent<Rigidbody2D>();

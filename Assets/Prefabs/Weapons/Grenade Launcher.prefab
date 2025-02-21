@@ -144,6 +144,7 @@ MonoBehaviour:
   ammoCapacity: 20
   currentAmmo: 0
   nextFireTime: 0
+  grenadeLauncherThump: {fileID: 8300000, guid: af62bb3ebfaf7a6409e11842d86509b2, type: 3}
   grenadePrefab: {fileID: 86678154571384049, guid: 8708277a4f6dd3d42adcd16ac3d9c766, type: 3}
   launchForce: 20
   launchAngle: 30
