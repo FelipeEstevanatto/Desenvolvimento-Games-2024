@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public bool IsMuted => isMuted;
     [SerializeField] private bool isMuted = false;
 
     [Header("Audio Source")]
@@ -57,11 +58,15 @@ public class AudioManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.M))
         {
-            isMuted = !isMuted;
-            // AudioListener.pause = !isMuted;
-            AudioListener.volume = isMuted ? 0 : 1;
+            ToggleMute();
         }
 
+    }
+
+    public void ToggleMute()
+    {
+        isMuted = !isMuted;
+        AudioListener.volume = isMuted ? 0 : 1;
     }
 
     public void PlayMusic(AudioClip musicClip, float volume = 1f)

@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 8ffd2dd31bd2c684e84666343fac9284
+guid: 5b24aa7d4961d164cb42dd1cd245e46e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7531887058470735319
-    second: soundIcon_0
+      213: 4690235775009894703
+    second: muteIcon_0
   - first:
-      213: -5689528887050008767
-    second: soundIcon_1
+      213: -6142461325446868253
+    second: muteIcon_1
+  - first:
+      213: -8852687267262430367
+    second: muteIcon_2
+  - first:
+      213: -3989649470449294883
+    second: muteIcon_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: soundIcon_0
+      name: muteIcon_0
       rect:
         serializedVersion: 2
-        x: 95
-        y: 127
-        width: 194
-        height: 258
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7dd8280cf53a68860800000000000000
-      internalID: 7531887058470735319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soundIcon_1
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 201
-        width: 110
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1478f042f9bba01b0800000000000000
-      internalID: -5689528887050008767
+      spriteID: f213b426690171140800000000000000
+      internalID: 4690235775009894703
       vertices: []
       indices: 
       edges: []
@@ -176,7 +160,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1452b8a80e87061458510e08ece2f5f8
     internalID: 0
     vertices: []
     indices: 
@@ -185,7 +169,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      muteIcon_0: 4690235775009894703
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

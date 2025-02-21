@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 5b24aa7d4961d164cb42dd1cd245e46e
+guid: 8ffd2dd31bd2c684e84666343fac9284
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4690235775009894703
-    second: muteIcon_0
+      213: 7531887058470735319
+    second: soundIcon_0
   - first:
-      213: -6142461325446868253
-    second: muteIcon_1
-  - first:
-      213: -8852687267262430367
-    second: muteIcon_2
-  - first:
-      213: -3989649470449294883
-    second: muteIcon_3
+      213: -5689528887050008767
+    second: soundIcon_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,89 +129,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: muteIcon_0
+      name: soundIcon_0
       rect:
         serializedVersion: 2
-        x: 95
-        y: 127
-        width: 194
-        height: 258
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f213b426690171140800000000000000
-      internalID: 4690235775009894703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muteIcon_1
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 203
-        width: 39
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e21a2af7f791caa0800000000000000
-      internalID: -6142461325446868253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muteIcon_2
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 169
-        width: 57
-        height: 174
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 163033f75dfe42580800000000000000
-      internalID: -8852687267262430367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: muteIcon_3
-      rect:
-        serializedVersion: 2
-        x: 355
-        y: 135
-        width: 73
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd16b87d1fae1a8c0800000000000000
-      internalID: -3989649470449294883
+      spriteID: 605abffbd8a69a641801682c75036d32
+      internalID: 1809464057
       vertices: []
       indices: 
       edges: []
@@ -226,7 +154,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 425419a335b382c4ba77cb37ef5377cf
     internalID: 0
     vertices: []
     indices: 
@@ -235,7 +163,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      soundIcon_0: 1809464057
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

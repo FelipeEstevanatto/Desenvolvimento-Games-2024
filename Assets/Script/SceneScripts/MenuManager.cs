@@ -1,17 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private AudioClip mainMenuMusic;
     [SerializeField] private AudioClip inGameMusic;
-
-    // [SerializeField] private GameObject hoverSprite;
-
-    // private Vector3 originalScale;
-    // private Coroutine scaleCoroutine;
+    [SerializeField] private Sprite mutedSprite;
+    [SerializeField] private Sprite unmutedSprite;
+    [SerializeField] private Button muteButton;
 
     public void Start()
     {
@@ -34,6 +32,13 @@ public class MenuManager : MonoBehaviour
     public void LoadCredits()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void MuteButton()
+    {
+        AudioManager.instance.ToggleMute();
+        // Toggle the mute icon
+        muteButton.image.sprite = AudioManager.instance.IsMuted ? mutedSprite : unmutedSprite;
     }
 
     public void QuitGame()
