@@ -154,7 +154,10 @@ public class GunEnemy : Enemy
 
     private void Attack()
     {
-        weapon.Attack(transform.localScale.x);
+        if (weapon != null)
+        {
+            weapon.Attack(transform.localScale.x);
+        }
         nextFireTime = Time.time + fireRate;
     }
 
