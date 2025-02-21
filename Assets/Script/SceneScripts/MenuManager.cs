@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private AudioClip mainMenuMusic;
-    [SerializeField] private AudioClip inGameMusic;
     [SerializeField] private Sprite mutedSprite;
     [SerializeField] private Sprite unmutedSprite;
     [SerializeField] private Button muteButton;
@@ -19,14 +18,15 @@ public class MenuManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
+        // If not already playing, play the main menu music
         AudioManager.instance.PlayMusic(mainMenuMusic);
     }
 
     public void LoadScene(string sceneName = "Level1")
     {
         SceneManager.LoadScene(sceneName);
-        AudioManager.instance.UnpauseMusic();
-        AudioManager.instance.PlayMusic(inGameMusic);
+        // AudioManager.instance.UnpauseMusic();
+        // AudioManager.instance.PlayMusic(inGameMusic);
     }
 
     public void LoadCredits()
